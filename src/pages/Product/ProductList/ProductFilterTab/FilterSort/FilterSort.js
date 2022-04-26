@@ -1,18 +1,20 @@
 import React from 'react';
 import '../FilterSort/FilterSort.scss';
 
-function FilterSort() {
+function FilterSort({ sortProducts }) {
   return (
     <ul>
-      <li>
-        <button>낮은 가격순</button>
-      </li>
-      <li>
-        <button>최신 등록순</button>
-      </li>
-      <li>
-        <button>리뷰 많은순</button>
-      </li>
+      <form onClick={sortProducts}>
+        <li>
+          <button type="button">낮은 가격순</button>
+        </li>
+        <li>
+          <button type="button">최신 등록순</button>
+        </li>
+        <li>
+          <button type="button">리뷰 많은순</button>
+        </li>
+      </form>
     </ul>
   );
 }

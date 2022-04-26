@@ -13,12 +13,22 @@ function ProductList() {
       .then(result => setProducts(result));
   }, []);
 
+  const sortProducts = e => {
+    console.log(e.target);
+    let newProducts = [...products];
+    newProducts.sort((a, b) => {
+      return a - b;
+    });
+
+    setProducts(newProducts);
+  };
+
   return (
     <div className="ProductList">
       <div className="contentWrapper">
         <div className="navContent">
           <ProductNavTab product={products} />
-          <ProductFilterTab />
+          <ProductFilterTab sortProducts={sortProducts} />
         </div>
         {/* 메인 카테고리 리스트 */}
         <main>
