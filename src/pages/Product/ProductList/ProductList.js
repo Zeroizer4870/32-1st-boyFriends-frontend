@@ -12,7 +12,7 @@ function ProductList() {
           <ProductNavTab />
           <ProductFilterTab />
         </div>
-        {/* 메인 카테고리 리스트 작성 예정 */}
+        {/* 메인 카테고리 리스트 */}
         <main>
           <div className="categoryList">
             <ul className="products">

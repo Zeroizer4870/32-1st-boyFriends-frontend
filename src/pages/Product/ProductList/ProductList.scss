@@ -1,13 +1,14 @@
 main {
   display: flex;
   justify-content: center;
+
   .categoryList {
     width: 1280px;
+
     ul {
       display: grid;
-      grid-template-columns: repeat(5, minmax(20%, 1fr));
-      grid-column: 10px;
-      height: 300px;
+      grid-template-columns: repeat(5, minmax(15%, 1fr));
+      column-gap: 30px;
     }
   }
 }

@@ -1,37 +1,5 @@
+@import '/src/styles/variables.scss';
+
 .product {
-  height: 325px;
   margin: 20px 0 20px;
-  padding: 0 15px 0 15px;
-
-  a {
-    font-size: 10px;
-    position: relative;
-
-    .bestTab {
-      position: absolute;
-      z-index: 2;
-      background-color: #4eb6dd;
-      color: white;
-      padding: 4px 7px 4px 7px;
-    }
-
-    .productImg {
-      display: flex;
-      width: 232px;
-      height: 232px;
-
-      img {
-        width: 100%;
-        object-fit: cover;
-      }
-    }
-  }
-
-  .reviewTab {
-    font-size: 10px;
-  }
-
-  .currentStock {
-    font-size: 12px;
-  }
 }
