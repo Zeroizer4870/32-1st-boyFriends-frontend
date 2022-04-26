@@ -1,3 +1,177 @@
-h1 {
-  font-size: 40px;
+@import '../../styles/variables.scss';
+
+#nav {
+  .upperWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgb(230, 230, 230);
+
+    #upper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 1280px;
+      height: 35px;
+      font-size: 11px;
+      text-decoration: none;
+
+      .upperLeft {
+        a {
+          margin-right: 10px;
+          color: $secondryFontColor;
+          text-decoration: none;
+        }
+      }
+      .upperRight {
+        a {
+          margin-left: 10px;
+          color: $secondryFontColor;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .logoWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    #logo {
+      display: flex;
+      justify-content: space-between;
+      width: 1280px;
+      margin-top: 40px;
+      margin-bottom: 30px;
+
+      .logoLeft {
+        display: flex;
+        align-items: center;
+        width: 220px;
+
+        a {
+          padding: 10px 25px;
+          border: 1px solid black;
+          border-radius: 50px;
+          color: white;
+          background-color: black;
+          text-decoration: none;
+          font-size: 12px;
+        }
+      }
+
+      .logoCenter {
+        margin: auto;
+        color: $fontColor;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 1000;
+      }
+
+      .logoRight {
+        position: relative;
+        width: 220px;
+        height: 40px;
+
+        .logoRightInput {
+          width: 100%;
+          padding: 13px 20px;
+          border: 1px solid rgb(200, 200, 200);
+          border-radius: 50px;
+          color: $secondryFontColor;
+          font-size: 12px;
+
+          &:focus::-webkit-input-placeholder {
+            color: transparent;
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        .fa-solid {
+          position: absolute;
+          top: 15px;
+          right: 20px;
+        }
+      }
+    }
+  }
+
+  .menuWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgb(230, 230, 230);
+
+    #menu {
+      width: 1280px;
+      height: 55px;
+      border-bottom: 1px solid rgb(230, 230, 230);
+
+      .mainMenu {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        text-align: center;
+        list-style-type: none;
+
+        li {
+          width: 200px;
+          line-height: 40px;
+          position: relative;
+
+          a {
+            display: block;
+            color: $fontColor;
+            font-size: 14px;
+            text-decoration: none;
+
+            &:hover {
+              color: $skyblue;
+              font-weight: bolder;
+            }
+          }
+
+          &:hover {
+            .subMenu {
+              left: 0px;
+            }
+          }
+
+          .subMenu {
+            position: absolute;
+            top: 35px;
+            left: -9999px;
+            width: 100%;
+            border: 1px solid rgb(200, 200, 200);
+            background-color: white;
+            list-style-type: none;
+
+            li {
+              position: relative;
+              width: 100%;
+              height: 100%;
+
+              &:hover {
+                background-color: rgb(248, 248, 248);
+
+                a {
+                  color: $skyblue;
+                }
+              }
+
+              a {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
