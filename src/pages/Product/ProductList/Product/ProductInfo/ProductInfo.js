@@ -1,22 +1,18 @@
 import React from 'react';
 import '../ProductInfo/ProductInfo.scss';
 
-function ProductInfo() {
+function ProductInfo({ product }) {
   return (
     <a href="/" className="goToDetail">
       <div className="bestTab">
         <span>Best</span>
       </div>
       <div className="productImg">
-        <img
-          className="productThumbnail"
-          alt="제품"
-          src="images/productListMock/product1.png"
-        />
+        <img className="productThumbnail" alt="제품" src={product.img} />
       </div>
-      <strong>라인프렌즈 BT21</strong>
+      <strong>{product.name}</strong>
       <div>
-        <span className="price">17,000원</span>
+        <span className="price">{product.price}원</span>
       </div>
       <p>
         ※ 본 상품 패키지의 테이프 장식은 종이 소재로 제작되어 배송 중 충격에

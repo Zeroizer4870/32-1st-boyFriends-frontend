@@ -1,11 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ProductNavTab from './ProductNavTab/ProductNavTab';
 import ProductFilterTab from './ProductFilterTab/ProductFilterTab';
 import Product from './Product/Product';
 import '../ProductList/ProductList.scss';
 
 function ProductList() {
-  const mockArr = [0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11];
+  useEffect(() => {
+    fetch('http://localhost:3000/data/ProductListMock/ProductListMock.json')
+      .then(res => res.json())
+      .then(result => console.log(result));
+  }, []);
+
+  const [product, setProduct] = useState({
+    id: 1,
+    name: '보이프렌즈',
+    price: 27000,
+    stock: 24,
+    img: 'images/productListMock/product1.png',
+    reviewCount: 421,
+    reputation: 4.2,
+  });
+
+  let testArr = [];
+  for (let i = 0; i < 50; i++) {
+    testArr.push(i);
+  }
 
   return (
     <div className="ProductList">
@@ -18,8 +37,8 @@ function ProductList() {
         <main>
           <div className="categoryList">
             <ul className="products">
-              {mockArr.map(x => (
-                <Product key={x} />
+              {testArr.map(x => (
+                <Product product={product} key={x} />
               ))}
             </ul>
           </div>
