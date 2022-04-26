@@ -13,15 +13,23 @@ function ProductList() {
           <ProductFilterTab />
         </div>
         {/* 메인 카테고리 리스트 작성 예정 */}
-        <div className="categoryList">
-          <ul className="products">
-            <Product />
-            <Product />
-            <Product />
-            <Product />
-            <Product />
-          </ul>
-        </div>
+        <main>
+          <div className="categoryList">
+            <ul className="products">
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+              <Product />
+            </ul>
+          </div>
+        </main>
       </div>
     </div>
   );
