@@ -1,0 +1,22 @@
+@import '/src//styles/variables.scss';
+
+.categoryWrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+
+  .categoryNav {
+    width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0 13px;
+
+    strong {
+      font-size: 20px;
+    }
+
+    ul {
+      display: flex;
+    }
+  }
+}
