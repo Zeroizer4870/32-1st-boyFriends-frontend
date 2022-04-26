@@ -1,18 +1,43 @@
+main {
+  display: grid;
+}
 section.캐러셀 {
   display: grid;
   grid-template-columns: 50px 1fr 50px;
   grid-template-rows: 100px 1fr 1fr;
   background-color: blue;
+  justify-self: center;
+  overflow: hidden;
+  width: 500px;
+}
+article.carCOm {
+  width: 500px;
+  display: inherit;
+  background-color: red;
+}
+.상품1 {
+  width: 500px;
+}
+
+h4 {
+  grid-column: 1/4;
+  grid-row: 1/2;
 }
 
 button.이전 {
   grid-column: 1/2;
   grid-row: 2/3;
+  z-index: 90;
+  opacity: 50%;
 }
+
 button.다음 {
   grid-column: 3/4;
   grid-row: 2/3;
+  z-index: 90;
+  opacity: 50%;
 }
-article {
-  background-color: red;
+.center {
+  grid-column: 1/4;
+  display: flex;
 }
