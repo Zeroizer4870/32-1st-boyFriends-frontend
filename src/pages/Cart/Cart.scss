@@ -1,3 +1,26 @@
-h1 {
-  font-size: 40px;
+@import '/src/styles/variables.scss';
+main {
+  width: 100vw;
+}
+
+.cartNav {
+  width: 1280px;
+  height: 96px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  font-size: 20px;
+
+  .normalDeli {
+    font-weight: 800;
+  }
+
+  .ingStatus {
+    font-size: 13px;
+  }
+
+  .basketBold {
+    font-weight: bold;
+  }
 }

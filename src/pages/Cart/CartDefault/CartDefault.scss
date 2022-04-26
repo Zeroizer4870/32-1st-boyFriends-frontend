@@ -1,0 +1,44 @@
+@import '/src/styles/variables.scss';
+
+.defaultBack {
+  display: flex;
+  width: 1280px;
+  height: 436px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  background-color: $MainBackground;
+}
+
+.basketDiv {
+  text-align: center;
+}
+.basket {
+  border-radius: 50%;
+  background-color: #e4e9ed;
+  padding: 10px 10px;
+}
+
+.basketText {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  color: $fontColor;
+}
+
+.wantProduct {
+  color: $secondryFontColor;
+}
+
+.showpingDiv {
+  text-align: center;
+}
+
+.showpingBtn {
+  width: 150px;
+  height: 50px;
+  margin-top: 20px;
+  border: 1px solid #e4e9ed;
+  background-color: $MainBackground;
+}

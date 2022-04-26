@@ -1,0 +1,110 @@
+@import '/src/styles/variables.scss';
+
+.selectNav {
+  width: 1280px;
+  height: 64px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid gray;
+}
+
+.cartInfo {
+  width: 1280px;
+  height: 311px;
+  margin: auto;
+  background-color: gainsboro;
+}
+
+.cartInfoBox {
+  background-color: white;
+  width: 1200px;
+  height: 260px;
+  position: relative;
+  top: 25px;
+  margin: auto;
+  border-radius: 10px;
+
+  .infoFirst {
+    height: 30px;
+    padding-top: 20px;
+    padding-left: 10px;
+  }
+
+  .infoSecond {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 25px;
+    border-top: 3px solid black;
+    border-bottom: 1px solid gray;
+  }
+
+  .imgFlex {
+    display: flex;
+    flex: 2;
+  }
+
+  .pants {
+    width: 90px;
+    height: 90px;
+    float: left;
+  }
+
+  .sizeBox {
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    flex: 1;
+  }
+
+  .priceBox {
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    flex: 1;
+  }
+
+  .delivery {
+    flex: 1;
+  }
+}
+
+.total {
+  width: 1280px;
+  display: flex;
+  justify-content: center;
+  align-items: cneter;
+
+  margin: 20px auto;
+
+  .plus,
+  .minus,
+  .totalPrice {
+    padding-top: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .totalPrice {
+    border-left: 1px solid gray;
+    padding-left: 20px;
+  }
+
+  .selectPrice,
+  .deliveryPrice,
+  .dcPrice {
+    text-align: center;
+  }
+}
+
+.finalSelect {
+  width: 1280px;
+  margin: auto;
+
+  button {
+    width: 600px;
+    height: 50px;
+    margin-left: 350px;
+    background-color: green;
+  }
+}
