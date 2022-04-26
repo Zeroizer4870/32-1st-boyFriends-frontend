@@ -5,6 +5,8 @@ import Product from './Product/Product';
 import '../ProductList/ProductList.scss';
 
 function ProductList() {
+  const mockArr = [0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11];
+
   return (
     <div className="ProductList">
       <div className="contentWrapper">
@@ -16,17 +18,9 @@ function ProductList() {
         <main>
           <div className="categoryList">
             <ul className="products">
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
-              <Product />
+              {mockArr.map(x => (
+                <Product key={x} />
+              ))}
             </ul>
           </div>
         </main>
