@@ -1,5 +1,6 @@
 import React from 'react';
 import CartInfoBox from './CartInfoBox/CartInfoBox';
+import CartDefault from './CartDefault/CartDefault';
 import './Cart.scss';
 
 export default function Cart() {
