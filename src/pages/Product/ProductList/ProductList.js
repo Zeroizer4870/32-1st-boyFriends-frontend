@@ -5,26 +5,18 @@ import Product from './Product/Product';
 import '../ProductList/ProductList.scss';
 
 function ProductList() {
+  const [products, setProducts] = useState([]);
+
   useEffect(() => {
     fetch('http://localhost:3000/data/ProductListMock/ProductListMock.json')
       .then(res => res.json())
-      .then(result => console.log(result));
+      .then(result => setProducts(result));
   }, []);
 
-  const [product, setProduct] = useState({
-    id: 1,
-    name: '보이프렌즈',
-    price: 27000,
-    stock: 24,
-    img: 'images/productListMock/product1.png',
-    reviewCount: 421,
-    reputation: 4.2,
-  });
-
-  let testArr = [];
-  for (let i = 0; i < 50; i++) {
-    testArr.push(i);
-  }
+  // let testArr = [];
+  // for (let i = 0; i < 50; i++) {
+  //   testArr.push(i);
+  // }
 
   return (
     <div className="ProductList">
@@ -37,8 +29,8 @@ function ProductList() {
         <main>
           <div className="categoryList">
             <ul className="products">
-              {testArr.map(x => (
-                <Product product={product} key={x} />
+              {products.map((product, index) => (
+                <Product product={product} key={index} />
               ))}
             </ul>
           </div>

@@ -4,6 +4,7 @@ import ProductStatus from './ProductStatus/ProductStatus';
 import '../Product/Product.scss';
 
 function Product({ product }) {
+  console.log(product);
   return (
     <li className="product">
       <ProductInfo product={product} />
