@@ -22,7 +22,7 @@ function ProductList() {
     <div className="ProductList">
       <div className="contentWrapper">
         <div className="navContent">
-          <ProductNavTab />
+          <ProductNavTab product={products} />
           <ProductFilterTab />
         </div>
         {/* 메인 카테고리 리스트 */}

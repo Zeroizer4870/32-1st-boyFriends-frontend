@@ -24,19 +24,22 @@ a {
     }
   }
 
-  strong {
+  .productContet {
     margin-top: 14px;
-    font-size: 13px;
-    font-weight: 800;
-  }
-  .price {
-    margin-top: 3px;
-    font-size: 13px;
-    font-weight: 800;
-  }
 
-  p {
-    margin-top: 10px;
-    font-size: 10px;
+    strong {
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .price {
+      margin-top: 3px;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    p {
+      margin-top: 10px;
+      font-size: 10px;
+    }
   }
 }

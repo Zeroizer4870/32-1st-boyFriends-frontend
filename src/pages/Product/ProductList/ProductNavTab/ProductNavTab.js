@@ -1,7 +1,7 @@
 import React from 'react';
 import '../ProductNavTab/ProductNavTab.scss';
 
-function ProductNavTab() {
+function ProductNavTab({ product }) {
   return (
     <nav className="categoryWrapper">
       <div className="categoryNav">
@@ -9,13 +9,13 @@ function ProductNavTab() {
         <div>
           <ul className="categoryTop">
             <li>
-              <a href="/">홈</a>
+              <a href="/">홈 ></a>
             </li>
             <li>
-              <a href="/">토이</a>
+              <a href="/">토이 ></a>
             </li>
             <li>
-              <a href="/">중대형 인형(64개)</a>
+              <a href="/category">중대형 인형 ({product.length}개)</a>
             </li>
           </ul>
         </div>
