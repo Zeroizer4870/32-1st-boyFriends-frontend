@@ -17,10 +17,24 @@ function ProductFilterTab() {
           </li>
         </ul>
         <div className="filterView">
+          <div className="selectOption">
+            <select>
+              <option>20개씩 보기</option>
+              <option selected>40개씩 보기</option>
+              <option>60개씩 보기</option>
+              <option>80개씩 보기</option>
+            </select>
+          </div>
           <div className="changeView">
-            <input type="button" />
-            <input type="button" />
-            <input type="button" />
+            <button type="button">
+              <i className="fa-solid fa-table-list" />
+            </button>
+            <button type="button">
+              <i className="fa-solid fa-border-all" />
+            </button>
+            <button type="button">
+              <i className="fa-solid fa-table-columns" />
+            </button>
           </div>
         </div>
       </div>

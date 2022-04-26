@@ -7,6 +7,7 @@
   .filterTab {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 1280px;
     margin-top: 10px;
 
@@ -27,6 +28,33 @@
             cursor: pointer;
           }
         }
+      }
+    }
+  }
+
+  .filterView {
+    display: flex;
+    align-items: center;
+
+    .selectOption {
+      select {
+        border: none;
+        padding: 5px 5px;
+        margin-right: 20px;
+        text-align: center;
+      }
+    }
+
+    button {
+      border: 1px solid #e0e0e0;
+      background-color: transparent;
+      padding: 5px;
+
+      &:hover {
+        cursor: pointer;
+      }
+      i {
+        color: $secondryFontColor;
       }
     }
   }
