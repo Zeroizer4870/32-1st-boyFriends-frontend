@@ -1,43 +1,124 @@
 main {
   display: grid;
-}
-section.캐러셀 {
-  display: grid;
-  grid-template-columns: 50px 1fr 50px;
-  grid-template-rows: 100px 1fr 1fr;
-  background-color: blue;
-  justify-self: center;
-  overflow: hidden;
-  width: 500px;
-}
-article.carCOm {
-  width: 500px;
-  display: inherit;
-  background-color: red;
-}
-.상품1 {
-  width: 500px;
-}
+  grid-template-columns: 1fr 1280px 1fr;
+  grid-template-rows: 767px repeat(8, 700px);
+  grid-row-gap: 200px;
 
-h4 {
-  grid-column: 1/4;
-  grid-row: 1/2;
-}
+  header {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    overflow: hidden;
 
-button.이전 {
-  grid-column: 1/2;
-  grid-row: 2/3;
-  z-index: 90;
-  opacity: 50%;
-}
+    .headerCardWrap {
+      display: flex;
 
-button.다음 {
-  grid-column: 3/4;
-  grid-row: 2/3;
-  z-index: 90;
-  opacity: 50%;
-}
-.center {
-  grid-column: 1/4;
-  display: flex;
+      .imgTest {
+        position: relative;
+        width: 100vw;
+      }
+
+      .testP {
+        position: absolute;
+        top: 200px;
+        left: 20px;
+      }
+    }
+
+    .btnWrap {
+      .prevBtn {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        z-index: 90;
+        opacity: 50%;
+      }
+
+      .nextBtn {
+        grid-column: 3/4;
+        grid-row: 2/3;
+        z-index: 90;
+        opacity: 50%;
+      }
+    }
+  }
+
+  .주목할만한소식 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: center;
+    width: 1280px;
+    overflow: hidden;
+
+    .주title {
+      display: flex;
+      align-items: center;
+      justify-self: center;
+      h1 {
+        font-size: 30px;
+      }
+    }
+
+    .center {
+      display: flex;
+      justify-items: center;
+
+      article {
+        width: 456px;
+        color: black;
+      }
+    }
+  }
+  .특별함을담아 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    justify-self: center;
+    display: grid;
+    width: 1280px;
+    overflow: hidden;
+    background-color: blue;
+
+    .주title {
+      margin: 10px 0px;
+      justify-self: center;
+      h1 {
+        font-size: 30px;
+      }
+    }
+
+    .center {
+      display: flex;
+      justify-content: space-between;
+
+      article {
+        color: white;
+      }
+    }
+  }
+
+  .선물하기좋은 {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    justify-self: center;
+    display: grid;
+    width: 1280px;
+    overflow: hidden;
+    background-color: blue;
+
+    .주title {
+      width: 100%;
+      justify-self: center;
+      h1 {
+        font-size: 30px;
+      }
+    }
+
+    .center {
+      display: flex;
+      justify-content: space-between;
+
+      article {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
 }
