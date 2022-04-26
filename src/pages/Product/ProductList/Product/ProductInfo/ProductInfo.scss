@@ -1,6 +1,6 @@
 @import '/src/styles/variables.scss';
 
-a {
+.linkWrapper {
   position: relative;
   text-decoration: none;
   color: black;
@@ -31,10 +31,14 @@ a {
       font-size: 13px;
       font-weight: 800;
     }
-    .price {
-      margin-top: 3px;
-      font-size: 13px;
-      font-weight: 800;
+
+    div {
+      margin-top: 12px;
+
+      .price {
+        font-size: 13px;
+        font-weight: 800;
+      }
     }
 
     p {

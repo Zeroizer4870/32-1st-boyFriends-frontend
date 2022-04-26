@@ -13,11 +13,6 @@ function ProductList() {
       .then(result => setProducts(result));
   }, []);
 
-  // let testArr = [];
-  // for (let i = 0; i < 50; i++) {
-  //   testArr.push(i);
-  // }
-
   return (
     <div className="ProductList">
       <div className="contentWrapper">

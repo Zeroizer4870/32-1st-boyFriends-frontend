@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../ProductNavTab/ProductNavTab.scss';
 
 function ProductNavTab({ product }) {
@@ -9,13 +10,13 @@ function ProductNavTab({ product }) {
         <div>
           <ul className="categoryTop">
             <li>
-              <a href="/">홈 ></a>
+              <Link to="/">홈</Link>
             </li>
             <li>
-              <a href="/">토이 ></a>
+              <Link to="/category">토이</Link>
             </li>
             <li>
-              <a href="/category">중대형 인형 ({product.length}개)</a>
+              <Link to="/category">중대형 인형 ({product.length}개)</Link>
             </li>
           </ul>
         </div>
