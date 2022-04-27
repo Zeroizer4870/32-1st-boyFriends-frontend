@@ -12,9 +12,9 @@ function Nav() {
             <Link to="#">보이쇼핑</Link>
           </div>
           <div className="upperRight">
-            <Link to="#">마이페이지</Link>
-            <Link to="#">장바구니</Link>
-            <Link to="#">user</Link>
+            <Link to="./user/signin">로그인</Link>
+            <Link to="./user/signup">회원가입</Link>
+            <Link to="./cart">장바구니</Link>
           </div>
         </div>
       </div>
@@ -23,9 +23,10 @@ function Nav() {
           <div className="logoLeft">
             <button className="logoLike">좋아요 238,287</button>
           </div>
-          <Link to="#" className="logoCenter">
-            BOY FRIENDS
+          <Link to="/">
+            <img alt="logo" className="logoCenter" src="/images/logo.png" />
           </Link>
+
           <div className="logoRight">
             <input
               type="text"
@@ -42,35 +43,35 @@ function Nav() {
         <div id="menu">
           <ul className="mainMenu">
             <li>
-              <Link to="#">토이</Link>
+              <Link to="./toy">토이</Link>
               <ul className="subMenu">
                 <li>
-                  <Link to="#">중대형 인형</Link>
+                  <Link to="./toy/bigtoy">중대형 인형</Link>
                 </li>
                 <li>
-                  <Link to="#">미니 인형</Link>
+                  <Link to="./toy/smalltoy">미니 인형</Link>
                 </li>
               </ul>
             </li>
             <li>
-              <Link to="#">옷</Link>
+              <Link to="./cloth">옷</Link>
               <ul className="subMenu">
                 <li>
-                  <Link to="#">반팔 의류</Link>
+                  <Link to="./cloth/shortsleeve">반팔 의류</Link>
                 </li>
                 <li>
-                  <Link to="#">긴팔 의류</Link>
+                  <Link to="./cloth/longsleeve">긴팔 의류</Link>
                 </li>
               </ul>
             </li>
             <li>
-              <Link to="#">디지털</Link>
+              <Link to="./digital">디지털</Link>
               <ul className="subMenu">
                 <li>
-                  <Link to="#">폰 케이스</Link>
+                  <Link to="./digital/phonecase">폰 케이스</Link>
                 </li>
                 <li>
-                  <Link to="#">소형 가전</Link>
+                  <Link to="./digital/electronic">소형 가전</Link>
                 </li>
               </ul>
             </li>
