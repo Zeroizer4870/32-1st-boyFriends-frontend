@@ -3,7 +3,7 @@ import './CartDefault.scss';
 
 export default function CartDefault() {
   return (
-    <div className="defaultBack">
+    <div className="cartDefault">
       <div className="defaultText">
         <div className="basketDiv">
           <span className="basket">

@@ -1,22 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import CartInfoBox from './CartInfoBox/CartInfoBox';
 import CartDefault from './CartDefault/CartDefault';
 import './Cart.scss';
 
 export default function Cart() {
+  const [infoBox, setInfoBox] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3000/data/cartData.json', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => {
+        setInfoBox(data);
+      });
+  }, []);
   return (
-    <main>
+    <main className="cart">
       <div className="cartNav">
         <div>
-          <span className="normalDeli">일반배송 1</span> | 지정배송 0
+          <span className="normalDeli">일반배송 0</span> | 지정배송 0
         </div>
         <div className=" ingStatus">
-          <span className="basketBold">장바구니</span> {'>'} 주문/결제 {'>'}{' '}
+          <span className="basketBold">장바구니</span> {'>'} 주문/결제 {'>'}
           완료
         </div>
       </div>
-      <CartInfoBox />
-      {/* <CartDefault /> */}
+      <CartDefault />
+      <CartInfoBox infoBox={infoBox} />
     </main>
   );
 }

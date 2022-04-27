@@ -10,7 +10,8 @@ function Router() {
     <BrowserRouter>
       <Nav />
       <Routes>
-        <Route path="/" element={<Cart />} />;
+        <Route path="/" element={<Main />} />;
+        <Route path="/cartPage" element={<Cart />} />;
       </Routes>
       <Footer />
     </BrowserRouter>

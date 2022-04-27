@@ -1,12 +1,12 @@
 @import '/src/styles/variables.scss';
 
-.selectNav {
-  width: 1280px;
-  height: 64px;
-  margin: 0 auto;
+.cartInfoBox {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 1280px;
+  height: 64px;
+  margin: 0 auto;
   border-top: 1px solid #ececef;
 
   .allSelect {
@@ -15,32 +15,32 @@
   }
 
   .deleteAll {
-    font-size: 14px;
     width: 96px;
     height: 34px;
     background-color: $MainBackground;
     border: 1px solid #ececef;
+    font-size: 14px;
+  }
+
+  .cartInfo {
+    width: 1280px;
+    height: 500px;
+    margin: auto;
+    background-color: #f4f4f4;
   }
 }
-
-.cartInfo {
-  width: 1280px;
-  height: 311px;
-  margin: auto;
-  background-color: #f4f4f4;
-}
-
-.cartInfoBox {
-  background-color: $MainBackground;
-  width: 1200px;
-  height: 260px;
+.cartInfoMap {
   position: relative;
   top: 25px;
+  width: 1200px;
+  height: 450px;
   margin: auto;
+  background-color: $MainBackground;
   border-radius: 10px;
   box-shadow: 0px 3px 9px rgba(103, 98, 98, 0.05);
+  overflow: scroll;
 
-  .infoFirst {
+  .bfLogo {
     height: 30px;
     padding-top: 20px;
     padding-left: 10px;
@@ -49,17 +49,17 @@
     font-weight: bold;
   }
 
-  .infoSecond {
-    height: 140px;
+  .infoMapBox {
     display: flex;
     justify-content: space-between;
     position: relative;
+    justify-content: center;
     top: 25px;
-    border-top: 3px solid black;
-    border-bottom: 1px solid #cacbd4;
+    height: 140px;
     margin-left: 30px;
     margin-right: 30px;
-    justify-content: center;
+    border-top: 3px solid black;
+    border-bottom: 1px solid #cacbd4;
 
     .productSelect {
       margin-top: 60px;
@@ -90,30 +90,71 @@
       }
     }
     .sizeBox {
+      flex: 1;
       border-left: 1px solid #ececef;
       border-right: 1px solid #ececef;
-      flex: 1;
-      padding-top: 23px;
-      padding-left: 20px;
+      font-size: 14px;
+      font-weight: bold;
 
-      .sizeText {
-        font-size: 14px;
+      .sizeS {
+        padding: 15px 0px 15px 15px;
+        border-bottom: 1px solid #ececef;
+      }
+      .sizeM {
+        padding: 15px 0px 15px 15px;
+        border-bottom: 1px solid #ececef;
+      }
+      .sizeL {
+        padding: 15px 0px 15px 15px;
       }
 
-      .modifyBtn {
-        width: 70px;
-        height: 28px;
-        margin-top: 15px;
-        font-size: 12px;
-        background-color: white;
-        border: 1px solid gainsboro;
+      .quantityBtnS {
+        position: relative;
+        left: 80px;
+
+        .quantityS {
+          margin: 0px 5px;
+        }
+
+        .quantityMinusS,
+        .quantityPlusS {
+          font-size: 12px;
+        }
+      }
+
+      .quantityBtnM {
+        position: relative;
+        left: 75px;
+
+        .quantityM {
+          margin: 0px 5px;
+        }
+
+        .quantityMinusM,
+        .quantityPlusM {
+          font-size: 12px;
+        }
+      }
+
+      .quantityBtnL {
+        position: relative;
+        left: 82px;
+
+        .quantityL {
+          margin: 0px 5px;
+        }
+
+        .quantityMinusL,
+        .quantityPlusL {
+          font-size: 12px;
+        }
       }
     }
 
     .priceBox {
       flex: 1;
-      text-align: center;
       margin-top: 23px;
+      text-align: center;
 
       .productPriceText {
         font-size: 12px;
@@ -121,10 +162,10 @@
       }
 
       .productPrice {
-        font-size: 15px;
-        font-weight: 800;
         margin-top: 10px;
         margin-bottom: 10px;
+        font-size: 15px;
+        font-weight: 800;
       }
 
       .orderBtn {
@@ -133,14 +174,15 @@
         color: $green;
         background-color: white;
         border: 1px solid $green;
+        border-radius: 10px;
       }
     }
 
     .delivery {
       flex: 1;
-      text-align: center;
       border-left: 1px solid gainsboro;
       padding-top: 23px;
+      text-align: center;
 
       .deliveryPriceText {
         font-size: 12px;
@@ -148,15 +190,15 @@
       }
 
       .deliveryPrice {
-        font-size: 15px;
-        font-weight: 800;
         margin-top: 10px;
         margin-bottom: 10px;
+        font-size: 15px;
+        font-weight: 800;
       }
 
       .deliveryFree {
-        font-size: 12px;
         color: #cacbd4;
+        font-size: 12px;
       }
     }
   }
@@ -167,17 +209,17 @@
   }
 
   .pants {
+    float: left;
     width: 90px;
     height: 90px;
-    float: left;
   }
 }
 
 .total {
-  width: 1280px;
   display: flex;
   justify-content: center;
   align-items: cneter;
+  width: 1280px;
   margin: 50px auto;
 
   .sizeFour {
@@ -185,23 +227,24 @@
     font-weight: 800;
   }
 
-  .sizeFourDcText {
-    font-size: 14px;
+  .sizeFourSaleText {
     padding-right: 20px;
+    font-size: 14px;
     font-weight: 800;
   }
 
   .sizeEight {
+    margin-top: 10px;
     font-size: 18px;
     font-weight: 800;
-    margin-top: 10px;
   }
 
-  .sizeEightDc {
-    text-align: left;
-    font-weight: 800;
-    color: red;
+  .sizeEightSale {
     margin-top: 10px;
+    color: red;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 800;
   }
 
   .plus,
@@ -213,20 +256,20 @@
   }
 
   .totalPriceText {
-    border-left: 1px solid gray;
     padding-left: 20px;
     padding-top: 10px;
+    border-left: 1px solid gray;
     font-size: 16px;
     font-weight: 800;
   }
 
   .totalPrice {
-    font-size: 18px;
-    color: $green;
-    font-weight: 800;
     padding-top: 10px;
     margin-left: 30px;
     margin-right: 30px;
+    color: $green;
+    font-size: 18px;
+    font-weight: 800;
   }
 
   .selectPrice,
@@ -244,10 +287,10 @@
     width: 600px;
     height: 50px;
     margin-left: 350px;
+    color: white;
     background-color: $green;
     border: 1px solid white;
     border-radius: 10px;
     font-size: 18px;
-    color: white;
   }
 }
