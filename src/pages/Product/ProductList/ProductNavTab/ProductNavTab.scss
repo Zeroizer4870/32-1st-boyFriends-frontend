@@ -1,27 +1,29 @@
 @import '/src//styles/variables.scss';
 
-.categoryWrapper {
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-
-  .categoryNav {
-    width: 1280px;
+.productNavTab {
+  .categoryWrapper {
+    width: 100vw;
     display: flex;
-    justify-content: space-between;
-    margin: 50px 0 13px;
+    justify-content: center;
 
-    strong {
-      font-size: 20px;
-      font-weight: 700;
-    }
-
-    ul {
+    .categoryNav {
+      width: 1280px;
       display: flex;
+      justify-content: space-between;
+      margin: 50px 0 13px;
 
-      li {
-        font-size: 12px;
-        padding-right: 10px;
+      strong {
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      ul {
+        display: flex;
+
+        li {
+          font-size: 12px;
+          padding-right: 10px;
+        }
       }
     }
   }

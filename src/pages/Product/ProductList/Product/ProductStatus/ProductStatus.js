@@ -1,23 +1,23 @@
 import React from 'react';
 import '../ProductStatus/ProductStatus.scss';
 
-function ProductStatus({ product }) {
+function ProductStatus({ products }) {
   return (
-    <>
+    <div className="productStatus">
       <div className="reviewTab">
         <div className="review">
-          <span>리뷰</span>
-          <em>{product.reviewCount}</em>
+          <span className="reviewTitle">리뷰</span>
+          <em className="reviewCount">{products.reviewCount}</em>
         </div>
         <div className="reputation">
-          <span>평점</span>
-          <em>{product.reputation}/5</em>
+          <span className="reputationTitle">평점</span>
+          <em className="reputationCount">{products.reputation}/5</em>
         </div>
       </div>
       <div className="currentStock">
-        <span>sold out</span>
+        <span className="stockOut">sold out</span>
       </div>
-    </>
+    </div>
   );
 }
 

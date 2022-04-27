@@ -3,16 +3,21 @@ import Filterview from './FilterView/Filterview';
 import FilterSort from './FilterSort/FilterSort';
 import '../ProductFilterTab/ProductFilterTab.scss';
 
-function ProductFilterTab({ sortProducts, sortReview, sortReputation }) {
+function ProductFilterTab({
+  sortProductsPrice,
+  sortReview,
+  sortReputation,
+  isTransform,
+}) {
   return (
-    <div className="ProductFilterTab">
+    <div className="productFilterTab">
       <div className="filterTab">
         <FilterSort
-          sortProducts={sortProducts}
+          sortProductsPrice={sortProductsPrice}
           sortReview={sortReview}
           sortReputation={sortReputation}
         />
-        <Filterview />
+        <Filterview isTransform={isTransform} />
       </div>
     </div>
   );

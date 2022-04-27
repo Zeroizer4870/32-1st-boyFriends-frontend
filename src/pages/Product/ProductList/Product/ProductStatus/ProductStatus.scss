@@ -1,44 +1,47 @@
 @import '/src/styles/variables.scss';
 
-.reviewTab {
-  display: flex;
-  margin-top: 20px;
-  font-size: 10px;
+.productStatus {
+  .reviewTab {
+    display: flex;
 
-  .review {
-    padding-right: 10px;
+    margin-top: 20px;
+    font-size: 10px;
 
-    span {
-      color: #8f8f8f;
-      padding-right: 5px;
+    .review {
+      padding-right: 10px;
+
+      .reviewTitle {
+        color: #8f8f8f;
+        padding-right: 5px;
+      }
+
+      .reviewCount {
+        color: #6b90dc;
+        font-weight: 600;
+      }
     }
 
-    em {
-      color: #6b90dc;
-      font-weight: 600;
+    .reputation {
+      .reputationTitle {
+        color: #8f8f8f;
+        padding-right: 5px;
+      }
+
+      .reputationCount {
+        color: #6b90dc;
+        font-weight: 600;
+      }
     }
   }
 
-  .reputation {
-    span {
-      color: #8f8f8f;
-      padding-right: 5px;
+  .currentStock {
+    margin-top: 16px;
+    font-size: 12px;
+
+    .stockOut {
+      padding: 2px 7px;
+      background-color: $soldOutColor;
+      color: white;
     }
-
-    em {
-      color: #6b90dc;
-      font-weight: 600;
-    }
-  }
-}
-
-.currentStock {
-  margin-top: 16px;
-  font-size: 12px;
-
-  span {
-    padding: 2px 7px;
-    background-color: $soldOutColor;
-    color: white;
   }
 }

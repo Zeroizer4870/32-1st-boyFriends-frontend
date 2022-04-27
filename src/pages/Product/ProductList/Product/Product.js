@@ -3,11 +3,11 @@ import ProductInfo from './ProductInfo/ProductInfo';
 import ProductStatus from './ProductStatus/ProductStatus';
 import '../Product/Product.scss';
 
-function Product({ product }) {
+function Product({ products }) {
   return (
     <li className="product">
-      <ProductInfo product={product} />
-      <ProductStatus product={product} />
+      <ProductInfo products={products} />
+      <ProductStatus products={products} />
     </li>
   );
 }

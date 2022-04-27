@@ -1,14 +1,16 @@
-main {
-  display: flex;
-  justify-content: center;
+.productList {
+  .categoryMain {
+    display: flex;
+    justify-content: center;
 
-  .categoryList {
-    width: 1280px;
+    .categoryList {
+      width: 1280px;
 
-    ul {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(15%, 1fr));
-      column-gap: 30px;
+      .products {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(15%, 1fr));
+        column-gap: 30px;
+      }
     }
   }
 }

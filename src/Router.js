@@ -8,10 +8,12 @@ import ProductList from './pages/Product/ProductList/ProductList';
 function Router() {
   return (
     <BrowserRouter>
+      <Nav />
       <Routes>
         <Route path="/" element={<Main />} />;
         <Route path="/category" element={<ProductList />} />;
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

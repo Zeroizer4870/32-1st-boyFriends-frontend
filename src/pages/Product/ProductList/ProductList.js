@@ -10,7 +10,9 @@ function ProductList() {
   useEffect(() => {
     fetch('http://localhost:3000/data/ProductListMock/ProductListMock.json')
       .then(res => res.json())
-      .then(result => setProducts(result));
+      .then(result => {
+        setProducts(result);
+      });
   }, []);
 
   const sortProductsPrice = () => {
@@ -31,23 +33,26 @@ function ProductList() {
     setProducts(newProducts);
   };
 
+  const isTransform = () => {};
+
   return (
-    <div className="ProductList">
+    <div className="productList">
       <div className="contentWrapper">
         <div className="navContent">
-          <ProductNavTab product={products} />
+          <ProductNavTab products={products} />
           <ProductFilterTab
-            sortProducts={sortProductsPrice}
+            sortProductsPrice={sortProductsPrice}
             sortReputation={sortReputation}
             sortReview={sortReview}
+            isTransform={isTransform}
           />
         </div>
-        {/* 메인 카테고리 리스트 */}
-        <main>
+
+        <main className="categoryMain">
           <div className="categoryList">
             <ul className="products">
-              {products.map((product, index) => (
-                <Product product={product} key={index} />
+              {products.map((products, index) => (
+                <Product products={products} key={index} />
               ))}
             </ul>
           </div>
