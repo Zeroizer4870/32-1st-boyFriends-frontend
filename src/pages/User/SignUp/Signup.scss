@@ -11,42 +11,81 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 600px;
+    width: 640px;
 
     .signUpWrapper {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 100%;
-      padding: 50px;
-      background-color: lightblue;
+      padding: 100px;
+      // background-color: lightblue;
+      border-bottom: 2px solid black;
 
       .signUp {
         color: black;
         font-size: 30px;
+        font-weight: bold;
       }
     }
     .form {
-      font-size: 30px;
+      font-size: 14px;
+      font-weight: bold;
       display: flex;
-      // justify-content: space-between;
-      // align-items: center;
+      justify-content: flex-start;
+      align-items: center;
       flex-direction: column;
       width: 100%;
-      background-color: bisque;
+      // background-color: bisque;
+
       .contentWrapper {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
         width: 100%;
-        padding: 30px;
+        // padding: 2px;
         .contentLabel {
+          width: 200px;
           padding: 30px 30px;
         }
         input {
-          width: 300px;
-          padding: 10px;
+          width: 332px;
+          height: 44px;
+          padding: 14px;
+          border: 1px solid rgb(230, 230, 230);
+          border-radius: 3px;
+          &:focus {
+            outline: 1px solid black;
+          }
+          &::placeholder {
+            color: rgb(200, 200, 200);
+          }
         }
+        .gender {
+          width: 25px;
+          margin-right: 10px;
+          margin-left: 50px;
+        }
+        .birthWrapper {
+          display: flex;
+
+          width: 332px;
+          .birth {
+            width: 33%;
+            text-align: center;
+          }
+        }
+      }
+      .submit {
+        width: 250px;
+        height: 50px;
+        margin: 50px 0px;
+        border: none;
+        background-color: $green;
+        border-radius: 3px;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
       }
     }
   }

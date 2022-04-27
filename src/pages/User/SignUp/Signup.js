@@ -65,16 +65,33 @@ function SignUp() {
           </div>
           <div className="contentWrapper">
             <label className="contentLabel">성별</label>
-            <input />
+            <input type="radio" name="gender" className="gender" />
+            <span>남자</span>
+            <input type="radio" name="gender" className="gender" />
+            <span>여자</span>
           </div>
           <div className="contentWrapper">
             <label className="contentLabel">생년월일</label>
-            <input
-              type="number"
-              name="birth"
-              className="birth"
-              placeholder=""
-            />
+            <div className="birthWrapper">
+              <input
+                type="number"
+                name="birth"
+                className="birth"
+                placeholder="YYYY"
+              />
+              <input
+                type="number"
+                name="birth"
+                className="birth"
+                placeholder="MM"
+              />
+              <input
+                type="number"
+                name="birth"
+                className="birth"
+                placeholder="DD"
+              />
+            </div>
           </div>
           <button className="submit">가입하기</button>
         </form>
