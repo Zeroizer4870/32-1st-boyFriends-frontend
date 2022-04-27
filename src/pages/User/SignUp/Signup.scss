@@ -1,3 +1,53 @@
-h1 {
-  font-size: 40px;
+@import '../../../styles/variables.scss';
+
+#signUp {
+  width: 1280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+
+    .signUpWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 50px;
+      background-color: lightblue;
+
+      .signUp {
+        color: black;
+        font-size: 30px;
+      }
+    }
+    .form {
+      font-size: 30px;
+      display: flex;
+      // justify-content: space-between;
+      // align-items: center;
+      flex-direction: column;
+      width: 100%;
+      background-color: bisque;
+      .contentWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 30px;
+        .contentLabel {
+          padding: 30px 30px;
+        }
+        input {
+          width: 300px;
+          padding: 10px;
+        }
+      }
+    }
+  }
 }
