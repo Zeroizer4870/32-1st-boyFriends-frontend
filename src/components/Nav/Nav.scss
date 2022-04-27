@@ -50,7 +50,7 @@
         align-items: center;
         width: 220px;
 
-        a {
+        .logoLike {
           padding: 10px 25px;
           border: 1px solid black;
           border-radius: 50px;
@@ -58,6 +58,7 @@
           background-color: black;
           text-decoration: none;
           font-size: 12px;
+          cursor: pointer;
         }
       }
 
@@ -90,12 +91,18 @@
             outline: none;
           }
         }
-
-        .fa-solid {
+        .logoRightInputSearch {
           position: absolute;
           top: 15px;
-          right: 20px;
+          right: 10px;
+          border: none;
+          background-color: transparent;
+          cursor: pointer;
         }
+
+        // .fa-solid {
+        //
+        // }
       }
     }
   }

@@ -12,7 +12,6 @@ function Nav() {
             <Link to="#">보이쇼핑</Link>
           </div>
           <div className="upperRight">
-            <Link to="#">찜한 스토어</Link>
             <Link to="#">마이페이지</Link>
             <Link to="#">장바구니</Link>
             <Link to="#">user</Link>
@@ -22,7 +21,7 @@ function Nav() {
       <div className="logoWrapper">
         <div id="logo">
           <div className="logoLeft">
-            <Link to="#">찜하기 238,287</Link>
+            <button className="logoLike">좋아요 238,287</button>
           </div>
           <Link to="#" className="logoCenter">
             BOY FRIENDS
@@ -33,7 +32,9 @@ function Nav() {
               className="logoRightInput"
               placeholder="검색어를 입력해보세요"
             />
-            <i className="fa-solid fa-magnifying-glass" />
+            <button className="logoRightInputSearch">
+              <i className="fa-solid fa-magnifying-glass" />
+            </button>
           </div>
         </div>
       </div>
@@ -44,10 +45,10 @@ function Nav() {
               <Link to="#">토이</Link>
               <ul className="subMenu">
                 <li>
-                  <Link to="#">Big Toy</Link>
+                  <Link to="#">중대형 인형</Link>
                 </li>
                 <li>
-                  <Link to="#">Small Toy</Link>
+                  <Link to="#">미니 인형</Link>
                 </li>
               </ul>
             </li>
@@ -55,10 +56,10 @@ function Nav() {
               <Link to="#">옷</Link>
               <ul className="subMenu">
                 <li>
-                  <Link to="#">숏 슬리브</Link>
+                  <Link to="#">반팔 의류</Link>
                 </li>
                 <li>
-                  <Link to="#">롱 슬리브</Link>
+                  <Link to="#">긴팔 의류</Link>
                 </li>
               </ul>
             </li>
@@ -69,7 +70,7 @@ function Nav() {
                   <Link to="#">폰 케이스</Link>
                 </li>
                 <li>
-                  <Link to="#">small appliance</Link>
+                  <Link to="#">소형 가전</Link>
                 </li>
               </ul>
             </li>
