@@ -13,13 +13,21 @@ function ProductList() {
       .then(result => setProducts(result));
   }, []);
 
-  const sortProducts = e => {
-    console.log(e.target);
+  const sortProductsPrice = () => {
     let newProducts = [...products];
-    newProducts.sort((a, b) => {
-      return a - b;
-    });
+    newProducts.sort((a, b) => a.price - b.price);
+    setProducts(newProducts);
+  };
 
+  const sortReview = () => {
+    let newProducts = [...products];
+    newProducts.sort((a, b) => b.reviewCount - a.reviewCount);
+    setProducts(newProducts);
+  };
+
+  const sortReputation = () => {
+    let newProducts = [...products];
+    newProducts.sort((a, b) => b.reputation - a.reputation);
     setProducts(newProducts);
   };
 
@@ -28,7 +36,11 @@ function ProductList() {
       <div className="contentWrapper">
         <div className="navContent">
           <ProductNavTab product={products} />
-          <ProductFilterTab sortProducts={sortProducts} />
+          <ProductFilterTab
+            sortProducts={sortProductsPrice}
+            sortReputation={sortReputation}
+            sortReview={sortReview}
+          />
         </div>
         {/* 메인 카테고리 리스트 */}
         <main>
