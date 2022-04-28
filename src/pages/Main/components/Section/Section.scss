@@ -1,0 +1,109 @@
+.section {
+  grid-column: 1/4;
+  grid-row: 2/3;
+  justify-self: center;
+  width: 1280px;
+  overflow: hidden;
+
+  .sectionTitle {
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    font-size: 50px;
+    font-weight: bold;
+  }
+
+  .cardList {
+    display: flex;
+    .card {
+      display: grid;
+      grid-template-rows: 1fr repeat(3, 0.1fr);
+      grid-row-gap: 30px;
+
+      .cardImgWrap {
+        width: 427px;
+        text-align: center;
+        .cardImg {
+          width: 93%;
+          border-radius: 10%;
+        }
+      }
+      .cardTitle {
+        font-size: 30px;
+        height: 60px;
+        padding: 0 13px;
+      }
+      .cardDetailWrap {
+        display: flex;
+        align-items: center;
+        padding: 0 13px;
+
+        .detailImg {
+          width: 20%;
+          border-radius: 25%;
+          margin-right: 20px;
+        }
+        .detailTitle {
+          color: red;
+        }
+
+        .detailContent {
+          color: blue;
+        }
+      }
+    }
+  }
+}
+
+.sectionZ {
+  grid-column: 1/4;
+  grid-row: 2/3;
+  position: relative;
+  background-color: transparent;
+  z-index: 90;
+
+  .prevBtn {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    border: 0;
+    background-color: transparent;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    align-self: center;
+    justify-self: left;
+    height: 50px;
+    opacity: 50%;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    i {
+      font-size: 40px;
+    }
+  }
+
+  .nextBtn {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    border: 0;
+    background-color: transparent;
+    grid-column: 3/4;
+    grid-row: 2/3;
+    align-self: center;
+    justify-self: right;
+    height: 50px;
+    opacity: 50%;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    i {
+      font-size: 40px;
+    }
+  }
+}

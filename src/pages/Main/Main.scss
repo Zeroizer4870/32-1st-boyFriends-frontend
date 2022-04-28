@@ -1,124 +1,252 @@
 main {
   display: grid;
-  grid-template-columns: 1fr 1280px 1fr;
-  grid-template-rows: 767px repeat(8, 700px);
-  grid-row-gap: 200px;
+  grid-template-columns: auto 1280px auto;
+  grid-template-rows: 767px 1fr repeat(3, 0.8fr);
+  row-gap: 100px;
 
-  header {
-    grid-column: 1/4;
-    grid-row: 1/2;
-    overflow: hidden;
+  // .새로나왔어요 {
+  //   grid-column: 2/3;
+  //   grid-row: 3/4;
+  //   justify-self: center;
+  //   width: 1280px;
+  //   overflow: hidden;
 
-    .headerCardWrap {
-      display: flex;
+  //   .주title {
+  //     display: flex;
+  //     justify-content: center;
+  //     margin-bottom: 50px;
+  //     h1 {
+  //       font-size: 30px;
+  //     }
+  //   }
 
-      .imgTest {
-        position: relative;
-        width: 100vw;
-      }
+  //   .cardList {
+  //     display: flex;
+  //     .carCOm {
+  //       display: grid;
+  //       grid-template-rows: 1fr repeat(3, 0.1fr);
+  //       grid-row-gap: 50px;
+  //       .imgTest {
+  //         text-align: center;
+  //         width: 25vw;
+  //         .mainImg {
+  //           width: 90%;
+  //           border-radius: 10%;
+  //         }
+  //       }
+  //       .mainCardTitle {
+  //         text-align: center;
+  //         font-size: 30px;
+  //         height: 60px;
+  //       }
+  //       .productDiv {
+  //         display: flex;
+  //         align-items: center;
 
-      .testP {
-        position: absolute;
-        top: 200px;
-        left: 20px;
-      }
-    }
+  //         .productImg {
+  //           width: 25%;
+  //           border-radius: 25%;
+  //         }
+  //         p {
+  //           color: red;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 
-    .btnWrap {
-      .prevBtn {
-        grid-column: 1/2;
-        grid-row: 2/3;
-        z-index: 90;
-        opacity: 50%;
-      }
+  // .이전2 {
+  //   border: 0;
+  //   background-color: transparent;
+  //   grid-column: 1/2;
+  //   grid-row: 3/4;
+  //   align-self: center;
+  //   justify-self: left;
+  //   height: 50px;
+  //   opacity: 50%;
+  //   margin-left: 50px;
+  //   i {
+  //     font-size: 40px;
+  //   }
+  // }
 
-      .nextBtn {
-        grid-column: 3/4;
-        grid-row: 2/3;
-        z-index: 90;
-        opacity: 50%;
-      }
-    }
-  }
+  // .다음2 {
+  //   border: 0;
+  //   background-color: transparent;
+  //   grid-column: 3/4;
+  //   grid-row: 3/4;
+  //   align-self: center;
+  //   justify-self: right;
+  //   height: 50px;
+  //   opacity: 50%;
+  //   margin-right: 50px;
 
-  .주목할만한소식 {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    justify-self: center;
-    width: 1280px;
-    overflow: hidden;
+  //   i {
+  //     font-size: 40px;
+  //   }
+  // }
 
-    .주title {
-      display: flex;
-      align-items: center;
-      justify-self: center;
-      h1 {
-        font-size: 30px;
-      }
-    }
+  // .특별함을담아 {
+  //   grid-column: 2/3;
+  //   grid-row: 4/5;
+  //   justify-self: center;
+  //   width: 1280px;
+  //   overflow: hidden;
 
-    .center {
-      display: flex;
-      justify-items: center;
+  //   .주title {
+  //     display: flex;
+  //     justify-content: center;
+  //     margin-bottom: 50px;
+  //     h1 {
+  //       font-size: 30px;
+  //     }
+  //   }
 
-      article {
-        width: 456px;
-        color: black;
-      }
-    }
-  }
-  .특별함을담아 {
-    grid-column: 2/3;
-    grid-row: 3/4;
-    justify-self: center;
-    display: grid;
-    width: 1280px;
-    overflow: hidden;
-    background-color: blue;
+  //   .cardList {
+  //     display: flex;
+  //     .carCOm {
+  //       display: grid;
+  //       grid-template-rows: 1fr repeat(3, 0.1fr);
+  //       grid-row-gap: 50px;
+  //       .imgTest {
+  //         text-align: center;
+  //         width: 25vw;
+  //         .mainImg {
+  //           width: 95%;
+  //           border-radius: 10%;
+  //         }
+  //       }
+  //       .mainCardTitle {
+  //         text-align: center;
+  //         font-size: 30px;
+  //         height: 60px;
+  //       }
+  //       .productDiv {
+  //         display: flex;
+  //         align-items: center;
 
-    .주title {
-      margin: 10px 0px;
-      justify-self: center;
-      h1 {
-        font-size: 30px;
-      }
-    }
+  //         .productImg {
+  //           width: 25%;
+  //           border-radius: 25%;
+  //         }
+  //         p {
+  //           color: red;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 
-    .center {
-      display: flex;
-      justify-content: space-between;
+  // .이전2 {
+  //   border: 0;
+  //   background-color: transparent;
+  //   grid-column: 1/2;
+  //   grid-row: 3/4;
+  //   align-self: center;
+  //   justify-self: left;
+  //   height: 50px;
+  //   opacity: 50%;
+  //   margin-left: 50px;
+  //   i {
+  //     font-size: 40px;
+  //   }
+  // }
 
-      article {
-        color: white;
-      }
-    }
-  }
+  // .다음2 {
+  //   border: 0;
+  //   background-color: transparent;
+  //   grid-column: 3/4;
+  //   grid-row: 3/4;
+  //   align-self: center;
+  //   justify-self: right;
+  //   height: 50px;
+  //   opacity: 50%;
+  //   margin-right: 50px;
 
-  .선물하기좋은 {
-    grid-column: 2/3;
-    grid-row: 4/5;
-    justify-self: center;
-    display: grid;
-    width: 1280px;
-    overflow: hidden;
-    background-color: blue;
+  //   i {
+  //     font-size: 40px;
+  //   }
+  // }
 
-    .주title {
-      width: 100%;
-      justify-self: center;
-      h1 {
-        font-size: 30px;
-      }
-    }
+  // .마음껏둘러보세요 {
+  //   grid-column: 2/3;
+  //   grid-row: 5/6;
+  //   justify-self: center;
+  //   width: 1280px;
+  //   overflow: hidden;
 
-    .center {
-      display: flex;
-      justify-content: space-between;
+  //   .주title {
+  //     display: flex;
+  //     justify-content: center;
+  //     margin-bottom: 50px;
+  //     h1 {
+  //       font-size: 30px;
+  //     }
+  //   }
 
-      article {
-        background-color: black;
-        color: white;
-      }
-    }
-  }
+  //   .cardList {
+  //     display: flex;
+  //     .carCOm {
+  //       display: grid;
+  //       grid-template-rows: 1fr repeat(3, 0.1fr);
+  //       grid-row-gap: 50px;
+  //       .imgTest {
+  //         text-align: center;
+  //         width: 25vw;
+  //         .mainImg {
+  //           width: 95%;
+  //           border-radius: 10%;
+  //         }
+  //       }
+  //       .mainCardTitle {
+  //         text-align: center;
+  //         font-size: 30px;
+  //         height: 60px;
+  //       }
+  //       .productDiv {
+  //         display: flex;
+  //         align-items: center;
+
+  //         .productImg {
+  //           width: 25%;
+  //           border-radius: 25%;
+  //         }
+  //         p {
+  //           color: red;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+
+  // .이전2 {
+  //   border: 0;
+  //   background-color: transparent;
+  //   grid-column: 1/2;
+  //   grid-row: 3/4;
+  //   align-self: center;
+  //   justify-self: left;
+  //   height: 50px;
+  //   opacity: 50%;
+  //   margin-left: 50px;
+  //   i {
+  //     font-size: 40px;
+  //   }
+  // }
+
+  // .다음2 {
+  //   border: 0;
+  //   background-color: transparent;
+  //   grid-column: 3/4;
+  //   grid-row: 3/4;
+  //   align-self: center;
+  //   justify-self: right;
+  //   height: 50px;
+  //   opacity: 50%;
+  //   margin-right: 50px;
+
+  //   i {
+  //     font-size: 40px;
+  //   }
+  // }
 }

@@ -7,7 +7,7 @@ import Footer from './components/Footer/Footer';
 function Router() {
   return (
     <BrowserRouter>
-      {/* <Nav /> */}
+      <Nav />
       <Routes>
         <Route path="/" element={<Main />} />;
       </Routes>

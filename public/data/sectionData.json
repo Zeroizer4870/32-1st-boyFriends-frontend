@@ -1,0 +1,109 @@
+[
+  {
+    "id": 0,
+    "title": "주목 할 만한 소식",
+    "content": [
+      {
+        "comment": "4.25 ~ 4.29라인프렌즈 신상위크 & 미니니 써니데이즈",
+        "src": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "items": [
+          {
+            "item": "OK",
+            "price": "22000원",
+            "percent": "20%",
+            "srcMiniTop": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+            "srcMiniBot": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg"
+          },
+          {
+            "item": "OK",
+            "price": "22000원",
+            "percent": "20%",
+            "srcMiniTop": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+            "srcMiniBot": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg"
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": 1,
+    "title": "새로 나왔어요",
+    "content": [
+      {
+        "comment": "몽글몽글 내 곁에 찾아온 포근함",
+        "src": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "items": [
+          {
+            "item": "OK",
+            "price": "33000원",
+            "percent": "30%",
+            "srcMiniTop": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+            "srcMiniBot": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg"
+          },
+          {
+            "item": "OK",
+            "price": "33000원",
+            "percent": "30%",
+            "srcMiniTop": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+            "srcMiniBot": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg"
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": 2,
+    "title": "#특별함을 담아",
+    "content": [
+      {
+        "comment": "와글와글 채우는 사랑스러움",
+        "src": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "items": [
+          {
+            "item": "OK",
+            "price": "44000원",
+            "percent": "40%",
+            "srcMiniTop": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+            "srcMiniBot": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg"
+          },
+          {
+            "item": "OK",
+            "price": "44000원",
+            "percent": "40%",
+            "srcMiniTop": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+            "srcMiniBot": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg"
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": 3,
+    "title": "마음껏 둘러보세요",
+    "content": [
+      {
+        "comment": "전제품 50% 할인",
+        "src": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "items": [
+          {
+            "item": "OK",
+            "price": "55000원",
+            "percent": "50%",
+            "srcMiniTop": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+            "srcMiniBot": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg"
+          },
+          {
+            "item": "OK",
+            "price": "55000원",
+            "percent": "50%",
+            "srcMiniTop": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+            "srcMiniBot": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg"
+          }
+        ]
+      }
+    ]
+  }
+]
