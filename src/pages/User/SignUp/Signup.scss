@@ -1,12 +1,20 @@
 @import '../../../styles/variables.scss';
 
-#signUp {
-  width: 1280px;
+.signUp {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  .red {
+    color: red;
+  }
+  .green {
+    color: $green;
+  }
+  .hidden {
+    visibility: hidden;
+  }
   .wrapper {
+    width: 1280px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,16 +25,24 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       width: 100%;
-      padding: 100px;
       // background-color: lightblue;
-      border-bottom: 2px solid black;
 
-      .signUp {
+      .signUpLogo {
         color: black;
         font-size: 30px;
         font-weight: bold;
+        margin: 50px;
       }
+    }
+    .signUpBar {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 30px;
+      padding: 15px;
+      border-bottom: 2px solid black;
     }
     .form {
       font-size: 14px;
@@ -36,7 +52,6 @@
       align-items: center;
       flex-direction: column;
       width: 100%;
-      // background-color: bisque;
 
       .contentWrapper {
         display: flex;
@@ -48,12 +63,23 @@
           width: 200px;
           padding: 30px 30px;
         }
+        .inputWrapper {
+          .check {
+            padding: 10px 0px;
+            font-size: 12px;
+          }
+        }
         input {
           width: 332px;
           height: 44px;
           padding: 14px;
           border: 1px solid rgb(230, 230, 230);
           border-radius: 3px;
+          &::-webkit-inner-spin-button,
+          ::-webkit-outer-spin-button {
+            appearance: none;
+          }
+
           &:focus {
             outline: 1px solid black;
           }
@@ -61,10 +87,15 @@
             color: rgb(200, 200, 200);
           }
         }
+
         .gender {
           width: 25px;
           margin-right: 10px;
           margin-left: 50px;
+        }
+        span {
+          font-size: 14px;
+          font-weight: 500;
         }
         .birthWrapper {
           display: flex;
@@ -81,11 +112,15 @@
         height: 50px;
         margin: 50px 0px;
         border: none;
-        background-color: $green;
+
         border-radius: 3px;
-        color: white;
+
         font-size: 16px;
         font-weight: bold;
+      }
+      .abled {
+        background-color: $green;
+        color: white;
       }
     }
   }
