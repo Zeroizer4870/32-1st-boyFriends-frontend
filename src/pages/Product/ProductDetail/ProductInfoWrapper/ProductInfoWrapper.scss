@@ -6,6 +6,7 @@
   width: 50%;
   justify-content: center;
   flex-direction: column;
+  top: 0px;
   border: 1px solid #ededed;
 
   .mainProductImg {
@@ -13,23 +14,6 @@
     display: flex;
     justify-content: center;
     border: 1px solid #ededed;
-  }
-
-  .imgs {
-    display: flex;
-    justify-content: center;
-    width: 511px;
-    height: 40px;
-    display: flex;
-    margin: 15px -1px 0;
-    overflow: hidden;
-
-    li {
-      margin: 0 10px;
-      img {
-        height: 40px;
-      }
-    }
   }
 
   .productReviewCount {

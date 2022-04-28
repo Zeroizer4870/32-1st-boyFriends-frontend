@@ -1,5 +1,6 @@
 import React from 'react';
 import '../ProductInfoWrapper/ProductInfoWrapper.scss';
+import ProductImgList from './ProductImgList/ProductImgList';
 
 function ProductInfoWrapper() {
   return (
@@ -12,30 +13,7 @@ function ProductInfoWrapper() {
         />
       </div>
       <ul className="imgs">
-        <li className="img">
-          <img
-            alt="img"
-            src="https://shop-phinf.pstatic.net/20220426_190/1650958998448KRsls_JPEG/52094832107772977_1629918675.jpg?type=m510"
-          />
-        </li>
-        <li className="img">
-          <img
-            alt="img"
-            src="https://shop-phinf.pstatic.net/20220426_190/1650958998448KRsls_JPEG/52094832107772977_1629918675.jpg?type=m510"
-          />
-        </li>
-        <li className="img">
-          <img
-            alt="img"
-            src="https://shop-phinf.pstatic.net/20220426_190/1650958998448KRsls_JPEG/52094832107772977_1629918675.jpg?type=m510"
-          />
-        </li>
-        <li className="img">
-          <img
-            alt="img"
-            src="https://shop-phinf.pstatic.net/20220426_190/1650958998448KRsls_JPEG/52094832107772977_1629918675.jpg?type=m510"
-          />
-        </li>
+        <ProductImgList />
       </ul>
       <div className="productReviewCount">
         <div>리뷰수 </div>

@@ -1,0 +1,100 @@
+.pointAccumulate {
+  margin-top: 15px;
+  padding-bottom: 19px;
+  border: 1px solid #989aa5;
+
+  .acceptCoupon {
+    overflow: hidden;
+    padding: 13px 16px;
+    border-bottom: 1px solid #f4f4f4;
+
+    .userTitle {
+      font-size: 16px;
+    }
+
+    .cuponBtn {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      float: right;
+      height: 26px;
+      padding: 0 9px 0 11px;
+      background-color: #454752;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 26px;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+
+  .maxPointCalc {
+    padding: 18px 16px 0;
+
+    .maxPointText {
+      display: inline-block;
+      font-size: 13px;
+      line-height: 18px;
+      color: #333;
+      vertical-align: top;
+    }
+
+    .resultCalc {
+      float: right;
+      margin-top: -2px;
+      font-size: 13px;
+      line-height: 18px;
+      color: #333;
+    }
+  }
+
+  .maxPointBox {
+    margin: 15px 16px 0;
+    padding: 14px 16px;
+    border: 1px solid #dce0e3;
+    background-color: #f7f8fa;
+    word-break: break-all;
+  }
+
+  .morePointBox {
+    margin: 15px 16px 0;
+    padding: 14px 16px;
+    border: 1px solid #dce0e3;
+    background-color: #f7f8fa;
+
+    .pointTips {
+      .tip {
+        font-size: 13px;
+        line-height: 15px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .maxPoint {
+        float: right;
+        margin-top: -2px;
+        font-size: 13px;
+        line-height: 15px;
+
+        .point {
+          font-weight: 600;
+        }
+      }
+    }
+
+    .pointLog {
+      margin-top: 3px;
+      font-size: 12px;
+      line-height: 14px;
+      color: #999;
+
+      .pointColumn {
+        margin-top: 7px;
+
+        .subPoint {
+          float: right;
+        }
+      }
+    }
+  }
+}

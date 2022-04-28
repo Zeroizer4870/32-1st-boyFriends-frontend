@@ -1,0 +1,28 @@
+.resultPrice {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  width: 100%;
+
+  .sumText {
+    font-size: 13px;
+  }
+
+  .productSum {
+    display: flex;
+    align-items: center;
+
+    .productCount {
+      font-size: 13px;
+      color: #999999;
+    }
+
+    .productPriceSum {
+      padding-left: 6px;
+      font-size: 24px;
+      font-weight: 600;
+
+      color: #6b90dc;
+    }
+  }
+}
