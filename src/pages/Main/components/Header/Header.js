@@ -1,23 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
+import CircleBtn from '../common/CircleBtn';
+import ImageCard from '../common/ImageCard';
 import './Header.scss';
+import DirectionBtn from '../common/DirectionBtn';
 
 const Header = ({ headerData }) => {
+  const [index, setIndex] = useState(0);
   const [carousel, setCarousel] = useState(4);
   // console.log(headerData[headerData.length - 1].id); // carousel 하드코딩 풀어야함
-  const [index, setIndex] = useState(0);
+  // 자동 캐러셀
 
   const cardRef = useRef(null);
-
-  const next = () => {
-    index >= carousel ? setIndex(0) : setIndex(index + 1);
-  };
-  const prev = () => {
-    index === 0 ? setIndex(carousel) : setIndex(index - 1);
-  };
-
-  const findImg = e => {
-    setIndex(e.target.id);
-  };
 
   useEffect(() => {
     cardRef.current.style.transition = 'all 0.5s ease-in-out';
@@ -29,25 +22,20 @@ const Header = ({ headerData }) => {
       <header className="header">
         <div ref={cardRef} className="card">
           {headerData.map(headerData => {
-            return <HeaderCard src={headerData.src} key={headerData.id} />;
+            return <ImageCard src={headerData.src} key={headerData.id} />;
           })}
         </div>
       </header>
       <div className="headerZ">
         <p className="cardTitle">{headerData[index]?.title}</p>
         <p className="cardContent">{headerData[index]?.content}</p>
-        <button onClick={prev} type="radio" className="prevBtn">
-          <i className="fa-solid fa-arrow-left" />
-        </button>
-        <button onClick={next} className="nextBtn">
-          <i className="fa-solid fa-arrow-right" />
-        </button>
+        <DirectionBtn index={index} setIndex={setIndex} carousel={carousel} />
         <div className="cardBtnList">
           {headerData.map(headerData => {
             return (
-              <HeaderBtn
-                findImg={findImg}
+              <CircleBtn
                 id={headerData.id}
+                setIndex={setIndex}
                 key={headerData.id}
               />
             );
@@ -55,18 +43,6 @@ const Header = ({ headerData }) => {
         </div>
       </div>
     </>
-  );
-};
-
-const HeaderCard = ({ src }) => {
-  return <img alt="cardImg" className="cardImg" src={src} />;
-};
-
-const HeaderBtn = ({ findImg, id }) => {
-  return (
-    <button onClick={findImg} id={id} className="cardBtn">
-      <i onClick={findImg} id={id} className="fa-regular fa-circle" />
-    </button>
   );
 };
 

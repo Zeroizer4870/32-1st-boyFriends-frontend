@@ -1,16 +1,18 @@
 import React from 'react';
-import MiniCard from './MiniCard';
+import SectionMiniCard from './SectionMiniCard';
 
-const SectionCard = ({ sectionData }) => {
+const SectionCard = ({ category, id }) => {
+  console.log(id);
   return (
     <article className="card">
       <div className="cardImgWrap">
-        <img className="cardImg" alt="img" src={sectionData.categorySrc} />
+        <img className="cardImg" alt="img" src={category.categorySrc} />
       </div>
-      <h3 className="cardTitle">{sectionData.categoryName}</h3>
-      {sectionData.categoryProduct.map(sectionData => {
-        return <MiniCard sectionData={sectionData} key={Date.now} />;
-      })}
+      <h3 className="cardTitle">{category.categoryName}</h3>
+      {id === 1 &&
+        category.categoryProduct.map(product => {
+          return <SectionMiniCard product={product} key={Date.now} />;
+        })}
     </article>
   );
 };

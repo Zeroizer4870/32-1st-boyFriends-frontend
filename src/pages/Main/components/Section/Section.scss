@@ -63,6 +63,28 @@
   background-color: transparent;
   z-index: 90;
 
+  .cardBtnList {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    margin-left: -85px;
+
+    .cardBtn {
+      background-color: transparent;
+      border: 0;
+
+      i {
+        color: black;
+        font-size: 13px;
+
+        &:hover {
+          color: #000000;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
   .prevBtn {
     position: absolute;
     top: 50%;
