@@ -4,11 +4,11 @@ import DirectionBtn from './DirectionBtn';
 import './Section.scss';
 
 const Section = ({ sectionData }) => {
-  const [carousel, setCarousel] = useState(1);
+  const [carousel, setCarousel] = useState(7);
   const [index, setIndex] = useState(0);
   const cardRef = useRef(null);
   const next = () => {
-    index >= carousel ? setIndex(3) : setIndex(index + 1);
+    index >= carousel ? setIndex(0) : setIndex(index + 1);
   };
 
   const prev = () => {
@@ -24,13 +24,13 @@ const Section = ({ sectionData }) => {
     <>
       <section
         style={
-          sectionData.id === 0
+          sectionData.id === 1
             ? { gridRow: '2/3' }
-            : sectionData.id === 1
-            ? { gridRow: '3/4' }
             : sectionData.id === 2
-            ? { gridRow: '4/5' }
+            ? { gridRow: '3/4' }
             : sectionData.id === 3
+            ? { gridRow: '4/5' }
+            : sectionData.id === 4
             ? { gridRow: '5/6' }
             : null
         }
@@ -40,20 +40,20 @@ const Section = ({ sectionData }) => {
           <h1>{sectionData.title}</h1>
         </div>
         <div ref={cardRef} className="cardList">
-          {sectionData.content.map(sectionData => {
+          {sectionData.category.map(sectionData => {
             return <SectionCard sectionData={sectionData} key={Date.now()} />;
           })}
         </div>
       </section>
       <div
         style={
-          sectionData.id === 0
+          sectionData.id === 1
             ? { gridRow: '2/3' }
-            : sectionData.id === 1
-            ? { gridRow: '3/4' }
             : sectionData.id === 2
-            ? { gridRow: '4/5' }
+            ? { gridRow: '3/4' }
             : sectionData.id === 3
+            ? { gridRow: '4/5' }
+            : sectionData.id === 4
             ? { gridRow: '5/6' }
             : null
         }

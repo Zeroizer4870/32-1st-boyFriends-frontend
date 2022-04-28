@@ -3,6 +3,7 @@ import './Header.scss';
 
 const Header = ({ headerData }) => {
   const [carousel, setCarousel] = useState(4);
+  setCarousel();
   // console.log(headerData[headerData.length - 1].id); // carousel 하드코딩 풀어야함
   const [index, setIndex] = useState(0);
 

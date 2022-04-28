@@ -1,106 +1,611 @@
 [
   {
-    "id": 0,
-    "title": "주목 할 만한 소식",
-    "content": [
-      {
-        "comment": "4.25 ~ 4.29라인프렌즈 신상위크 & 미니니 써니데이즈",
-        "src": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
-        "items": [
-          {
-            "item": "OK",
-            "price": "22000원",
-            "percent": "20%",
-            "srcMiniTop": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
-            "srcMiniBot": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg"
-          },
-          {
-            "item": "OK",
-            "price": "22000원",
-            "percent": "20%",
-            "srcMiniTop": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
-            "srcMiniBot": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg"
-          }
-        ]
-      }
-    ]
-  },
-
-  {
     "id": 1,
-    "title": "새로 나왔어요",
-    "content": [
+    "title": "주목 할 만한 소식",
+    "category": [
       {
-        "comment": "몽글몽글 내 곁에 찾아온 포근함",
-        "src": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
-        "items": [
+        "categoryId": 1,
+        "categoryName": "4.25 ~ 4.29라인프렌즈 신상위크 & 미니니 써니데이즈",
+        "categorySrc": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "categoryProduct": [
           {
-            "item": "OK",
-            "price": "33000원",
-            "percent": "30%",
-            "srcMiniTop": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
-            "srcMiniBot": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg"
+            "productId": 1,
+            "productName": "라인프렌즈 미니니 브니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
           },
           {
-            "item": "OK",
-            "price": "33000원",
-            "percent": "30%",
-            "srcMiniTop": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
-            "srcMiniBot": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg"
+            "productId": 2,
+            "productName": "라인프렌즈 미니니 코니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_55/16509618945193KUOD_JPEG/21218546_73801098.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          }
+        ]
+      },
+      {
+        "categoryId": 2,
+        "categoryName": "4.25 ~ 4.29라인프렌즈 신상위크 & 미니니 써니데이즈",
+        "categorySrc": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "categoryProduct": [
+          {
+            "productId": 3,
+            "productName": "라인프렌즈 미니니 브니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          },
+          {
+            "productId": 4,
+            "productName": "라인프렌즈 미니니 코니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_55/16509618945193KUOD_JPEG/21218546_73801098.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          }
+        ]
+      },
+      {
+        "categoryId": 3,
+        "categoryName": "4.25 ~ 4.29라인프렌즈 신상위크 & 미니니 써니데이즈",
+        "categorySrc": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "categoryProduct": [
+          {
+            "productId": 5,
+            "productName": "라인프렌즈 미니니 브니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          },
+          {
+            "productId": 6,
+            "productName": "라인프렌즈 미니니 코니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_55/16509618945193KUOD_JPEG/21218546_73801098.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          }
+        ]
+      },
+      {
+        "categoryId": 4,
+        "categoryName": "4.25 ~ 4.29라인프렌즈 신상위크 & 미니니 써니데이즈",
+        "categorySrc": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "categoryProduct": [
+          {
+            "productId": 7,
+            "productName": "라인프렌즈 미니니 브니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          },
+          {
+            "productId": 8,
+            "productName": "라인프렌즈 미니니 코니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_55/16509618945193KUOD_JPEG/21218546_73801098.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          }
+        ]
+      },
+      {
+        "categoryId": 5,
+        "categoryName": "4.25 ~ 4.29라인프렌즈 신상위크 & 미니니 써니데이즈",
+        "categorySrc": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "categoryProduct": [
+          {
+            "productId": 9,
+            "productName": "라인프렌즈 미니니 브니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          },
+          {
+            "productId": 10,
+            "productName": "라인프렌즈 미니니 코니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_55/16509618945193KUOD_JPEG/21218546_73801098.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          }
+        ]
+      },
+      {
+        "categoryId": 6,
+        "categoryName": "4.25 ~ 4.29라인프렌즈 신상위크 & 미니니 써니데이즈",
+        "categorySrc": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "categoryProduct": [
+          {
+            "productId": 11,
+            "productName": "라인프렌즈 미니니 브니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          },
+          {
+            "productId": 12,
+            "productName": "라인프렌즈 미니니 코니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_55/16509618945193KUOD_JPEG/21218546_73801098.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          }
+        ]
+      },
+      {
+        "categoryId": 7,
+        "categoryName": "4.25 ~ 4.29라인프렌즈 신상위크 & 미니니 써니데이즈",
+        "categorySrc": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "categoryProduct": [
+          {
+            "productId": 13,
+            "productName": "라인프렌즈 미니니 브니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          },
+          {
+            "productId": 14,
+            "productName": "라인프렌즈 미니니 코니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_55/16509618945193KUOD_JPEG/21218546_73801098.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
           }
         ]
       }
     ]
   },
-
   {
     "id": 2,
-    "title": "#특별함을 담아",
-    "content": [
+    "title": "새로운 아이템",
+    "category": [
       {
-        "comment": "와글와글 채우는 사랑스러움",
-        "src": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
-        "items": [
+        "categoryId": 1,
+        "categoryName": "4.25 ~ 4.29라인프렌즈 신상위크 & 미니니 써니데이즈",
+        "categorySrc": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "categoryProduct": [
           {
-            "item": "OK",
-            "price": "44000원",
-            "percent": "40%",
-            "srcMiniTop": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
-            "srcMiniBot": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg"
+            "productId": 1,
+            "productName": "라인프렌즈 미니니 브니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
           },
           {
-            "item": "OK",
-            "price": "44000원",
-            "percent": "40%",
-            "srcMiniTop": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
-            "srcMiniBot": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg"
+            "productId": 2,
+            "productName": "라인프렌즈 미니니 코니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_55/16509618945193KUOD_JPEG/21218546_73801098.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          }
+        ]
+      },
+      {
+        "categoryId": 2,
+        "categoryName": "4.25 ~ 4.29라인프렌즈 신상위크 & 미니니 써니데이즈",
+        "categorySrc": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "categoryProduct": [
+          {
+            "productId": 3,
+            "productName": "라인프렌즈 미니니 브니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          },
+          {
+            "productId": 4,
+            "productName": "라인프렌즈 미니니 코니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_55/16509618945193KUOD_JPEG/21218546_73801098.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          }
+        ]
+      },
+      {
+        "categoryId": 3,
+        "categoryName": "4.25 ~ 4.29라인프렌즈 신상위크 & 미니니 써니데이즈",
+        "categorySrc": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "categoryProduct": [
+          {
+            "productId": 5,
+            "productName": "라인프렌즈 미니니 브니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          },
+          {
+            "productId": 6,
+            "productName": "라인프렌즈 미니니 코니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_55/16509618945193KUOD_JPEG/21218546_73801098.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          }
+        ]
+      },
+      {
+        "categoryId": 4,
+        "categoryName": "4.25 ~ 4.29라인프렌즈 신상위크 & 미니니 써니데이즈",
+        "categorySrc": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "categoryProduct": [
+          {
+            "productId": 7,
+            "productName": "라인프렌즈 미니니 브니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          },
+          {
+            "productId": 8,
+            "productName": "라인프렌즈 미니니 코니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_55/16509618945193KUOD_JPEG/21218546_73801098.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          }
+        ]
+      },
+      {
+        "categoryId": 5,
+        "categoryName": "4.25 ~ 4.29라인프렌즈 신상위크 & 미니니 써니데이즈",
+        "categorySrc": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "categoryProduct": [
+          {
+            "productId": 9,
+            "productName": "라인프렌즈 미니니 브니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          },
+          {
+            "productId": 10,
+            "productName": "라인프렌즈 미니니 코니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_55/16509618945193KUOD_JPEG/21218546_73801098.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          }
+        ]
+      },
+      {
+        "categoryId": 6,
+        "categoryName": "4.25 ~ 4.29라인프렌즈 신상위크 & 미니니 써니데이즈",
+        "categorySrc": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "categoryProduct": [
+          {
+            "productId": 11,
+            "productName": "라인프렌즈 미니니 브니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          },
+          {
+            "productId": 12,
+            "productName": "라인프렌즈 미니니 코니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_55/16509618945193KUOD_JPEG/21218546_73801098.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          }
+        ]
+      },
+      {
+        "categoryId": 7,
+        "categoryName": "4.25 ~ 4.29라인프렌즈 신상위크 & 미니니 써니데이즈",
+        "categorySrc": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "categoryProduct": [
+          {
+            "productId": 13,
+            "productName": "라인프렌즈 미니니 브니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          },
+          {
+            "productId": 14,
+            "productName": "라인프렌즈 미니니 코니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_55/16509618945193KUOD_JPEG/21218546_73801098.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
           }
         ]
       }
     ]
   },
-
   {
     "id": 3,
-    "title": "마음껏 둘러보세요",
-    "content": [
+    "title": "#지렸다",
+    "category": [
       {
-        "comment": "전제품 50% 할인",
-        "src": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
-        "items": [
+        "categoryId": 1,
+        "categoryName": "4.25 ~ 4.29라인프렌즈 신상위크 & 미니니 써니데이즈",
+        "categorySrc": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "categoryProduct": [
           {
-            "item": "OK",
-            "price": "55000원",
-            "percent": "50%",
-            "srcMiniTop": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
-            "srcMiniBot": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg"
+            "productId": 1,
+            "productName": "라인프렌즈 미니니 브니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
           },
           {
-            "item": "OK",
-            "price": "55000원",
-            "percent": "50%",
-            "srcMiniTop": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
-            "srcMiniBot": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg"
+            "productId": 2,
+            "productName": "라인프렌즈 미니니 코니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_55/16509618945193KUOD_JPEG/21218546_73801098.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          }
+        ]
+      },
+      {
+        "categoryId": 2,
+        "categoryName": "4.25 ~ 4.29라인프렌즈 신상위크 & 미니니 써니데이즈",
+        "categorySrc": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "categoryProduct": [
+          {
+            "productId": 3,
+            "productName": "라인프렌즈 미니니 브니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          },
+          {
+            "productId": 4,
+            "productName": "라인프렌즈 미니니 코니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_55/16509618945193KUOD_JPEG/21218546_73801098.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          }
+        ]
+      },
+      {
+        "categoryId": 3,
+        "categoryName": "4.25 ~ 4.29라인프렌즈 신상위크 & 미니니 써니데이즈",
+        "categorySrc": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "categoryProduct": [
+          {
+            "productId": 5,
+            "productName": "라인프렌즈 미니니 브니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          },
+          {
+            "productId": 6,
+            "productName": "라인프렌즈 미니니 코니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_55/16509618945193KUOD_JPEG/21218546_73801098.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          }
+        ]
+      },
+      {
+        "categoryId": 4,
+        "categoryName": "4.25 ~ 4.29라인프렌즈 신상위크 & 미니니 써니데이즈",
+        "categorySrc": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "categoryProduct": [
+          {
+            "productId": 7,
+            "productName": "라인프렌즈 미니니 브니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          },
+          {
+            "productId": 8,
+            "productName": "라인프렌즈 미니니 코니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_55/16509618945193KUOD_JPEG/21218546_73801098.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          }
+        ]
+      },
+      {
+        "categoryId": 5,
+        "categoryName": "4.25 ~ 4.29라인프렌즈 신상위크 & 미니니 써니데이즈",
+        "categorySrc": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "categoryProduct": [
+          {
+            "productId": 9,
+            "productName": "라인프렌즈 미니니 브니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          },
+          {
+            "productId": 10,
+            "productName": "라인프렌즈 미니니 코니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_55/16509618945193KUOD_JPEG/21218546_73801098.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          }
+        ]
+      },
+      {
+        "categoryId": 6,
+        "categoryName": "4.25 ~ 4.29라인프렌즈 신상위크 & 미니니 써니데이즈",
+        "categorySrc": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "categoryProduct": [
+          {
+            "productId": 11,
+            "productName": "라인프렌즈 미니니 브니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          },
+          {
+            "productId": 12,
+            "productName": "라인프렌즈 미니니 코니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_55/16509618945193KUOD_JPEG/21218546_73801098.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          }
+        ]
+      },
+      {
+        "categoryId": 7,
+        "categoryName": "4.25 ~ 4.29라인프렌즈 신상위크 & 미니니 써니데이즈",
+        "categorySrc": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "categoryProduct": [
+          {
+            "productId": 13,
+            "productName": "라인프렌즈 미니니 브니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          },
+          {
+            "productId": 14,
+            "productName": "라인프렌즈 미니니 코니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_55/16509618945193KUOD_JPEG/21218546_73801098.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "마음껏 둘러보세요",
+    "category": [
+      {
+        "categoryId": 1,
+        "categoryName": "4.25 ~ 4.29라인프렌즈 신상위크 & 미니니 써니데이즈",
+        "categorySrc": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "categoryProduct": [
+          {
+            "productId": 1,
+            "productName": "라인프렌즈 미니니 브니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          },
+          {
+            "productId": 2,
+            "productName": "라인프렌즈 미니니 코니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_55/16509618945193KUOD_JPEG/21218546_73801098.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          }
+        ]
+      },
+      {
+        "categoryId": 2,
+        "categoryName": "4.25 ~ 4.29라인프렌즈 신상위크 & 미니니 써니데이즈",
+        "categorySrc": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "categoryProduct": [
+          {
+            "productId": 3,
+            "productName": "라인프렌즈 미니니 브니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          },
+          {
+            "productId": 4,
+            "productName": "라인프렌즈 미니니 코니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_55/16509618945193KUOD_JPEG/21218546_73801098.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          }
+        ]
+      },
+      {
+        "categoryId": 3,
+        "categoryName": "4.25 ~ 4.29라인프렌즈 신상위크 & 미니니 써니데이즈",
+        "categorySrc": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "categoryProduct": [
+          {
+            "productId": 5,
+            "productName": "라인프렌즈 미니니 브니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          },
+          {
+            "productId": 6,
+            "productName": "라인프렌즈 미니니 코니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_55/16509618945193KUOD_JPEG/21218546_73801098.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          }
+        ]
+      },
+      {
+        "categoryId": 4,
+        "categoryName": "4.25 ~ 4.29라인프렌즈 신상위크 & 미니니 써니데이즈",
+        "categorySrc": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "categoryProduct": [
+          {
+            "productId": 7,
+            "productName": "라인프렌즈 미니니 브니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          },
+          {
+            "productId": 8,
+            "productName": "라인프렌즈 미니니 코니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_55/16509618945193KUOD_JPEG/21218546_73801098.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          }
+        ]
+      },
+      {
+        "categoryId": 5,
+        "categoryName": "4.25 ~ 4.29라인프렌즈 신상위크 & 미니니 써니데이즈",
+        "categorySrc": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "categoryProduct": [
+          {
+            "productId": 9,
+            "productName": "라인프렌즈 미니니 브니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          },
+          {
+            "productId": 10,
+            "productName": "라인프렌즈 미니니 코니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_55/16509618945193KUOD_JPEG/21218546_73801098.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          }
+        ]
+      },
+      {
+        "categoryId": 6,
+        "categoryName": "4.25 ~ 4.29라인프렌즈 신상위크 & 미니니 써니데이즈",
+        "categorySrc": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "categoryProduct": [
+          {
+            "productId": 11,
+            "productName": "라인프렌즈 미니니 브니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          },
+          {
+            "productId": 12,
+            "productName": "라인프렌즈 미니니 코니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_55/16509618945193KUOD_JPEG/21218546_73801098.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          }
+        ]
+      },
+      {
+        "categoryId": 7,
+        "categoryName": "4.25 ~ 4.29라인프렌즈 신상위크 & 미니니 써니데이즈",
+        "categorySrc": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+        "categoryProduct": [
+          {
+            "productId": 13,
+            "productName": "라인프렌즈 미니니 브니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
+          },
+          {
+            "productId": 14,
+            "productName": "라인프렌즈 미니니 코니니 인형 마그넷",
+            "productSrc": "https://shop-phinf.pstatic.net/20220426_55/16509618945193KUOD_JPEG/21218546_73801098.jpg?type=f120_120",
+            "productPrice": "10,800원",
+            "productSale": "10%"
           }
         ]
       }
