@@ -1,7 +1,7 @@
 import React from 'react';
 import '../FilterView/Filterview.scss';
 
-function Filterview({ isTransform }) {
+function Filterview({ isViewChange }) {
   return (
     <div className="filterView">
       <div className="selectOption">
@@ -16,10 +16,10 @@ function Filterview({ isTransform }) {
         <button type="button">
           <i className="fa-solid fa-table-list" />
         </button>
-        <button type="button">
+        <button className="fiveGrid" onClick={isViewChange} type="button">
           <i className="fa-solid fa-border-all" />
         </button>
-        <button type="button" onClick={isTransform}>
+        <button className="doubleGrid" onClick={isViewChange} type="button">
           <i className="fa-solid fa-table-columns" />
         </button>
       </div>

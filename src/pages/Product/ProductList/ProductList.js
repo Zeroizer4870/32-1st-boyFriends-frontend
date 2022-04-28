@@ -3,9 +3,11 @@ import ProductNavTab from './ProductNavTab/ProductNavTab';
 import ProductFilterTab from './ProductFilterTab/ProductFilterTab';
 import Product from './Product/Product';
 import '../ProductList/ProductList.scss';
+import { render } from '@testing-library/react';
 
 function ProductList() {
   const [products, setProducts] = useState([]);
+  const [isGrid, setIsGrid] = useState(true);
 
   useEffect(() => {
     fetch('http://localhost:3000/data/ProductListMock/ProductListMock.json')
@@ -33,7 +35,14 @@ function ProductList() {
     setProducts(newProducts);
   };
 
-  const isTransform = () => {};
+  const isViewChange = e => {
+    let name = e.target.className;
+    if (name === 'doubleGrid') {
+      setIsGrid(false);
+    } else if (name === 'fiveGrid') {
+      setIsGrid(true);
+    }
+  };
 
   return (
     <div className="productList">
@@ -44,13 +53,12 @@ function ProductList() {
             sortProductsPrice={sortProductsPrice}
             sortReputation={sortReputation}
             sortReview={sortReview}
-            isTransform={isTransform}
+            isViewChange={isViewChange}
           />
         </div>
-
         <main className="categoryMain">
           <div className="categoryList">
-            <ul className="products">
+            <ul className={isGrid ? 'fiveGrids' : 'doubleGrid'}>
               {products.map((products, index) => (
                 <Product products={products} key={index} />
               ))}

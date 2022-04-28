@@ -7,7 +7,7 @@ function ProductFilterTab({
   sortProductsPrice,
   sortReview,
   sortReputation,
-  isTransform,
+  isViewChange,
 }) {
   return (
     <div className="productFilterTab">
@@ -17,7 +17,7 @@ function ProductFilterTab({
           sortReview={sortReview}
           sortReputation={sortReputation}
         />
-        <Filterview isTransform={isTransform} />
+        <Filterview isViewChange={isViewChange} />
       </div>
     </div>
   );

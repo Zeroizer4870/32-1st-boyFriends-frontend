@@ -16,9 +16,9 @@ function ProductNavTab({ products }) {
     <div className="productNavTab">
       <nav className="categoryWrapper">
         <div className="categoryNav">
-          <strong>중대형 인형</strong>
+          <strong className="categoryName">중대형 인형</strong>
           <div>
-            <ul className="categoryTop">{spreadLink}</ul>
+            <ul className="categoryLink">{spreadLink}</ul>
           </div>
         </div>
       </nav>

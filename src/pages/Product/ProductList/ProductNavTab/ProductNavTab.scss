@@ -12,12 +12,12 @@
       justify-content: space-between;
       margin: 50px 0 13px;
 
-      strong {
+      .categoryName {
         font-size: 20px;
         font-weight: 700;
       }
 
-      ul {
+      .categoryLink {
         display: flex;
 
         li {
