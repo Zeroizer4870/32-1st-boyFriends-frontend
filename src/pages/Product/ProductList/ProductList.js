@@ -59,8 +59,8 @@ function ProductList() {
         <main className="categoryMain">
           <div className="categoryList">
             <ul className={isGrid ? 'fiveGrids' : 'doubleGrid'}>
-              {products.map((products, index) => (
-                <Product products={products} key={index} />
+              {products.map(products => (
+                <Product products={products} key={products.id} />
               ))}
             </ul>
           </div>
