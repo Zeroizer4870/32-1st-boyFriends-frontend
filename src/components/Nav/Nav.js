@@ -1,38 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Menu from './Menu';
+import Menulist from './Menulist';
 import './Nav.scss';
 
 function Nav() {
-  const menuList = [
-    {
-      id: 1,
-      menuName: '토이',
-      menuLink: '/toys',
-      subMenu1: '중대형 토이',
-      subMenu1Link: '/toys/bigtoys',
-      subMenu2: '미니 토이',
-      subMenu2Link: '/toys/smalltoys',
-    },
-    {
-      id: 2,
-      menuName: '옷',
-      menuLink: '/cloths',
-      subMenu1: '반팔 의류',
-      subMenu1Link: '/cloths/shortsleeves',
-      subMenu2: '긴팔 의류',
-      subMenu2Link: '/cloths/longsleeves',
-    },
-    {
-      id: 3,
-      menuName: '디지털',
-      menuLink: '/digital',
-      subMenu1: '폰 케이스',
-      subMenu1Link: '/digital/phonecases',
-      subMenu2: '소형 가전',
-      subMenu2Link: '/digital/electronics',
-    },
-  ];
+  const [menuList, setMenuList] = useState([]);
+  useEffect(() => {
+    fetch('/data/menuData.json', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => {
+        setMenuList(data);
+      });
+  }, []);
+
   return (
     <nav className="nav">
       <div className="infoWrapper">
@@ -72,7 +54,7 @@ function Nav() {
         <div className="menu">
           <ul className="mainMenu">
             {menuList.map(menu => {
-              return <Menu menu={menu} key={menu.id} />;
+              return <Menulist menu={menu} key={menu.id} />;
             })}
           </ul>
         </div>

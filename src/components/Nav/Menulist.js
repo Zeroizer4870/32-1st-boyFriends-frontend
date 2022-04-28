@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Menu.scss';
+import './Menulist.scss';
 
-function Menu({ menu }) {
+function Menulist({ menu }) {
   const { menuName, menuLink, subMenu1, subMenu1Link, subMenu2, subMenu2Link } =
     menu;
   return (
@@ -20,4 +20,4 @@ function Menu({ menu }) {
   );
 }
 
-export default Menu;
+export default Menulist;
