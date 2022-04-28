@@ -10,7 +10,7 @@ function ProductList() {
   const [isGrid, setIsGrid] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:3000/data/ProductListMock/ProductListMock.json')
+    fetch('/data/ProductListMock/ProductListMock.json')
       .then(res => res.json())
       .then(result => {
         setProducts(result);
