@@ -5,6 +5,7 @@ import './Section.scss';
 
 const Section = ({ sectionData }) => {
   const [carousel, setCarousel] = useState(7);
+  setCarousel();
   const [index, setIndex] = useState(0);
   const cardRef = useRef(null);
   const next = () => {
