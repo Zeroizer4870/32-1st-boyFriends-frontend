@@ -4,7 +4,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 
   .contentsWrapper {
     display: flex;
@@ -12,26 +11,26 @@
     align-items: center;
     flex-direction: column;
     width: 1280px;
+
     .contents {
       width: 340px;
       padding-top: 90px;
-      // height: 442px;
 
       .loginText {
         font-size: 20px;
         font-weight: bold;
         text-align: center;
       }
+
       .inputWrapper {
         display: flex;
         justify-content: center;
         flex-direction: column;
-
         padding-top: 36px;
 
         .input {
           height: 54px;
-          padding: 0 19px;
+          padding: 0px 19px;
           border: 1px solid lightgray;
           border-radius: 3px;
 
@@ -39,19 +38,20 @@
             color: lightgray;
           }
           &:focus {
-            outline: none;
             border: 1px solid black;
+            outline: none;
           }
         }
+
         .email {
           margin-bottom: 10px;
         }
       }
+
       .findWrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
         padding-bottom: 28px;
         font-size: 13px;
 
@@ -60,7 +60,7 @@
         }
 
         .findIdPw {
-          padding-top: 13px;
+          margin-top: 13px;
 
           .link {
             color: black;
@@ -84,19 +84,22 @@
           width: 100%;
           height: 54px;
           background-color: white;
-          font-size: 16px;
           border-radius: 3px;
+          font-size: 16px;
         }
+
         .loginBtn {
           margin-bottom: 10px;
           border: none;
           color: lightgreen;
         }
+
         .valid {
           background-color: $green;
           color: white;
           cursor: pointer;
         }
+
         .signUpBtn {
           border: 1px solid $green;
           color: $green;
