@@ -21,12 +21,11 @@ function ProductList() {
   ]);
   const [isGrid, setIsGrid] = useState(true);
 
-  // http://10.58.1.245:8000/products/productslist
   useEffect(() => {
-    fetch('/data/ProductListMock/ProductListMock.json')
+    fetch('http://10.58.1.245:8000/products/productslist')
       .then(res => res.json())
       .then(result => {
-        setProducts(result);
+        setProducts(result.results);
       });
   }, []);
 
