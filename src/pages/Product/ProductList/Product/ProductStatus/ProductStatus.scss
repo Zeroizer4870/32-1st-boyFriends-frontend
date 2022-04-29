@@ -1,0 +1,47 @@
+@import '/src/styles/variables.scss';
+
+.productStatus {
+  .reviewTab {
+    display: flex;
+
+    margin-top: 20px;
+    font-size: 10px;
+
+    .review {
+      padding-right: 10px;
+
+      .reviewTitle {
+        color: #8f8f8f;
+        padding-right: 5px;
+      }
+
+      .reviewCount {
+        color: #6b90dc;
+        font-weight: 600;
+      }
+    }
+
+    .reputation {
+      .reputationTitle {
+        color: #8f8f8f;
+        padding-right: 5px;
+      }
+
+      .reputationCount {
+        color: #6b90dc;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .currentStock {
+    margin-top: 16px;
+    font-size: 12px;
+
+    .stockOut {
+      padding: 2px 7px;
+      background-color: $soldOutColor;
+      color: white;
+    }
+  }
+}

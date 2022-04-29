@@ -1,0 +1,31 @@
+@import '/src/styles/variables.scss';
+
+.filterView {
+  display: flex;
+  align-items: center;
+
+  .selectOption {
+    .selectView {
+      border: none;
+      padding: 5px 5px;
+      margin-right: 20px;
+      text-align: center;
+    }
+  }
+
+  .changeView {
+    button {
+      border: 1px solid #e0e0e0;
+      background-color: transparent;
+      padding: 5px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      i {
+        color: $secondryFontColor;
+      }
+    }
+  }
+}
