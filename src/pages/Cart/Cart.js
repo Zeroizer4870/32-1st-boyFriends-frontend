@@ -26,7 +26,7 @@ export default function Cart() {
           완료
         </div>
       </div>
-      <CartDefault />
+      {/* <CartDefault /> */}
       <CartInfoBox infoBox={infoBox} />
     </main>
   );

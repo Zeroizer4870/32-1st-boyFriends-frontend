@@ -21,200 +21,189 @@
     border: 1px solid #ececef;
     font-size: 14px;
   }
-
-  .cartInfo {
-    width: 1280px;
-    height: 500px;
-    margin: auto;
-    background-color: #f4f4f4;
-  }
 }
-.cartInfoMap {
-  position: relative;
-  top: 25px;
-  width: 1200px;
-  height: 450px;
+
+.cartInfo {
+  width: 100%;
+  height: 800px;
   margin: auto;
-  background-color: $MainBackground;
-  border-radius: 10px;
-  box-shadow: 0px 3px 9px rgba(103, 98, 98, 0.05);
-  overflow: scroll;
+  background-color: #f4f4f4;
 
-  .bfLogo {
-    height: 30px;
-    padding-top: 20px;
-    padding-left: 10px;
-    margin-left: 30px;
-    font-size: 20px;
-    font-weight: bold;
-  }
-
-  .infoMapBox {
-    display: flex;
-    justify-content: space-between;
+  .cartInfoMap {
     position: relative;
-    justify-content: center;
-    top: 25px;
-    height: 140px;
-    margin-left: 30px;
-    margin-right: 30px;
-    border-top: 3px solid black;
-    border-bottom: 1px solid #cacbd4;
+    top: 50px;
+    width: 1200px;
+    height: 700px;
+    margin: auto;
+    background-color: $MainBackground;
+    border-radius: 10px;
+    box-shadow: 0px 3px 9px rgba(103, 98, 98, 0.05);
+    overflow: scroll;
 
-    .productSelect {
-      margin-top: 60px;
+    .bfLogo {
+      height: 30px;
+      padding-top: 20px;
+      padding-left: 10px;
+      margin-left: 30px;
+      font-size: 20px;
+      font-weight: bold;
     }
 
-    .infoBox {
-      width: 100%;
-      margin: auto 10px;
-      font-size: 14px;
+    .infoMapBox {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      justify-content: center;
+      top: 25px;
+      height: 140px;
+      margin-left: 30px;
+      margin-right: 30px;
+      border-top: 3px solid black;
+      border-bottom: 1px solid #cacbd4;
 
-      .imgText {
-        margin-left: 110px;
+      .productSelect {
+        margin-top: 60px;
+      }
 
-        .infoTitle {
+      .infoBox {
+        width: 100%;
+        margin: auto 10px;
+        font-size: 14px;
+
+        .imgText {
+          margin-left: 110px;
+
+          .infoTitle {
+            font-weight: bold;
+          }
+
+          .infoPrice {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-weight: bold;
+          }
+
+          .salePriceText {
+            margin-bottom: 10px;
+            font-weight: bold;
+          }
+
+          .salePrice {
+            color: red;
+            font-weight: bold;
+          }
+
+          .storeInfo {
+            color: #cacbd4;
+            font-size: 12px;
+          }
+        }
+      }
+      .sizeBox {
+        flex: 1;
+        border-left: 1px solid #ececef;
+        border-right: 1px solid #ececef;
+        font-size: 14px;
+        font-weight: bold;
+
+        .sizeS {
+          padding: 15px 0px 15px 15px;
+          border-bottom: 1px solid #ececef;
+        }
+        .sizeM {
+          padding: 15px 0px 15px 15px;
+          border-bottom: 1px solid #ececef;
+        }
+        .sizeL {
+          padding: 15px 0px 15px 15px;
+        }
+
+        .quantityBtnS {
+          position: relative;
+          left: 80px;
+
+          .quantityS {
+            margin: 0px 5px;
+            padding: 3px 5px;
+          }
+
+          .quantityMinusS,
+          .quantityPlusS {
+            font-size: 12px;
+          }
+        }
+
+        .quantityBtnM {
+          position: relative;
+          left: 75px;
+
+          .quantityM {
+            margin: 0px 5px;
+            padding: 3px 5px;
+          }
+
+          .quantityMinusM,
+          .quantityPlusM {
+            font-size: 12px;
+          }
+        }
+
+        .quantityBtnL {
+          position: relative;
+          left: 82px;
+
+          .quantityL {
+            margin: 0px 5px;
+            padding: 3px 5px;
+          }
+
+          .quantityMinusL,
+          .quantityPlusL {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .priceBox {
+        flex: 1;
+        margin-top: 23px;
+        text-align: center;
+
+        .productPriceText {
+          font-size: 12px;
           font-weight: bold;
         }
 
-        .infoPrice {
+        .productPrice {
           margin-top: 10px;
           margin-bottom: 10px;
-          font-weight: bold;
+          font-size: 15px;
+          font-weight: 800;
         }
 
-        .storeInfo {
-          color: #cacbd4;
-          font-size: 12px;
-        }
-      }
-    }
-    .sizeBox {
-      flex: 1;
-      border-left: 1px solid #ececef;
-      border-right: 1px solid #ececef;
-      font-size: 14px;
-      font-weight: bold;
-
-      .sizeS {
-        padding: 15px 0px 15px 15px;
-        border-bottom: 1px solid #ececef;
-      }
-      .sizeM {
-        padding: 15px 0px 15px 15px;
-        border-bottom: 1px solid #ececef;
-      }
-      .sizeL {
-        padding: 15px 0px 15px 15px;
-      }
-
-      .quantityBtnS {
-        position: relative;
-        left: 80px;
-
-        .quantityS {
-          margin: 0px 5px;
-        }
-
-        .quantityMinusS,
-        .quantityPlusS {
-          font-size: 12px;
-        }
-      }
-
-      .quantityBtnM {
-        position: relative;
-        left: 75px;
-
-        .quantityM {
-          margin: 0px 5px;
-        }
-
-        .quantityMinusM,
-        .quantityPlusM {
-          font-size: 12px;
-        }
-      }
-
-      .quantityBtnL {
-        position: relative;
-        left: 82px;
-
-        .quantityL {
-          margin: 0px 5px;
-        }
-
-        .quantityMinusL,
-        .quantityPlusL {
-          font-size: 12px;
+        .orderBtn {
+          width: 70px;
+          height: 30px;
+          color: $green;
+          background-color: white;
+          border: 1px solid $green;
+          border-radius: 10px;
         }
       }
     }
 
-    .priceBox {
-      flex: 1;
-      margin-top: 23px;
-      text-align: center;
-
-      .productPriceText {
-        font-size: 12px;
-        font-weight: bold;
-      }
-
-      .productPrice {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 15px;
-        font-weight: 800;
-      }
-
-      .orderBtn {
-        width: 70px;
-        height: 30px;
-        color: $green;
-        background-color: white;
-        border: 1px solid $green;
-        border-radius: 10px;
-      }
+    .imgFlex {
+      display: flex;
+      flex: 2;
     }
 
-    .delivery {
-      flex: 1;
-      border-left: 1px solid gainsboro;
-      padding-top: 23px;
-      text-align: center;
-
-      .deliveryPriceText {
-        font-size: 12px;
-        font-weight: bold;
-      }
-
-      .deliveryPrice {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 15px;
-        font-weight: 800;
-      }
-
-      .deliveryFree {
-        color: #cacbd4;
-        font-size: 12px;
-      }
+    .pants {
+      float: left;
+      width: 90px;
+      height: 90px;
     }
-  }
-
-  .imgFlex {
-    display: flex;
-    flex: 2;
-  }
-
-  .pants {
-    float: left;
-    width: 90px;
-    height: 90px;
   }
 }
-
 .total {
   display: flex;
   justify-content: center;
@@ -272,11 +261,17 @@
     font-weight: 800;
   }
 
-  .selectPrice,
-  .deliveryPrice,
-  .dcPrice {
+  .selectPrice {
     text-align: center;
   }
+}
+
+.deliveryInfo {
+  margin-left: 1100px;
+  background-color: gainsboro;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
 }
 
 .finalSelect {
@@ -286,7 +281,8 @@
   .finalBtn {
     width: 600px;
     height: 50px;
-    margin-left: 350px;
+    margin-top: 20px;
+    margin-left: 320px;
     color: white;
     background-color: $green;
     border: 1px solid white;
