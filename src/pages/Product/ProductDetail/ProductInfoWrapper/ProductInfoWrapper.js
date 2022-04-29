@@ -1,23 +1,35 @@
 import React from 'react';
 import '../ProductInfoWrapper/ProductInfoWrapper.scss';
-import ProductImgList from './ProductImgList/ProductImgList';
 
-function ProductInfoWrapper() {
+function ProductInfoWrapper({ productData }) {
+  let accessReputation = productData.review.map(x => x.reputation);
+
+  let sumReputation = accessReputation.reduce((acc, cur) => {
+    return acc + cur;
+  }, 0);
+
+  let reputationAverage = sumReputation / accessReputation.length;
+
   return (
     <div className="productInfoWrapper">
       <div className="mainProductImg">
-        <span className="statusTap">NEw</span>
+        <span className="statusTab">{productData.status}</span>
         <img
-          src="https://shop-phinf.pstatic.net/20220426_190/1650958998448KRsls_JPEG/52094832107772977_1629918675.jpg?type=m510"
-          alt="인형"
+          className="productThumbNail"
+          src={productData.img}
+          alt={productData.itemTitle}
         />
       </div>
-      <ul className="imgs">
-        <ProductImgList />
-      </ul>
+
       <div className="productReviewCount">
-        <div>리뷰수 </div>
-        <div>사용자 총 평점</div>
+        <span className="reviewSum">
+          <div className="reviewText">리뷰수 </div>
+          <span className="reviewNum">{productData.review.length}</span>
+        </span>
+        <div className="reviewSum">
+          <div className="reviewText">사용자 총 평점</div>
+          <span className="reviewNum">{reputationAverage} / 5</span>
+        </div>
       </div>
     </div>
   );

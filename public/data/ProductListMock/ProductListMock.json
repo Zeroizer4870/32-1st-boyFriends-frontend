@@ -5,8 +5,8 @@
     "price": 27000,
     "stock": 24,
     "img": "https://shop-phinf.pstatic.net/20211104_206/1636008231985x2u60_JPEG/20370937_67411161.jpg?type=f232_232",
-    "reviewCount": 3,
-    "reputation": 2,
+    "reviewCount": null,
+    "reputation": null,
     "descript": null,
     "status": "New"
   },

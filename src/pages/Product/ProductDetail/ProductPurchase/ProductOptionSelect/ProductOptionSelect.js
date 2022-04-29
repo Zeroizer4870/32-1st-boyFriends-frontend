@@ -3,11 +3,27 @@ import React, { useState } from 'react';
 import '../ProductOptionSelect/ProductOptionSelect.scss';
 import ResultPrice from './ResultPrice/ResultPrice';
 
-function ProductOptionSelect() {
-  const [view, setView] = useState('사이즈');
+function ProductOptionSelect({ productData, salePrice }) {
+  const [viewItem, setViewItem] = useState('사이즈');
+  const [itemCount, setItemCount] = useState(0);
+  const [itemPrice, setItemPrice] = useState(0);
 
   const change = ({ target }) => {
-    setView(target.value);
+    setViewItem(target.value);
+  };
+
+  const onIncrease = () => {
+    setItemCount(prev => prev + 1);
+    setItemPrice(prev => prev + salePrice);
+  };
+
+  const onDecrease = () => {
+    if (itemCount <= 1) {
+      alert('1개 이하는 선택할 수 없습니다.');
+      return;
+    }
+    setItemCount(prev => prev - 1);
+    setItemPrice(prev => prev - salePrice);
   };
 
   return (
@@ -21,19 +37,23 @@ function ProductOptionSelect() {
         </div>
         {/* 사이즈 선택 */}
         <div className="currentSelect">
-          {view !== '사이즈' && (
+          {viewItem !== '사이즈' && (
             <ul className="selectedProduct">
               <li className="selectedStatus">
                 <p className="optionTitle">단품(옵션 이름)</p>
                 <div className="selectedWrapper">
                   <div className="productCount">
-                    <button className="countBtn"> - </button>
-                    <input className="countValue" type="number" />
-                    <button className="countBtn"> + </button>
+                    <button className="countBtn" onClick={onDecrease}>
+                      -
+                    </button>
+                    <span className="countValue">{itemCount}</span>
+                    <button className="countBtn" onClick={onIncrease}>
+                      +
+                    </button>
                   </div>
                   <span className="selectedPrice">
-                    19,000
-                    <span>원</span>
+                    {itemPrice.toLocaleString()}
+                    <span> 원</span>
                   </span>
                 </div>
               </li>
@@ -41,7 +61,7 @@ function ProductOptionSelect() {
           )}
         </div>
         {/* 총 가격 */}
-        <ResultPrice />
+        <ResultPrice itemPrice={itemPrice} itemCount={itemCount} />
       </div>
     </div>
   );

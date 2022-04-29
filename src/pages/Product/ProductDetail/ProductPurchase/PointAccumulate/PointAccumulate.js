@@ -2,10 +2,12 @@ import React from 'react';
 import '../PointAccumulate/PointAccumulate.scss';
 
 function PointAccumulate() {
+  const userName = '형준';
+
   return (
     <div className="pointAccumulate">
       <div className="acceptCoupon">
-        <span className="userTitle">OO님만을 위한 혜택</span>
+        <span className="userTitle">{userName}님만을 위한 혜택</span>
         <button className="cuponBtn">쿠폰받기</button>
       </div>
       <div className="maxPointCalc">

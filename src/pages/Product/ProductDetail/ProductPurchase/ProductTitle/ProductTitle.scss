@@ -1,3 +1,38 @@
 .productTitle {
-  margin-bottom: 15px;
+  .itemTitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+  }
+  .numberWrapper {
+    position: relative;
+    align-items: center;
+    height: 40px;
+    position: relative;
+    margin-top: 15px;
+
+    .saleRatio {
+      font-size: 20px;
+      font-weight: 300;
+      margin-left: 3px;
+      color: #6b90dc;
+    }
+
+    .priceWrapper {
+      float: right;
+
+      .beforeSalePrice {
+        padding-right: 15px;
+        font-size: 16px;
+        color: #999999;
+        text-decoration: line-through;
+      }
+
+      .productPrice {
+        font-size: 24px;
+        font-weight: 700;
+        color: #6b90dc;
+      }
+    }
+  }
 }

@@ -1,15 +1,17 @@
 .pointAccumulate {
-  margin-top: 15px;
+  margin-top: 5px;
   padding-bottom: 19px;
   border: 1px solid #989aa5;
 
   .acceptCoupon {
     overflow: hidden;
     padding: 13px 16px;
+    margin-top: 5px;
     border-bottom: 1px solid #f4f4f4;
 
     .userTitle {
       font-size: 16px;
+      font-weight: 600;
     }
 
     .cuponBtn {
@@ -33,7 +35,7 @@
 
     .maxPointText {
       display: inline-block;
-      font-size: 13px;
+      font-size: 12px;
       line-height: 18px;
       color: #333;
       vertical-align: top;
@@ -44,6 +46,7 @@
       margin-top: -2px;
       font-size: 13px;
       line-height: 18px;
+      font-weight: 700;
       color: #333;
     }
   }
