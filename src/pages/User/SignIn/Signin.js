@@ -17,7 +17,7 @@ function SignIn() {
 
   function goToMain(e) {
     e.preventDefault();
-    fetch('http://10.58.0.112:8000/users/signin', {
+    fetch('http://10.58.3.2:8000/users/signin', {
       method: 'POST',
       body: JSON.stringify({
         email: inputValues.email,
@@ -27,7 +27,7 @@ function SignIn() {
       .then(response => response.json())
       .then(result => {
         if (result.message === 'SUCCESS') {
-          localStorage.setItem('token', result.access_token);
+          localStorage.setItem('token', result.ACCESS_TOKEN);
           alert('환영합니다!');
           navigate('/');
         }
