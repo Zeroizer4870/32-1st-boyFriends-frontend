@@ -13,9 +13,6 @@ function Filterview({ isViewChange }) {
         </select>
       </div>
       <div className="changeView">
-        <button type="button">
-          <i className="fa-solid fa-table-list" />
-        </button>
         <button className="fiveGrid" onClick={isViewChange} type="button">
           <i className="fa-solid fa-border-all" />
         </button>
