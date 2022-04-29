@@ -1,0 +1,14 @@
+@import '../../../../styles/variables.scss';
+
+.productFilterTab {
+  display: flex;
+  justify-content: center;
+
+  .filterTab {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1280px;
+    margin-top: 10px;
+  }
+}

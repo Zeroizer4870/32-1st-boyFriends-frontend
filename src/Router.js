@@ -4,6 +4,7 @@ import Main from './pages/Main/Main';
 import Nav from './components/Nav/Nav';
 import Footer from './components/Footer/Footer';
 import ProductDetail from './pages/Product/ProductDetail/ProductDetail';
+import ProductList from './pages/Product/ProductList/ProductList';
 
 function Router() {
   return (
@@ -12,6 +13,7 @@ function Router() {
       <Routes>
         <Route path="/" element={<Main />} />;
         <Route path="/product" element={<ProductDetail />} />;
+        <Route path="/category" element={<ProductList />} />;
       </Routes>
       <Footer />
     </BrowserRouter>
