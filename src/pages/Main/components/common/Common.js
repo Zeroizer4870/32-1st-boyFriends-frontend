@@ -6,6 +6,6 @@ export function goToPrev(index, setIndex, carousel) {
   index === 0 ? setIndex(carousel) : setIndex(index - 1);
 }
 
-export function findImage(e, setIndex) {
+export function findCard(e, setIndex) {
   setIndex(e.target.id);
 }

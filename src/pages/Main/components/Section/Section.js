@@ -5,10 +5,10 @@ import CircleBtn from '../common/CircleBtn';
 import './Section.scss';
 
 const Section = ({ sectionData }) => {
-  const [carousel, setCarousel] = useState(7);
+  const carousel = 7;
   const [index, setIndex] = useState(0);
   const cardRef = useRef(null);
-  console.log(sectionData.id);
+
   const gridRowSet =
     sectionData.id === 1
       ? { gridRow: '2/3' }
@@ -24,8 +24,9 @@ const Section = ({ sectionData }) => {
     // index === 8
     //   ? (cardRef.current.style.transition = 'none'): // 무한 캐러셀 만들어야ㅏㅎㅁ
     cardRef.current.style.transition = 'all 0.5s ease-in-out';
-    cardRef.current.style.transform = `translateX(-${index * 427}px)`;
+    cardRef.current.style.transform = `translateX(-${index * 1280}px)`;
   }, [index]);
+
   return (
     <>
       <section style={gridRowSet} className="section">
@@ -45,7 +46,7 @@ const Section = ({ sectionData }) => {
         </div>
       </section>
 
-      <div style={gridRowSet} className="sectionZ">
+      <div style={gridRowSet} className="sectionCopy">
         <DirectionBtn index={index} setIndex={setIndex} carousel={carousel} />
         <div className="cardBtnList">
           {sectionData.category.map(sectionData => {

@@ -8,13 +8,13 @@ const Main = () => {
   const [sectionData, setSectionData] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/data/headerData.json', {
+    fetch('/data/headerData.json', {
       method: 'GET',
     })
       .then(res => res.json())
       .then(data => setHeaderData(data));
 
-    fetch('http://localhost:3000/data/sectionData.json', {
+    fetch('/data/sectionData.json', {
       method: 'GET',
     })
       .then(res => res.json())

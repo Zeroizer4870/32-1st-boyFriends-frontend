@@ -2,7 +2,6 @@ import React from 'react';
 import SectionMiniCard from './SectionMiniCard';
 
 const SectionCard = ({ category, id }) => {
-  console.log(id);
   return (
     <article className="card">
       <div className="cardImgWrap">

@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import CircleBtn from '../common/CircleBtn';
 import ImageCard from '../common/ImageCard';
-import './Header.scss';
 import DirectionBtn from '../common/DirectionBtn';
+import './Header.scss';
 
 const Header = ({ headerData }) => {
+  const carousel = 4;
   const [index, setIndex] = useState(0);
-  const [carousel, setCarousel] = useState(4);
   // console.log(headerData[headerData.length - 1].id); // carousel 하드코딩 풀어야함
   // 자동 캐러셀
 
@@ -26,7 +26,7 @@ const Header = ({ headerData }) => {
           })}
         </div>
       </header>
-      <div className="headerZ">
+      <div className="headerCopy">
         <p className="cardTitle">{headerData[index]?.title}</p>
         <p className="cardContent">{headerData[index]?.content}</p>
         <DirectionBtn index={index} setIndex={setIndex} carousel={carousel} />
