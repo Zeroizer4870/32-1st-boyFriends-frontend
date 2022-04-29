@@ -6,9 +6,11 @@ function ProductInfo({ products }) {
   return (
     <Link to="/category" className="productInfo">
       <div className="linkWrapper">
-        <div className="bestTab">
-          <span>Best</span>
-        </div>
+        {products.status !== null && (
+          <div className="bestTab">
+            <span>{products.status}</span>
+          </div>
+        )}
         <div className="productImg">
           <img className="productThumbnail" alt="제품" src={products.img} />
         </div>
