@@ -4,6 +4,7 @@ import '../ProductOptionSelect/ProductOptionSelect.scss';
 import ResultPrice from './ResultPrice/ResultPrice';
 
 function ProductOptionSelect({ productData, salePrice }) {
+  console.log(productData);
   const [viewItem, setViewItem] = useState('사이즈');
   const [itemCount, setItemCount] = useState(0);
   const [itemPrice, setItemPrice] = useState(0);
@@ -36,6 +37,7 @@ function ProductOptionSelect({ productData, salePrice }) {
           </select>
         </div>
         {/* 사이즈 선택 */}
+
         <div className="currentSelect">
           {viewItem !== '사이즈' && (
             <ul className="selectedProduct">

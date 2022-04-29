@@ -7,10 +7,12 @@ function ProductDetail() {
   const PRODUCT_DATA = {
     id: 1,
     itemTitle: '후드티',
+    category: null,
+    userName: '성용',
     img: 'https://image.fmkorea.com/files/attach/new/20201223/4477817/2069934950/3279324811/e1f621cd14d2c931f6d5cbf5d38a3b18.png',
     price: 49000,
     stock: 10,
-    size: [{ 1: 'S', 2: 'M', 3: 'L', 4: '단품' }],
+    size: [{ 1: 'S', 2: 'M', 3: 'L', 4: null }],
     sale: 15,
     status: 'New',
     review: [

@@ -10,7 +10,7 @@ function ProductPurchase({ productData }) {
   return (
     <div className="productPurchase">
       <ProductTitle productData={productData} salePrice={salePrice} />
-      <PointAccumulate />
+      <PointAccumulate productData={productData} />
       <span className="installment">무이자 할부 | 카드 자세히보기</span>
       <div className="productShippment">
         <span>택배 배송 | </span>
