@@ -7,7 +7,7 @@ export default function CartDefault() {
       <div className="defaultText">
         <div className="basketDiv">
           <span className="basket">
-            <i class="fa-solid fa-basket-shopping" />
+            <i className="fa-solid fa-basket-shopping" />
           </span>
         </div>
         <div className="basketText"> 장바구니에 담긴 상품이 없습니다.</div>

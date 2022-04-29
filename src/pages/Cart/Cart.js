@@ -7,7 +7,7 @@ export default function Cart() {
   const [infoBox, setInfoBox] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/data/cartData.json', {
+    fetch('/data/cartData.json', {
       method: 'GET',
     })
       .then(res => res.json())

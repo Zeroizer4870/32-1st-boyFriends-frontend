@@ -31,12 +31,12 @@ const InfoMapBox = ({ box }) => {
           <input type="checkbox" className="productSelect" />
         </div>
         <div className="infoBox">
-          <img src={box.img} className="pants" />
+          <img src={box.img} alt={box.name} className="pants" />
           <div className="imgText">
             <div className="infoTitle">{box.name}</div>
             <p className="infoPrice">{box.price}원</p>
             <p className="salePriceText">
-              할인 가능 금액{' '}
+              할인 가능 금액
               <span className="salePrice">
                 {box.price * (box.sale / 100)}원
               </span>
@@ -50,11 +50,11 @@ const InfoMapBox = ({ box }) => {
           size: {box.size[0]}
           <span className="quantityBtnS">
             <span className="quantityMinusS">
-              <i class="fa-solid fa-minus" onClick={minusOneS} />
+              <i className="fa-solid fa-minus" onClick={minusOneS} />
             </span>
             <span className="quantityS">{numS}</span>
             <span className="quantityPlusS">
-              <i class="fa-solid fa-plus" onClick={plusOneS} />
+              <i className="fa-solid fa-plus" onClick={plusOneS} />
             </span>
           </span>
         </div>
@@ -62,11 +62,11 @@ const InfoMapBox = ({ box }) => {
           size: {box.size[1]}
           <span className="quantityBtnM">
             <span className="quantityMinusM">
-              <i class="fa-solid fa-minus" onClick={minusOneM} />
+              <i className="fa-solid fa-minus" onClick={minusOneM} />
             </span>
             <span className="quantityM">{numM}</span>
             <span className="quantityPlusM">
-              <i class="fa-solid fa-plus" onClick={plusOneM} />
+              <i className="fa-solid fa-plus" onClick={plusOneM} />
             </span>
           </span>
         </div>
@@ -74,11 +74,11 @@ const InfoMapBox = ({ box }) => {
           size: {box.size[2]}
           <span className="quantityBtnL">
             <span className="quantityMinusL">
-              <i class="fa-solid fa-minus" onClick={minusOneL} />
+              <i className="fa-solid fa-minus" onClick={minusOneL} />
             </span>
             <span className="quantityL">{numL}</span>
             <span className="quantityPlusL">
-              <i class="fa-solid fa-plus" onClick={plusOneL} />
+              <i className="fa-solid fa-plus" onClick={plusOneL} />
             </span>
           </span>
         </div>

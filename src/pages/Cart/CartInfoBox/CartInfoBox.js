@@ -20,7 +20,7 @@ export default function CartInfoBox({ infoBox }) {
     <>
       <div className="cartInfoBox">
         <div className="allSelect">
-          <input type="checkbox" className="navSelect" onChange={priceSum} />
+          <input type="checkbox" className="navSelect" onClick={priceSum} />
           전체 선택
         </div>
         <div>
@@ -31,7 +31,7 @@ export default function CartInfoBox({ infoBox }) {
         <div className="cartInfoMap">
           <div className="bfLogo">
             BoyFriends &nbsp;
-            <i class="fa-solid fa-house-chimney" />
+            <i className="fa-solid fa-house-chimney" />
           </div>
           {infoBox.map(box => (
             <InfoMapBox box={box} />
@@ -40,18 +40,18 @@ export default function CartInfoBox({ infoBox }) {
       </div>
       <div className="total">
         <div className="selectPrice">
-          <p className="sizeFour">총 선택상품금액</p>
-          <p className="sizeEight">{sum}원</p>
+          <p className="textSizeFourteen">총 선택상품금액</p>
+          <p className="textSizeEighteen">{sum}원</p>
         </div>
         <div className="plus">+</div>
         <div className="deliveryPrice">
-          <p className="sizeFour">총 배송비</p>
-          <p className="sizeEight">3,000원</p>
+          <p className="textSizeFourteen">총 배송비</p>
+          <p className="textSizeEighteen">3,000원</p>
         </div>
         <div className="minus">-</div>
-        <div className="dcPrice">
-          <p className="sizeFourSaleText">할인예상금액</p>
-          <p className="sizeEightSale">0원</p>
+        <div className="salePrice">
+          <p className="finalSaleText">할인예상금액</p>
+          <p className="finalSalePrice">0원</p>
         </div>
         <span className="totalPriceText">총 주문금액</span>
         <span className="totalPrice">원</span>
