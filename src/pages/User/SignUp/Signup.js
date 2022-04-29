@@ -19,12 +19,6 @@ function SignUp() {
     const { name, value } = e.target;
     setInputValues(inputValues => ({ ...inputValues, [name]: value }));
   };
-
-  // const isEmpty = inputValues === false;
-  // if (isEmpty) {
-  //   style.visibility = 'hidden';
-  // }
-
   const isValid =
     inputValues.email.includes('@') &&
     inputValues.pw.length >= 6 &&
@@ -58,12 +52,10 @@ function SignUp() {
         if (result.message === 'SUCCESS') {
           localStorage.setItem('token', result.access_token);
           alert('환영합니다!');
-          // navigate('/');
+          navigate('/');
         }
       });
-    // navigate('/');
   }
-  // console.log(inputValues);
 
   return (
     <div className="signUp">
@@ -74,7 +66,7 @@ function SignUp() {
         <p className="signUpBar">
           <span className="red">*</span> 필수입력사항
         </p>
-        {/* 이벤트 위임 */}
+
         <form className="form" onChange={handleInput}>
           <div className="contentWrapper">
             <label className="contentLabel">
