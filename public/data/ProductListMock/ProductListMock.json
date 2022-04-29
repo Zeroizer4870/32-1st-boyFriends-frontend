@@ -4,10 +4,11 @@
     "name": "보이프렌즈",
     "price": 27000,
     "stock": 24,
-    "img": "https://shop-phinf.pstatic.net/20211104_121/1636010773881llNC1_JPEG/20372405_67412893.jpg?type=f232_232",
-    "reviewCount": 421,
-    "reputation": 4.2,
-    "descript": null
+    "img": "https://shop-phinf.pstatic.net/20211104_206/1636008231985x2u60_JPEG/20370937_67411161.jpg?type=f232_232",
+    "reviewCount": 3,
+    "reputation": 2,
+    "descript": null,
+    "status": "New"
   },
   {
     "id": 2,
@@ -17,7 +18,8 @@
     "img": "https://shop-phinf.pstatic.net/20211104_206/1636008231985x2u60_JPEG/20370937_67411161.jpg?type=f232_232",
     "reviewCount": 4212,
     "reputation": 4.2,
-    "descript": null
+    "descript": null,
+    "status": "Best"
   },
   {
     "id": 3,
@@ -27,7 +29,8 @@
     "img": "https://shop-phinf.pstatic.net/20200317_46/15844357835974QxWM_JPEG/16349666_42170032.jpg?type=f232_232",
     "reviewCount": 42121,
     "reputation": 24,
-    "descript": null
+    "descript": null,
+    "status": "New"
   },
   {
     "id": 4,
@@ -37,7 +40,8 @@
     "img": "https://shop-phinf.pstatic.net/20220214_250/16448253516035uS5g_JPEG/20866150_71088514.jpg?type=f232_232",
     "reviewCount": 121,
     "reputation": 1522,
-    "descript": null
+    "descript": null,
+    "status": "New"
   },
   {
     "id": 5,
@@ -47,7 +51,8 @@
     "img": "https://shop-phinf.pstatic.net/20200428_245/1588053618652ltQoJ_JPEG/25415161280604313_650709649.jpg?type=f232_232",
     "reviewCount": 4858,
     "reputation": 4.23,
-    "descript": null
+    "descript": null,
+    "status": "Best"
   },
   {
     "id": 6,

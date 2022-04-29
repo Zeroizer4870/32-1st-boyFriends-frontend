@@ -3,12 +3,25 @@ import ProductNavTab from './ProductNavTab/ProductNavTab';
 import ProductFilterTab from './ProductFilterTab/ProductFilterTab';
 import Product from './Product/Product';
 import '../ProductList/ProductList.scss';
-import { render } from '@testing-library/react';
 
 function ProductList() {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState([
+    {
+      id: 0,
+      name: '',
+      price: 0,
+      stock: 0,
+      img: null,
+      reviewCount: null,
+      reputation: null,
+      descript: null,
+      status: null,
+      sale: null,
+    },
+  ]);
   const [isGrid, setIsGrid] = useState(true);
 
+  // http://10.58.1.245:8000/products/productslist
   useEffect(() => {
     fetch('/data/ProductListMock/ProductListMock.json')
       .then(res => res.json())
