@@ -1,0 +1,47 @@
+@import '/src/styles/variables.scss';
+
+.productInfo {
+  .linkWrapper {
+    position: relative;
+    text-decoration: none;
+    color: black;
+
+    .bestTab {
+      position: absolute;
+      z-index: 2;
+      background-color: #4eb6dd;
+      color: white;
+      padding: 4px 7px 4px 7px;
+    }
+
+    .productImg {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+
+    .productContet {
+      margin-top: 14px;
+
+      strong {
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      div {
+        margin-top: 12px;
+
+        .price {
+          font-size: 13px;
+          font-weight: 800;
+        }
+      }
+
+      p {
+        margin-top: 10px;
+        font-size: 10px;
+      }
+    }
+  }
+}
