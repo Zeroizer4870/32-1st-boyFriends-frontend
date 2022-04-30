@@ -19,5 +19,3 @@ function ProductTitle({ productData, salePrice }) {
 }
 
 export default ProductTitle;
-
-// {productData.sale !== null && }
