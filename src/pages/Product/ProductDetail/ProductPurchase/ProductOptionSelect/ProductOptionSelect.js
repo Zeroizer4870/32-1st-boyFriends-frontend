@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../ProductOptionSelect/ProductOptionSelect.scss';
 import ResultPrice from './ResultPrice/ResultPrice';
+import SelectedProduct from './SelectedProduct/SelectedProduct';
 
 function ProductOptionSelect({ productData, salePrice }) {
   const [viewItem, setViewItem] = useState([]);
@@ -52,29 +53,15 @@ function ProductOptionSelect({ productData, salePrice }) {
 
         <div className="currentSelect">
           {viewItem.length !== 0 && (
-            <ul className="selectedProduct">
-              <li className="selectedStatus">
-                <p className="optionTitle">{viewItem.optionTitle}</p>
-                <div className="selectedWrapper">
-                  <div className="productCount">
-                    <button className="countBtn" onClick={onDecrease}>
-                      -
-                    </button>
-                    <span className="countValue">{itemCount}</span>
-                    <button className="countBtn" onClick={onIncrease}>
-                      +
-                    </button>
-                  </div>
-                  <span className="selectedPrice">
-                    {itemPrice.toLocaleString()}
-                    <span> 원</span>
-                  </span>
-                </div>
-              </li>
-            </ul>
+            <SelectedProduct
+              itemCount={itemCount}
+              itemPrice={itemPrice}
+              viewItem={viewItem}
+              onIncrease={onIncrease}
+              onDecrease={onDecrease}
+            />
           )}
         </div>
-        {/* 총 가격 */}
         <ResultPrice itemPrice={itemPrice} itemCount={itemCount} />
       </div>
     </div>

@@ -1,6 +1,12 @@
 import React from 'react';
 
-function SelectedProduct() {
+function SelectedProduct({
+  itemPrice,
+  itemCount,
+  onIncrease,
+  onDecrease,
+  viewItem,
+}) {
   return (
     <ul className="selectedProduct">
       <li className="selectedStatus">
