@@ -3,13 +3,22 @@ import '../ProductOptionSelect/ProductOptionSelect.scss';
 import ResultPrice from './ResultPrice/ResultPrice';
 
 function ProductOptionSelect({ productData, salePrice }) {
-  const [viewItem, setViewItem] = useState('사이즈');
+  const [viewItem, setViewItem] = useState([]);
   const [itemCount, setItemCount] = useState(0);
   const [itemPrice, setItemPrice] = useState(0);
 
-  const change = ({ target }) => {
-    setViewItem(target.value);
+  const change = e => {
+    setViewItem({ optionTitle: e.target.value });
   };
+
+  /*
+    onchange 
+    사이즈가 선택되면 해당 e.target.value를 통해 들어온다.
+    들어온 이벤트를 객체로 만들어서 특정 배열에 저장한다.
+    배열을 mapping해서 뿌려준다.
+    그러면, 선택된 옵션 만큼 뿌려지지 않을가?
+     다만 / 한번 선택되서 만들어진 박스는 중복되서 나올 수 없다.
+  */
 
   const onIncrease = () => {
     setItemCount(prev => prev + 1);
@@ -31,19 +40,21 @@ function ProductOptionSelect({ productData, salePrice }) {
         <div>
           <select className="selectFeature" onChange={change}>
             <option>사이즈</option>
-            {productData.productOtpion.map(option => (
-              <option key={option.id}>
-                {option.size} ({option.stock}개)
-              </option>
-            ))}
+            {productData.productOtpion
+              .filter(option => option.category === productData.category)
+              .map(option => (
+                <option key={option.id}>
+                  {option.size} ({option.stock}개)
+                </option>
+              ))}
           </select>
         </div>
 
         <div className="currentSelect">
-          {viewItem !== '사이즈' && (
+          {viewItem.length !== 0 && (
             <ul className="selectedProduct">
               <li className="selectedStatus">
-                <p className="optionTitle">단품(옵션 이름)</p>
+                <p className="optionTitle">{viewItem.optionTitle}</p>
                 <div className="selectedWrapper">
                   <div className="productCount">
                     <button className="countBtn" onClick={onDecrease}>
