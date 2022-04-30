@@ -11,8 +11,11 @@ function ProductDetail() {
     userName: '성용',
     img: 'https://image.fmkorea.com/files/attach/new/20201223/4477817/2069934950/3279324811/e1f621cd14d2c931f6d5cbf5d38a3b18.png',
     price: 49000,
-    stock: 10,
-    size: [{ 1: 'S', 2: 'M', 3: 'L', 4: null }],
+    productOtpion: [
+      { id: 1, size: 'S', stock: 12 },
+      { id: 2, size: 'M', stock: 21 },
+      { id: 3, size: 'L', stock: 0 },
+    ],
     sale: 15,
     status: 'New',
     review: [

@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-
 import '../ProductOptionSelect/ProductOptionSelect.scss';
 import ResultPrice from './ResultPrice/ResultPrice';
 
 function ProductOptionSelect({ productData, salePrice }) {
-  console.log(productData);
   const [viewItem, setViewItem] = useState('사이즈');
   const [itemCount, setItemCount] = useState(0);
   const [itemPrice, setItemPrice] = useState(0);
@@ -33,10 +31,13 @@ function ProductOptionSelect({ productData, salePrice }) {
         <div>
           <select className="selectFeature" onChange={change}>
             <option>사이즈</option>
-            <option>단품</option>
+            {productData.productOtpion.map(option => (
+              <option key={option.id}>
+                {option.size} ({option.stock}개)
+              </option>
+            ))}
           </select>
         </div>
-        {/* 사이즈 선택 */}
 
         <div className="currentSelect">
           {viewItem !== '사이즈' && (
