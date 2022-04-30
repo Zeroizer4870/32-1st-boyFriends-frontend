@@ -13,10 +13,10 @@ const DirectionBtn = ({ index, setIndex, carousel }) => {
   return (
     <>
       <button onClick={goToPrev} className="prevBtn">
-        <i className="fa-solid fa-arrow-left" />
+        <i className="fa-solid fa-less-than" />
       </button>
       <button onClick={goToNext} className="nextBtn">
-        <i className="fa-solid fa-arrow-right" />
+        <i className="fa-solid fa-greater-than" />
       </button>
     </>
   );

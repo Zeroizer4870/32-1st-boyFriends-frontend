@@ -33,13 +33,16 @@ const Section = ({ sectionData }) => {
         <div className="sectionTitle">
           <h1>{sectionData.title}</h1>
         </div>
-        <div ref={cardRef} className="cardList">
+        <div
+          ref={cardRef}
+          className={sectionData.id === 4 ? 'cardListGrid' : 'cardListFlex'}
+        >
           {sectionData.category.map(category => {
             return (
               <SectionCard
                 id={sectionData.id}
                 category={category}
-                key={sectionData.id}
+                key={Date.now()}
               />
             );
           })}
@@ -47,17 +50,20 @@ const Section = ({ sectionData }) => {
       </section>
 
       <div style={gridRowSet} className="sectionCopy">
-        <DirectionBtn index={index} setIndex={setIndex} carousel={carousel} />
-        <div className="cardBtnList">
-          {sectionData.category.map(sectionData => {
-            return (
-              <CircleBtn
-                id={sectionData.categoryId}
-                setIndex={setIndex}
-                key={sectionData.categoryId}
-              />
-            );
-          })}
+        {sectionData.id === 4 || (
+          <DirectionBtn index={index} setIndex={setIndex} carousel={carousel} />
+        )}
+        <div className="circleBtnList">
+          {sectionData.id === 4 ||
+            sectionData.category.map(sectionData => {
+              return (
+                <CircleBtn
+                  id={sectionData.categoryId}
+                  setIndex={setIndex}
+                  key={sectionData.categoryId}
+                />
+              );
+            })}
         </div>
       </div>
     </>

@@ -7,8 +7,8 @@ const CircleBtn = ({ setIndex, id }) => {
   };
 
   return (
-    <button id={id} className="cardBtn" onClick={e => {}}>
-      <i onClick={findCard} id={id} className="fa-regular fa-circle" />
+    <button id={id} className="circleBtn" onClick={e => {}}>
+      <i onClick={findCard} id={id} className="fa-solid fa-circle" />
     </button>
   );
 };

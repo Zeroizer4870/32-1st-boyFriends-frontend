@@ -1,17 +1,22 @@
 import React from 'react';
 import SectionMiniCard from './SectionMiniCard';
+import './SectionCard.scss';
 
 const SectionCard = ({ category, id }) => {
   return (
     <article className="card">
-      <div className="cardImgWrap">
-        <img className="cardImg" alt="img" src={category.categorySrc} />
+      <div className={id === 1 ? 'cardThreeImage' : 'cardFourImage'}>
+        <img className="cardImage" alt="img" src={category.categorySrc} />
       </div>
-      <h3 className="cardTitle">{category.categoryName}</h3>
-      {id === 1 &&
-        category.categoryProduct.map(product => {
-          return <SectionMiniCard product={product} key={Date.now} />;
-        })}
+
+      {id === 1 && (
+        <strong className="cardTitle">{category.categoryName}</strong>
+      )}
+      {category.categoryProduct.map(product => {
+        return (
+          <SectionMiniCard id={id} product={product} key={product.productId} />
+        );
+      })}
     </article>
   );
 };

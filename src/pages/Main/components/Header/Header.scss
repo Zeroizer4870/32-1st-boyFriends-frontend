@@ -1,3 +1,5 @@
+@import '/src/styles/variables.scss';
+
 .header {
   grid-column: 1/4;
   grid-row: 1/2;
@@ -6,7 +8,7 @@
   .card {
     display: flex;
     width: 500vw;
-    .cardImg {
+    .cardImage {
       width: 100vw;
       height: 767px;
     }
@@ -17,91 +19,119 @@
   grid-column: 1/4;
   grid-row: 1/2;
   position: relative;
-  background-color: transparent;
   z-index: 90;
+  background-color: transparent;
+  opacity: 100%;
+
+  .nav {
+    .infoWrapper {
+      border-bottom: 1px solid $secondryFontColor;
+    }
+    .menuWrapper {
+      border-bottom: 0px;
+
+      .menu {
+        border-bottom: 0px;
+      }
+    }
+  }
+
+  .prevBtn,
+  .nextBtn {
+    opacity: 0%;
+  }
 
   .cardTitle {
     position: absolute;
-    top: 150px;
-    left: 250px;
-    font-size: 70px;
-    font-weight: bold;
-    color: black;
-    // white-space: pre-line;
+    top: 250px;
+    left: 150px;
+    font-size: 52px;
+    font-weight: 900;
+    color: $fontColor;
     width: 280px;
     line-height: 90px;
   }
 
   .cardContent {
     position: absolute;
-    top: 450px;
-    left: 250px;
-    color: black;
-    font-size: 40px;
-    font-weight: bold;
+    top: 420px;
+    left: 150px;
+    color: $fontColor;
+    font-size: 12px;
     width: 500px;
     line-height: 60px;
   }
 
-  .cardBtnList {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    margin-left: -55px;
+  &:hover {
+    opacity: 100%;
 
-    .cardBtn {
-      background-color: transparent;
-      border: 0;
+    .prevBtn {
+      position: absolute;
+      top: 60%;
+      left: 10px;
+      margin-top: -80px;
+      opacity: 30%;
+      width: 80px;
+      height: 80px;
+      background-color: $fontColor;
+      border: 0px;
+      border-radius: 50%;
+
+      &:hover {
+        opacity: 100%;
+        cursor: pointer;
+      }
 
       i {
-        color: white;
-        font-size: 13px;
+        font-size: 30px;
+        color: $MainBackground;
+      }
+    }
 
-        &:hover {
-          color: #000000;
-          cursor: pointer;
-        }
+    .nextBtn {
+      position: absolute;
+      top: 60%;
+      right: 10px;
+      margin-top: -80px;
+      opacity: 30%;
+      width: 80px;
+      height: 80px;
+      background-color: $fontColor;
+      border: 0px;
+      border-radius: 50%;
+
+      &:hover {
+        opacity: 100%;
+        cursor: pointer;
+      }
+
+      i {
+        font-size: 30px;
+        color: $MainBackground;
       }
     }
   }
 
-  .prevBtn {
+  .circleBtnList {
     position: absolute;
-    top: 50%;
-    width: 100px;
-    height: 100px;
-    margin-top: -100px;
-    left: 20px;
-    background-color: transparent;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -25px;
 
-    &:hover {
-      color: #000000;
-      cursor: pointer;
-    }
+    .circleBtn {
+      background-color: transparent;
+      border: 0;
 
-    i {
-      font-size: 100px;
-      color: white;
-    }
-  }
+      i {
+        color: $fontColor;
+        opacity: 30%;
+        font-size: 5px;
 
-  .nextBtn {
-    position: absolute;
-    top: 50%;
-    width: 100px;
-    height: 100px;
-    margin-top: -100px;
-    right: 20px;
-    background-color: transparent;
-
-    &:hover {
-      color: #000000;
-      cursor: pointer;
-    }
-
-    i {
-      font-size: 100px;
-      color: white;
+        &:hover {
+          opacity: 100%;
+          cursor: pointer;
+        }
+      }
     }
   }
 }

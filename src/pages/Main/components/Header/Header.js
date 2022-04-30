@@ -3,6 +3,7 @@ import CircleBtn from '../common/CircleBtn';
 import ImageCard from '../common/ImageCard';
 import DirectionBtn from '../common/DirectionBtn';
 import './Header.scss';
+import Nav from '../../../../components/Nav/Nav';
 
 const Header = ({ headerData }) => {
   const carousel = 4;
@@ -26,11 +27,12 @@ const Header = ({ headerData }) => {
           })}
         </div>
       </header>
+
       <div className="headerCopy">
-        <p className="cardTitle">{headerData[index]?.title}</p>
+        <strong className="cardTitle">{headerData[index]?.title}</strong>
         <p className="cardContent">{headerData[index]?.content}</p>
         <DirectionBtn index={index} setIndex={setIndex} carousel={carousel} />
-        <div className="cardBtnList">
+        <div className="circleBtnList">
           {headerData.map(headerData => {
             return (
               <CircleBtn
