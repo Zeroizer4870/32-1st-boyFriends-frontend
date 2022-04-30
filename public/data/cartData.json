@@ -6,7 +6,8 @@
     "price": 100000,
     "size": ["S", "M", "L"],
     "sale": 30,
-    "stock": [10, 3, 5]
+    "stock": [10, 3, 5],
+    "isChecked": true
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "price": 22000,
     "size": ["S", "M", "L"],
     "sale": 10,
-    "stock": [3, 5, 30]
+    "stock": [3, 5, 30],
+    "isChecked": true
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "price": 30000,
     "size": ["S", "M", "L"],
     "sale": 0,
-    "stock": [1, 2, 5]
+    "stock": [1, 2, 5],
+    "isChecked": true
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "price": 20000,
     "size": ["S", "M", "L"],
     "sale": 5,
-    "stock": [4, 5, 12]
+    "stock": [4, 5, 12],
+    "isChecked": true
   },
   {
     "id": 5,
@@ -42,6 +46,7 @@
     "price": 500000,
     "size": ["S", "M", "L"],
     "sale": 20,
-    "stock": [4, 11, 0]
+    "stock": [4, 11, 0],
+    "isChecked": true
   }
 ]

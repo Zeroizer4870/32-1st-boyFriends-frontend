@@ -15,11 +15,13 @@ export default function Cart() {
         setInfoBox(data);
       });
   }, []);
+
   return (
     <main className="cart">
       <div className="cartNav">
         <div>
-          <span className="normalDeli">일반배송 0</span> | 지정배송 0
+          <span className="normalDeli">일반배송 {infoBox.length}</span> |
+          지정배송 0
         </div>
         <div className=" ingStatus">
           <span className="basketBold">장바구니</span> {'>'} 주문/결제 {'>'}

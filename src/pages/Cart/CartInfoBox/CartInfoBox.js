@@ -1,26 +1,28 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import InfoMapBox from './InfoMapBox';
 import './CartInfoBox.scss';
 
 export default function CartInfoBox({ infoBox }) {
-  const [sum, setSum] = useState(0);
+  const [sum, setSum] = useState({ default: 0 });
+  const [delivery, setDelivery] = useState(3000);
+  const [sale, setSale] = useState({ default: 0 });
 
-  const priceSum = () => {
-    let arr = [];
-    for (let i = 0; i < infoBox.length; i++) {
-      arr.push(infoBox[i].price);
-    }
+  const total = Object.values(sum).reduce((acc, cur) => acc + cur);
+  const salePrice = Object.values(sale).reduce((acc, cur) => acc + cur);
 
-    let sum = arr.reduce((acc, cur) => acc + cur);
-
-    setSum(sum);
+  const deliveryCharge = () => {
+    return total <= 29999 ? setDelivery(3000) : setDelivery(0);
   };
+
+  useEffect(() => {
+    deliveryCharge();
+  }, [total]);
 
   return (
     <>
       <div className="cartInfoBox">
         <div className="allSelect">
-          <input type="checkbox" className="navSelect" onClick={priceSum} />
+          <input type="checkbox" className="navSelect" />
           전체 선택
         </div>
         <div>
@@ -34,33 +36,39 @@ export default function CartInfoBox({ infoBox }) {
             <i className="fa-solid fa-house-chimney" />
           </div>
           {infoBox.map(box => (
-            <InfoMapBox box={box} />
+            <InfoMapBox setSum={setSum} box={box} setSale={setSale} />
           ))}
         </div>
       </div>
       <div className="total">
         <div className="selectPrice">
           <p className="textSizeFourteen">총 선택상품금액</p>
-          <p className="textSizeEighteen">{sum}원</p>
+          <p className="textSizeEighteen">{total.toLocaleString()}원 </p>
         </div>
         <div className="plus">+</div>
         <div className="deliveryPrice">
           <p className="textSizeFourteen">총 배송비</p>
-          <p className="textSizeEighteen">3,000원</p>
+          <p className="textSizeEighteen">{delivery.toLocaleString()}원</p>
         </div>
         <div className="minus">-</div>
         <div className="salePrice">
           <p className="finalSaleText">할인예상금액</p>
-          <p className="finalSalePrice">0원</p>
+          <p className="finalSalePrice">{salePrice.toLocaleString()}원</p>
         </div>
         <span className="totalPriceText">총 주문금액</span>
-        <span className="totalPrice">원</span>
+        {total !== 0 && (
+          <span className="totalPrice">
+            {(total + delivery - salePrice).toLocaleString()}원
+          </span>
+        )}
       </div>
-      <span className="deliveryInfo">
-        배송비는 3,000원이며, 30,000원 이상 구매시 무료입니다.
-      </span>
+      <div className="deliveryInfoDiv">
+        <span className="deliveryInfoText">
+          배송비는 3,000원이며, 30,000원 이상 구매시 무료입니다.
+        </span>
+      </div>
       <div className="finalSelect">
-        <button className="finalBtn">총 1건 주문하기</button>
+        <button className="finalBtn">총 {infoBox.length}건 주문하기</button>
       </div>
     </>
   );
