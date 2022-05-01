@@ -1,0 +1,56 @@
+@import '/src/styles/variables.scss';
+
+.modalSellerDetail {
+  position: absolute;
+  top: 42px;
+  right: 490px;
+  border: 1px solid $secondryFontColor;
+  background-color: $MainBackground;
+  width: 410px;
+  height: 264px;
+
+  button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background-color: transparent;
+
+    &:hover {
+      color: $secondryFontColor;
+      cursor: pointer;
+    }
+  }
+
+  .container {
+    padding: 30px 40px;
+    line-height: 180%;
+
+    .title {
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .content {
+      display: flex;
+      margin-top: 10px;
+      font-size: 12px;
+
+      .contentKey {
+        margin-right: 30px;
+        font-weight: 600;
+        color: $secondryFontColor;
+      }
+
+      .contentValue {
+        span {
+          margin-right: 5px;
+        }
+        .inlineText {
+          display: inline;
+          color: $skyblue;
+        }
+      }
+    }
+  }
+}
