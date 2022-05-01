@@ -4,17 +4,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   .red {
     color: red;
   }
+
   .gray {
     color: $secondryFontColor;
   }
+
   .green {
     color: $green;
-  }
-  .hidden {
-    visibility: hidden;
   }
 
   .wrapper {
@@ -23,25 +23,17 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 640px;
 
-    .signUpWrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      width: 100%;
-      // background-color: lightblue;
-
-      .signUpLogo {
-        color: black;
-        font-size: 30px;
-        font-weight: bold;
-        margin: 50px;
-      }
+    .signUpLogo {
+      color: black;
+      font-size: 30px;
+      font-weight: bold;
+      margin-top: 100px;
+      margin-bottom: 60px;
     }
+
     .signUpBar {
-      width: 100%;
+      width: 640px;
       display: flex;
       justify-content: flex-end;
       margin-bottom: 30px;
@@ -50,92 +42,45 @@
       font-size: 12px;
     }
     .form {
+      width: 640px;
       font-size: 14px;
       font-weight: bold;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       flex-direction: column;
-      width: 100%;
 
-      .contentWrapper {
+      .genderLabel {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
-        width: 100%;
-        // padding: 2px;
-        .contentLabel {
-          width: 200px;
-          padding: 30px 30px;
-        }
+        width: 332px;
 
-        input {
-          width: 332px;
-          height: 44px;
-          padding: 14px;
-          border: 1px solid rgb(230, 230, 230);
-          border-radius: 3px;
-          // &::-webkit-inner-spin-button,
-          // ::-webkit-outer-spin-button {
-          //   -webkit-appearance: none;
-          // }
-
-          &:focus {
-            outline: 1px solid black;
-          }
-          &::placeholder {
-            color: rgb(200, 200, 200);
-          }
-        }
-
-        input[type='number'] {
-          &::-webkit-inner-spin-button,
-          ::-webkit-outer-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-          }
-        }
-
-        .genderLabel {
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-
-          width: 332px;
-          .gender {
-            width: 25px;
-          }
-          span {
-            font-size: 14px;
-            font-weight: 500;
-          }
+        span {
+          font-size: 14px;
+          font-weight: 500;
         }
       }
+
       .submit {
         width: 250px;
         height: 50px;
         margin: 50px 0px;
         border: none;
         border-radius: 3px;
-
         font-size: 16px;
         font-weight: bold;
       }
+
       .abled {
         background-color: $green;
         color: white;
+        cursor: pointer;
       }
+
       .disabled {
         background-color: transparent;
-        // color: transparent;
       }
-    }
-    .check {
-      align-self: flex-start;
-      position: relative;
-      left: 260px;
-      font-size: 12px;
-      margin: 5px 0px;
     }
   }
 }

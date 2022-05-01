@@ -1,9 +1,22 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Contents from './Contents';
 import './Signup.scss';
 
 function SignUp() {
   const navigate = useNavigate();
+
+  const [contentsData, setContentsDataList] = useState([]);
+  useEffect(() => {
+    fetch('/data/SignUpMock/contentsData.json', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => {
+        setContentsDataList(data);
+      });
+  }, []);
+
   const [inputValues, setInputValues] = useState({
     email: '',
     pw: '',
@@ -19,23 +32,20 @@ function SignUp() {
     const { name, value } = e.target;
     setInputValues(inputValues => ({ ...inputValues, [name]: value }));
   };
+  const pwdCheck = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,20}$/;
+
   const isValid =
-    inputValues.email.includes('@') &&
-    inputValues.pw.length >= 6 &&
+    inputValues.email.includes('@', '.') &&
+    inputValues.pw.length >= 8 &&
+    pwdCheck.test(inputValues.pw) &&
+    inputValues.pw.length >= 8 &&
+    pwdCheck.test(inputValues.pw) &&
     inputValues.pw === inputValues.pw2 &&
     inputValues.name.length >= 2;
 
-  let pwdCheck = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,20}$/;
-
-  const isValidId = inputValues.email.includes('@' && '.');
-  const isValidPw = pwdCheck.test(inputValues.pw);
-  const isValidPw2 =
-    pwdCheck.test(inputValues.pw) && inputValues.pw2 === inputValues.pw;
-  const isValidName = inputValues.name.length >= 2;
-
   function goToLogIn(e) {
     e.preventDefault();
-    fetch('http://10.58.0.112:8000/users/signup', {
+    fetch('http://10.58.7.24:8000/users/signup', {
       method: 'POST',
       body: JSON.stringify({
         email: inputValues.email,
@@ -60,123 +70,40 @@ function SignUp() {
   return (
     <div className="signUp">
       <div className="wrapper">
-        <div className="signUpWrapper">
-          <p className="signUpLogo">회원가입</p>
-        </div>
+        <p className="signUpLogo">회원가입</p>
         <p className="signUpBar">
           <span className="red">*</span> 필수입력사항
         </p>
-
         <form className="form" onChange={handleInput}>
-          <div className="contentWrapper">
-            <label className="contentLabel">
-              이메일 <span className="red">*</span>
-            </label>
-
-            <input
-              type="text"
-              name="email"
-              className="email"
-              placeholder="이메일을 입력해주세요"
-            />
-          </div>
-          <p className={`check ${isValidId ? 'green' : 'gray'}`}>
-            이메일 형식으로 입력해주세요
-          </p>
-          <div className="contentWrapper">
-            <label className="contentLabel">
-              비밀번호 <span className="red">*</span>
-            </label>
-
-            <input
-              type="password"
-              name="pw"
-              className="pw"
-              placeholder="비밀번호를 입력해주세요"
-            />
-          </div>
-          <p className={`check ${isValidPw ? 'green' : 'gray'}`}>
-            문자, 숫자, 특수문자로 8글자 이상을 입력해주세요
-          </p>
-          <div className="contentWrapper">
-            <label className="contentLabel">
-              비밀번호확인 <span className="red">*</span>
-            </label>
-
-            <input
-              type="password"
-              name="pw2"
-              className="pw2"
-              placeholder="비밀번호를 한번 더 입력해주세요"
-            />
-          </div>
-          <p className={`check ${isValidPw2 ? 'green' : 'gray'}`}>
-            동일한 비밀번호를 입력해주세요
-          </p>
-          <div className="contentWrapper">
-            <label className="contentLabel">
-              이름 <span className="red">*</span>
-            </label>
-
-            <input
-              type="text"
-              name="name"
-              className="name"
-              placeholder="이름을 입력해주세요"
-            />
-          </div>
-          <p className={`check ${isValidName ? 'green' : 'gray'}`}>
-            두 글자 이상을 입력해주세요
-          </p>
-          <div className="contentWrapper">
-            <label className="contentLabel">휴대폰</label>
-
-            <input
-              type="number"
-              name="phone"
-              className="phone"
-              placeholder="숫자만 입력해주세요"
-            />
-          </div>
-          <div className="contentWrapper">
-            <label className="contentLabel">주소</label>
-
-            <input
-              type="text"
-              name="address"
-              className="address"
-              placeholder="주소를 입력해주세요"
-            />
-          </div>
-          <div className="contentWrapper">
-            <label className="contentLabel">성별</label>
-            <div className="genderLabel">
-              <input
-                type="radio"
-                name="gender"
-                className="gender"
-                value="남자"
+          {contentsData.map(data => {
+            return (
+              <Contents
+                inputValues={inputValues}
+                contents={data}
+                key={data.id}
               />
-              <span>남자</span>
-              <input
-                type="radio"
-                name="gender"
-                className="gender"
-                value="여자"
-              />
-
-              <span>여자</span>
+            );
+          })}
+          <div className="contents">
+            <div className="inputWrapper">
+              <label className="contentLabel">성별</label>
+              <div className="genderLabel">
+                <input
+                  type="radio"
+                  name="gender"
+                  className="gender"
+                  value="남자"
+                />
+                <span>남자</span>
+                <input
+                  type="radio"
+                  name="gender"
+                  className="gender"
+                  value="여자"
+                />
+                <span>여자</span>
+              </div>
             </div>
-          </div>
-          <div className="contentWrapper">
-            <label className="contentLabel">나이</label>
-
-            <input
-              type="number"
-              name="age"
-              className="age"
-              placeholder="나이를 입력해주세요"
-            />
           </div>
           <button
             className={`submit ${isValid ? 'abled' : 'disabled'}`}
