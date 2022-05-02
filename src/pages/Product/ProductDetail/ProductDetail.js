@@ -6,12 +6,12 @@ import ProductPurchase from './ProductPurchase/ProductPurchase';
 function ProductDetail() {
   const PRODUCT_DATA = {
     id: 1,
-    itemTitle: '후드티',
+    itemTitle: '보이프렌즈 후드티 BT21',
     category: '의류',
     userName: '성용',
     img: 'https://image.fmkorea.com/files/attach/new/20201223/4477817/2069934950/3279324811/e1f621cd14d2c931f6d5cbf5d38a3b18.png',
-    price: 25000,
-    productOtpion: [
+    price: 49000,
+    productOptioin: [
       { id: 1, size: 'S', stock: 12, category: '의류' },
       { id: 2, size: 'M', stock: 21, category: '의류' },
       { id: 3, size: 'L', stock: 0, category: '의류' },

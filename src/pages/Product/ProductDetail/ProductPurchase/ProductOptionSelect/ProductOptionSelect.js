@@ -5,63 +5,49 @@ import SelectedProduct from './SelectedProduct/SelectedProduct';
 
 function ProductOptionSelect({ productData, salePrice }) {
   const [viewItem, setViewItem] = useState([]);
-  const [itemCount, setItemCount] = useState(0);
+  const [key, setKey] = useState(1);
   const [itemPrice, setItemPrice] = useState(0);
+  const [resultCount, setResultCount] = useState(0);
 
-  const change = e => {
-    setViewItem({ optionTitle: e.target.value });
+  const optionChange = e => {
+    viewItem.map(x => x.optionName);
+    let a = [...viewItem, { optionName: e.target.value, key: key }];
+    setViewItem(a);
+
+    keyChange();
   };
 
-  /*
-    onchange 
-    사이즈가 선택되면 해당 e.target.value를 통해 들어온다.
-    들어온 이벤트를 객체로 만들어서 특정 배열에 저장한다.
-    배열을 mapping해서 뿌려준다.
-    그러면, 선택된 옵션 만큼 뿌려지지 않을가?
-     다만 / 한번 선택되서 만들어진 박스는 중복되서 나올 수 없다.
-  */
-
-  const onIncrease = () => {
-    setItemCount(prev => prev + 1);
-    setItemPrice(prev => prev + salePrice);
-  };
-
-  const onDecrease = () => {
-    if (itemCount <= 1) {
-      alert('1개 이하는 선택할 수 없습니다.');
-      return;
-    }
-    setItemCount(prev => prev - 1);
-    setItemPrice(prev => prev - salePrice);
+  const keyChange = () => {
+    setKey(prev => prev + 1);
   };
 
   return (
     <div className="productOptionSelect">
       <div className="selectOption">
         <div>
-          <select className="selectFeature" onChange={change}>
+          <select className="selectFeature" onChange={optionChange}>
             <option>사이즈</option>
-            {productData.productOtpion
+            {productData.productOptioin
               .filter(option => option.category === productData.category)
               .map(option => (
-                <option disabled={option.stock === 0} key={option.id}>
+                <option disabled={!option.stock} key={option.id}>
                   {option.size} ({option.stock}개)
                 </option>
               ))}
           </select>
         </div>
         <div className="currentSelect">
-          {viewItem.length !== 0 && (
+          {viewItem.map(item => (
             <SelectedProduct
-              itemCount={itemCount}
-              itemPrice={itemPrice}
+              key={item.key}
               viewItem={viewItem}
-              onIncrease={onIncrease}
-              onDecrease={onDecrease}
+              salePrice={salePrice}
+              setItemPrice={setItemPrice}
+              setResultCount={setResultCount}
             />
-          )}
+          ))}
         </div>
-        <ResultPrice itemPrice={itemPrice} itemCount={itemCount} />
+        <ResultPrice itemPrice={itemPrice} resultCount={resultCount} />
       </div>
     </div>
   );

@@ -1,16 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function SelectedProduct({
-  itemPrice,
-  itemCount,
-  onIncrease,
-  onDecrease,
   viewItem,
+  salePrice,
+  setItemPrice,
+  setResultCount,
 }) {
+  const [itemCount, setItemCount] = useState(0);
+  const [priceOption, setPriceOption] = useState(0);
+
+  const onIncrease = () => {
+    setItemCount(prev => prev + 1);
+    setResultCount(prev => prev + 1);
+    setPriceOption(prev => prev + salePrice);
+    setItemPrice(prev => prev + salePrice);
+  };
+
+  const onDecrease = () => {
+    if (itemCount <= 0) {
+      alert('0개 이하는 선택할 수 없습니다.');
+      return;
+    }
+    setItemCount(prev => prev - 1);
+    setResultCount(prev => prev - 1);
+    setPriceOption(prev => prev - salePrice);
+    setItemPrice(prev => prev - salePrice);
+  };
+
+  let optionName = viewItem.map(x => x.optionName);
+
   return (
     <ul className="selectedProduct">
       <li className="selectedStatus">
-        <p className="optionTitle">{viewItem.optionTitle}</p>
+        <p className="optionTitle">{optionName}</p>
         <div className="selectedWrapper">
           <div className="productCount">
             <button className="countBtn" onClick={onDecrease}>
@@ -22,7 +44,7 @@ function SelectedProduct({
             </button>
           </div>
           <span className="selectedPrice">
-            {itemPrice.toLocaleString()}
+            {priceOption.toLocaleString()}
             <span> 원</span>
           </span>
         </div>
