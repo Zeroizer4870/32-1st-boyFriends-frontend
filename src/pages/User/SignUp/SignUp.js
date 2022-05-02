@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Contents from './Contents';
-import './Signup.scss';
+import './SignUp.scss';
 
 function SignUp() {
   const navigate = useNavigate();
