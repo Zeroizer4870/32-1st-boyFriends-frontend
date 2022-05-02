@@ -27,11 +27,11 @@ const Main = () => {
       .then(res => res.json())
       .then(data => setHeaderData(data));
 
-    fetch('/data/sectionData.json', {
+    fetch('http://10.58.0.223:8000/products/main', {
       method: 'GET',
     })
       .then(res => res.json())
-      .then(data => setSectionData(data));
+      .then(data => setSectionData(data), console.log(sectionData));
   }, []);
 
   return (
