@@ -61,7 +61,7 @@ function SignUp() {
       .then(result => {
         if (result.message === 'SUCCESS') {
           localStorage.setItem('token', result.access_token);
-          alert('환영합니다!');
+          alert('환영합니다! boyFriends 입니다!');
           navigate('/');
         }
       });

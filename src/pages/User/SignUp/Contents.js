@@ -5,6 +5,7 @@ function Contents({ contents, inputValues }) {
   const { contentName, isImportant, placeholder, type, name, check } = contents;
 
   const [test, setTest] = useState(false);
+
   function isValidEach(e) {
     const pwdCheck = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,20}$/;
     if (name === 'email') {
