@@ -1,12 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react';
-import './Main.scss';
+import Nav from '../../components/Nav/Nav';
 import Header from './components/Header/Header';
 import Section from './components/Section/Section';
+import './Main.scss';
 
 const Main = () => {
-  const [headerData, setHeaderData] = useState([]);
-  const [sectionData, setSectionData] = useState([]);
-
+  const [mainData, setMainData] = useState([]);
+  const sectionData = [
+    { id: 1, title: '주목할만한소식1' },
+    { id: 2, title: '주목할만한소식2' },
+    { id: 3, title: '주목할만한소식3' },
+    { id: 4, title: '주목할만한소식4' },
+  ];
   const testRef = useRef(null);
   const [myElementIsVisible, setMyElementIsVisible] = useState();
   console.log('myElementIsVisible: ', myElementIsVisible);
@@ -21,25 +26,32 @@ const Main = () => {
   }, []);
 
   useEffect(() => {
-    fetch('/data/headerData.json', {
+    fetch('/data/mainMock/mainMock.json', {
       method: 'GET',
     })
       .then(res => res.json())
-      .then(data => setHeaderData(data));
-
-    fetch('http://10.58.0.223:8000/products/main', {
-      method: 'GET',
-    })
-      .then(res => res.json())
-      .then(data => setSectionData(data), console.log(sectionData));
+      .then(data => setMainData(data));
   }, []);
+
+  // fetch('http://10.58.0.223:8000/products/main', {
+  //   method: 'GET',
+  // })
+  //   .then(res => res.json())
+  //   .then(data => setSectionData(data));
 
   return (
     <main>
-      <Header headerData={headerData} />
+      <Nav />
+      <Header mainData={mainData} />
       <div ref={testRef} />
       {sectionData.map(sectionData => {
-        return <Section sectionData={sectionData} key={sectionData.id} />;
+        return (
+          <Section
+            sectionData={sectionData}
+            mainData={mainData}
+            key={sectionData}
+          />
+        );
       })}
     </main>
   );

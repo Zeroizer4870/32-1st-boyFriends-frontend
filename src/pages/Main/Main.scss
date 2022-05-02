@@ -3,4 +3,23 @@ main {
   grid-template-columns: auto 1280px auto;
   grid-template-rows: 767px 748px repeat(2, 527px) 1fr;
   row-gap: 130px;
+
+  .nav {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    z-index: 91;
+    height: 202px;
+
+    .infoWrapper {
+      border-color: #cbcbcb;
+    }
+
+    .logoSearchInput {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .menuWrapper {
+      border: none;
+    }
+  }
 }

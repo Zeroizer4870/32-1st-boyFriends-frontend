@@ -7,5 +7,5 @@ export function goToPrev(index, setIndex, carousel) {
 }
 
 export function findCard(e, setIndex) {
-  setIndex(e.target.id);
+  setIndex(Number(e.target.id) - 1);
 }

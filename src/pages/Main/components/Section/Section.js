@@ -4,7 +4,7 @@ import DirectionBtn from '../common/DirectionBtn';
 import CircleBtn from '../common/CircleBtn';
 import './Section.scss';
 
-const Section = ({ sectionData }) => {
+const Section = ({ sectionData, mainData }) => {
   const carousel = 7;
   const [index, setIndex] = useState(0);
   const cardRef = useRef(null);
@@ -37,15 +37,15 @@ const Section = ({ sectionData }) => {
           ref={cardRef}
           className={sectionData.id === 4 ? 'cardListGrid' : 'cardListFlex'}
         >
-          {sectionData.category.map(category => {
+          {/* {mainData.map(mainData => {
             return (
               <SectionCard
-                id={sectionData.id}
-                category={category}
-                key={Date.now()}
+                id={mainData.categoryId}
+                category={mainData}
+                key={mainData.categoryId}
               />
             );
-          })}
+          })} */}
         </div>
       </section>
 
@@ -55,12 +55,12 @@ const Section = ({ sectionData }) => {
         )}
         <div className="circleBtnList">
           {sectionData.id === 4 ||
-            sectionData.category.map(sectionData => {
+            mainData.map(mainData => {
               return (
                 <CircleBtn
-                  id={sectionData.categoryId}
+                  id={mainData.categoryId}
                   setIndex={setIndex}
-                  key={sectionData.categoryId}
+                  key={mainData.categoryId}
                 />
               );
             })}

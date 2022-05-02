@@ -3,14 +3,14 @@ import CircleBtn from '../common/CircleBtn';
 import ImageCard from '../common/ImageCard';
 import DirectionBtn from '../common/DirectionBtn';
 import './Header.scss';
-import Nav from '../../../../components/Nav/Nav';
 
-const Header = ({ headerData }) => {
+const Header = ({ mainData }) => {
   const carousel = 4;
   const [index, setIndex] = useState(0);
   // console.log(headerData[headerData.length - 1].id); // carousel 하드코딩 풀어야함
   // 자동 캐러셀
-
+  const cardTitle = ['새콤달콤', 'ㅋㅋ', 'ㅋㅋ', 'ㅋㅋ', 'ㅋㅋ', 'ㅋㅋ'];
+  const cardContent = ['달콤새콤', 'gg', 'gg', 'gg', 'gg', 'gg'];
   const cardRef = useRef(null);
 
   useEffect(() => {
@@ -22,24 +22,20 @@ const Header = ({ headerData }) => {
     <>
       <header className="header">
         <div ref={cardRef} className="card">
-          {headerData.map(headerData => {
-            return <ImageCard src={headerData.src} key={headerData.id} />;
+          {mainData.map(a => {
+            return <ImageCard src={a.categoryImg} key={a.categoryImg} />;
           })}
         </div>
       </header>
 
       <div className="headerCopy">
-        <strong className="cardTitle">{headerData[index]?.title}</strong>
-        <p className="cardContent">{headerData[index]?.content}</p>
+        <strong className="cardTitle">{cardTitle[index]}</strong>
+        <p className="cardContent">{cardContent[index]}</p>
         <DirectionBtn index={index} setIndex={setIndex} carousel={carousel} />
         <div className="circleBtnList">
-          {headerData.map(headerData => {
+          {mainData.map(a => {
             return (
-              <CircleBtn
-                id={headerData.id}
-                setIndex={setIndex}
-                key={headerData.id}
-              />
+              <CircleBtn id={a.categoryId} setIndex={setIndex} key={a.id} />
             );
           })}
         </div>
