@@ -23,7 +23,6 @@ function Contents({ contents, inputValues }) {
       setTest(e.target.value.length >= 2);
     }
   }
-
   return (
     <div className="contents">
       <div className="inputWrapper">

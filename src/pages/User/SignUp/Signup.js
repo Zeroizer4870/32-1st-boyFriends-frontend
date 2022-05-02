@@ -35,9 +35,7 @@ function SignUp() {
   const pwdCheck = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,20}$/;
 
   const isValid =
-    inputValues.email.includes('@', '.') &&
-    inputValues.pw.length >= 8 &&
-    pwdCheck.test(inputValues.pw) &&
+    inputValues.email.includes('@' && '.') &&
     inputValues.pw.length >= 8 &&
     pwdCheck.test(inputValues.pw) &&
     inputValues.pw === inputValues.pw2 &&
@@ -61,7 +59,7 @@ function SignUp() {
       .then(result => {
         if (result.message === 'SUCCESS') {
           localStorage.setItem('token', result.access_token);
-          alert('환영합니다! boyFriends 입니다!');
+          alert('환영합니다! BoyFriends 입니다!');
           navigate('/');
         }
       });
