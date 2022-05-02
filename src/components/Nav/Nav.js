@@ -6,7 +6,7 @@ import './Nav.scss';
 function Nav() {
   const [menuList, setMenuList] = useState([]);
   useEffect(() => {
-    fetch('/data/navMock/navMock.json', {
+    fetch('/navMock/navMock.json', {
       method: 'GET',
     })
       .then(res => res.json())
@@ -24,8 +24,8 @@ function Nav() {
               <Link to="/">BoyFriends</Link>
             </div>
             <div className="infoIcons">
-              <Link to="/user/signin">로그인</Link>
-              <Link to="/user/signup">회원가입</Link>
+              <Link to="/users/signin">로그인</Link>
+              <Link to="/users/signup">회원가입</Link>
               <Link to="/cart">장바구니</Link>
             </div>
           </div>
