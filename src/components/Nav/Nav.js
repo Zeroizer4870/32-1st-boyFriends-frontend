@@ -6,12 +6,12 @@ import './Nav.scss';
 function Nav() {
   const [menuList, setMenuList] = useState([]);
   useEffect(() => {
-    fetch('/navMock/navMock.json', {
+    fetch('http://10.58.1.245:8000/core/nav', {
       method: 'GET',
     })
       .then(res => res.json())
       .then(data => {
-        setMenuList(data);
+        setMenuList(data.results);
       });
   }, []);
 

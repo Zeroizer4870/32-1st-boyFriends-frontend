@@ -7,13 +7,13 @@ function Menulist({ menu }) {
     menu;
   return (
     <li className="menuList">
-      <Link to={menuLink}>{menuName}</Link>
+      <Link to={`"/products?main_category_id=${menuLink}"`}>{menuName}</Link>
       <ul className="subMenu">
         <li className="subMenuList">
-          <Link to={subMenu1Link}>{subMenu1}</Link>
+          <Link to={`"/products?category_id=${subMenu1Link}"`}>{subMenu1}</Link>
         </li>
         <li className="subMenuList">
-          <Link to={subMenu2Link}>{subMenu2}</Link>
+          <Link to={`"/products?category_id=${subMenu2Link}"`}>{subMenu2}</Link>
         </li>
       </ul>
     </li>
