@@ -14,7 +14,7 @@ function ProductDetail() {
     productOptioin: [
       { id: 1, size: 'S', stock: 12, category: '의류' },
       { id: 2, size: 'M', stock: 21, category: '의류' },
-      { id: 3, size: 'L', stock: 0, category: '의류' },
+      { id: 3, size: 'L', stock: 342, category: '의류' },
       { id: 4, size: '단품', stock: 0, category: `토이` },
     ],
     sale: 15,

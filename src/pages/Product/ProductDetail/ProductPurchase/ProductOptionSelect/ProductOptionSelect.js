@@ -10,9 +10,17 @@ function ProductOptionSelect({ productData, salePrice }) {
   const [resultCount, setResultCount] = useState(0);
 
   const optionChange = e => {
-    viewItem.map(x => x.optionName);
-    let a = [...viewItem, { optionName: e.target.value, key: key }];
-    setViewItem(a);
+    if (e.target.value === '사이즈') {
+      return;
+    }
+
+    let isIncludeItem = viewItem
+      .map(item => item.optionName)
+      .includes(e.target.value);
+
+    if (!isIncludeItem) {
+      setViewItem([...viewItem, { optionName: e.target.value, key: key }]);
+    }
 
     keyChange();
   };
@@ -40,7 +48,7 @@ function ProductOptionSelect({ productData, salePrice }) {
           {viewItem.map(item => (
             <SelectedProduct
               key={item.key}
-              viewItem={viewItem}
+              viewItem={item.optionName}
               salePrice={salePrice}
               setItemPrice={setItemPrice}
               setResultCount={setResultCount}

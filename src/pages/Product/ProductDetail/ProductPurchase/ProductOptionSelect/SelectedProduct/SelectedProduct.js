@@ -27,12 +27,10 @@ function SelectedProduct({
     setItemPrice(prev => prev - salePrice);
   };
 
-  let optionName = viewItem.map(x => x.optionName);
-
   return (
     <ul className="selectedProduct">
       <li className="selectedStatus">
-        <p className="optionTitle">{optionName}</p>
+        <p className="optionTitle">{viewItem}</p>
         <div className="selectedWrapper">
           <div className="productCount">
             <button className="countBtn" onClick={onDecrease}>
