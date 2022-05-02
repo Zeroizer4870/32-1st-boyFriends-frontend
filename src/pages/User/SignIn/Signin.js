@@ -28,8 +28,10 @@ function SignIn() {
       .then(result => {
         if (result.message === 'SUCCESS') {
           localStorage.setItem('token', result.ACCESS_TOKEN);
-          alert('환영합니다!');
+          alert('환영합니다! BoyFriends 입니다!');
           navigate('/');
+        } else if (result.message === 'INVALID_USER') {
+          alert('이메일 또는 비밀번호를 다시 확인하세요!');
         }
       });
   }
