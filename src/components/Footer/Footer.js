@@ -27,8 +27,8 @@ function Footer() {
         <button className="sellerInstagram">
           <i className="fa-brands fa-instagram-square" />
         </button>
+        {closeBtn ? <ModalSellerDetail setCloseBtn={setCloseBtn} /> : null}
       </div>
-      {closeBtn ? <ModalSellerDetail setCloseBtn={setCloseBtn} /> : null}
       <div className="mid">
         <div className="termsOfService">
           <ul>
