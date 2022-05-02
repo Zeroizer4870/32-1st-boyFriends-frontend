@@ -44,13 +44,12 @@ function ProductOptionSelect({ productData, salePrice }) {
             {productData.productOtpion
               .filter(option => option.category === productData.category)
               .map(option => (
-                <option key={option.id}>
+                <option disabled={option.stock === 0} key={option.id}>
                   {option.size} ({option.stock}개)
                 </option>
               ))}
           </select>
         </div>
-
         <div className="currentSelect">
           {viewItem.length !== 0 && (
             <SelectedProduct
