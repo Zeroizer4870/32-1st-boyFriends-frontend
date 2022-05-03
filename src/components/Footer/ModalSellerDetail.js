@@ -55,6 +55,7 @@ const ContentKey = ({ contentKey }) => {
 
 const ContentValue = ({ contentValue }) => {
   return (
+    // eslint-disable-next-line react/jsx-no-useless-fragment
     <>
       {contentValue === '6336-7941' ? (
         <span>{contentValue}</span>
