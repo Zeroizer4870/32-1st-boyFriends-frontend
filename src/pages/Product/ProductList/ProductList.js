@@ -3,6 +3,7 @@ import ProductNavTab from './ProductNavTab/ProductNavTab';
 import ProductFilterTab from './ProductFilterTab/ProductFilterTab';
 import Product from './Product/Product';
 import '../ProductList/ProductList.scss';
+import { useNavigate } from 'react-router-dom';
 
 function ProductList() {
   const [products, setProducts] = useState([
@@ -56,6 +57,13 @@ function ProductList() {
     }
   };
 
+  const navigate = useNavigate();
+
+  const goToDetail = id => {
+    console.log(id);
+    navigate(`/product/${id}`);
+  };
+
   return (
     <div className="productList">
       <div className="contentWrapper">
@@ -71,8 +79,8 @@ function ProductList() {
         <main className="categoryMain">
           <div className="categoryList">
             <ul className={isGrid ? 'fiveGrids' : 'doubleGrid'}>
-              {products.map(products => (
-                <Product products={products} key={products.id} />
+              {products.map((products, id) => (
+                <Product goToDetail={goToDetail} products={products} key={id} />
               ))}
             </ul>
           </div>
