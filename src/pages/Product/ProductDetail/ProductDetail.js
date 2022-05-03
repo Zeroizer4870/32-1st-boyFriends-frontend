@@ -9,7 +9,7 @@ function ProductDetail() {
   console.log(params);
 
   // useEffect(() => {
-  //   fetch(`${params:id}`).then(res => res.json()).then(data => )
+  //   fetch(`http://${params:id}`).then(res => res.json()).then(data => )
   // });
 
   const PRODUCT_DATA = {

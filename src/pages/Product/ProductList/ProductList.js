@@ -21,6 +21,7 @@ function ProductList() {
     },
   ]);
   const [isGrid, setIsGrid] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch('/data/ProductListMock/ProductListMock.json')
@@ -57,10 +58,7 @@ function ProductList() {
     }
   };
 
-  const navigate = useNavigate();
-
   const goToDetail = id => {
-    console.log(id);
     navigate(`/product/${id}`);
   };
 
