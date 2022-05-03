@@ -6,7 +6,7 @@ import './Nav.scss';
 function Nav() {
   const [menuList, setMenuList] = useState([]);
   useEffect(() => {
-    fetch('/data/navMock/navMock.json')
+    fetch('http://10.58.1.227:8000/core/nav')
       .then(res => res.json())
       .then(data => {
         setMenuList(data.results);
