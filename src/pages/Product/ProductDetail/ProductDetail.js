@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import '../ProductDetail/ProductDetail.scss';
 import ProductInfoWrapper from './ProductInfoWrapper/ProductInfoWrapper';
 import ProductPurchase from './ProductPurchase/ProductPurchase';
 
 function ProductDetail() {
+  const params = useParams();
+  console.log(params);
+
+  // useEffect(() => {
+  //   fetch(`${params:id}`).then(res => res.json()).then(data => )
+  // });
+
   const PRODUCT_DATA = {
     id: 1,
     itemTitle: '보이프렌즈 후드티 BT21',
@@ -17,7 +25,7 @@ function ProductDetail() {
       { id: 3, size: 'L', stock: 342, category: '의류' },
       { id: 4, size: '단품', stock: 0, category: `토이` },
     ],
-    sale: 25,
+    sale: 12,
     status: 'New',
     review: [
       {

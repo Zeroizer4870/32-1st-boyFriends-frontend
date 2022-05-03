@@ -6,11 +6,15 @@ function ProductTitle({ productData, salePrice }) {
     <div className="productTitle">
       <div className="itemTitle">{productData.itemTitle}</div>
       <div className="numberWrapper">
-        <span className="saleRatio">{productData.sale} %</span>
+        {productData.sale !== 0 && (
+          <span className="saleRatio">{productData.sale} %</span>
+        )}
         <span className="priceWrapper">
-          <span className="beforeSalePrice">
-            {productData.price.toLocaleString()}원
-          </span>
+          {productData.sale !== 0 && (
+            <span className="beforeSalePrice">
+              {productData.price.toLocaleString()}원
+            </span>
+          )}
           <span className="productPrice">{salePrice.toLocaleString()} 원</span>
         </span>
       </div>
