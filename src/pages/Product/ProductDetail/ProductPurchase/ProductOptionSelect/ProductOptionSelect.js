@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../ProductOptionSelect/ProductOptionSelect.scss';
 import ResultPrice from './ResultPrice/ResultPrice';
 import SelectedProduct from './SelectedProduct/SelectedProduct';
