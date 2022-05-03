@@ -3,6 +3,7 @@ import SectionCard from './SectionCard';
 import DirectionBtn from '../common/DirectionBtn';
 import CircleBtn from '../common/CircleBtn';
 import './Section.scss';
+import { useNavigate } from 'react-router-dom';
 
 const Section = ({ sectionData, mainData }) => {
   const carousel = 7;
@@ -26,6 +27,11 @@ const Section = ({ sectionData, mainData }) => {
     cardRef.current.style.transition = 'all 0.5s ease-in-out';
     cardRef.current.style.transform = `translateX(-${index * 1280}px)`;
   }, [index]);
+
+  const navigate = useNavigate();
+  const goToProducts = () => {
+    navigate(`/products/${sectionData.id}`);
+  };
 
   return (
     <>
@@ -57,7 +63,7 @@ const Section = ({ sectionData, mainData }) => {
         </div>
       </section>
 
-      <div style={gridRowSet} className="sectionCopy">
+      <div onClick={goToProducts} style={gridRowSet} className="sectionCopy">
         {sectionData.id === 4 || (
           <DirectionBtn index={index} setIndex={setIndex} carousel={carousel} />
         )}

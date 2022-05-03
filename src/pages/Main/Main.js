@@ -6,7 +6,6 @@ import './Main.scss';
 
 const Main = () => {
   const [mainData, setMainData] = useState([]);
-
   const sectionData = [
     { id: 1, title: '주목할만한 소식' },
     { id: 2, title: '새로 나왔어요' },
@@ -33,13 +32,12 @@ const Main = () => {
     })
       .then(res => res.json())
       .then(data => setMainData(data.result));
-    //   fetch('http://10.58.1.186:8000/core/topic', {
-    //     method: 'GET',
-    //   })
-    //     .then(res => res.json())
-    //     .then(data => setMainData(data.results));
+    // fetch('http://10.58.1.186:8000/core/topic', {
+    //   method: 'GET',
+    // })
+    //   .then(res => res.json())
+    //   .then(data => setMainData(data.results));
   }, []);
-  // console.log(mainData);
 
   return (
     <main>
