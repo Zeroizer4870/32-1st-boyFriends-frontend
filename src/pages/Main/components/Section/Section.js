@@ -37,15 +37,23 @@ const Section = ({ sectionData, mainData }) => {
           ref={cardRef}
           className={sectionData.id === 4 ? 'cardListGrid' : 'cardListFlex'}
         >
-          {/* {mainData.map(mainData => {
-            return (
-              <SectionCard
-                id={mainData.categoryId}
-                category={mainData}
-                key={mainData.categoryId}
-              />
-            );
-          })} */}
+          {sectionData.id === 1
+            ? mainData.map(category => {
+                return (
+                  <SectionCard
+                    category={category}
+                    sectionData={sectionData}
+                    key={category.categoryId}
+                  />
+                );
+              })
+            : mainData.map(category => {
+                return category.product.map(product => {
+                  return (
+                    <SectionCard product={product} key={product.productId} />
+                  );
+                });
+              })}
         </div>
       </section>
 
@@ -55,12 +63,12 @@ const Section = ({ sectionData, mainData }) => {
         )}
         <div className="circleBtnList">
           {sectionData.id === 4 ||
-            mainData.map(mainData => {
+            mainData.map(category => {
               return (
                 <CircleBtn
-                  id={mainData.categoryId}
+                  id={category.categoryId}
                   setIndex={setIndex}
-                  key={mainData.categoryId}
+                  key={category.categoryId}
                 />
               );
             })}

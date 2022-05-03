@@ -22,8 +22,13 @@ const Header = ({ mainData }) => {
     <>
       <header className="header">
         <div ref={cardRef} className="card">
-          {mainData.map(a => {
-            return <ImageCard src={a.categoryImg} key={a.categoryImg} />;
+          {mainData.map(category => {
+            return (
+              <ImageCard
+                src={category.categoryImg}
+                key={category.categoryImg}
+              />
+            );
           })}
         </div>
       </header>
@@ -33,9 +38,13 @@ const Header = ({ mainData }) => {
         <p className="cardContent">{cardContent[index]}</p>
         <DirectionBtn index={index} setIndex={setIndex} carousel={carousel} />
         <div className="circleBtnList">
-          {mainData.map(a => {
+          {mainData.map(category => {
             return (
-              <CircleBtn id={a.categoryId} setIndex={setIndex} key={a.id} />
+              <CircleBtn
+                id={category.categoryId}
+                setIndex={setIndex}
+                key={category.id}
+              />
             );
           })}
         </div>

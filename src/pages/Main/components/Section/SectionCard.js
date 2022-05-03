@@ -2,21 +2,37 @@ import React from 'react';
 import SectionMiniCard from './SectionMiniCard';
 import './SectionCard.scss';
 
-const SectionCard = ({ category, id }) => {
+const SectionCard = ({ category, product }) => {
   return (
     <article className="card">
-      <div className={id === 1 ? 'cardThreeImage' : 'cardFourImage'}>
-        <img className="cardImage" alt="img" src={category.categorySrc} />
+      <div className={!!category ? 'cardThreeImage' : 'cardFourImage'}>
+        {!!category ? (
+          <img className="cardImage" alt="img" src={category.categoryImg} />
+        ) : (
+          <img className="cardImage" alt="img" src={product.productImg} />
+        )}
       </div>
 
-      {id === 1 && (
+      {!!category && (
         <strong className="cardTitle">{category.categoryName}</strong>
       )}
-      {category.categoryProduct.map(product => {
-        return (
-          <SectionMiniCard id={id} product={product} key={product.productId} />
-        );
-      })}
+
+      {!!category ? (
+        category.product.map(product => {
+          return <SectionMiniCard product={product} key={product.productId} />;
+        })
+      ) : (
+        <div className="fourDetailWrap">
+          <div>
+            <span className="detailSale">{product.productDiscount}%</span>
+            <span className="detailPrice">
+              {product.productPrice.toLocaleString()}원
+            </span>
+
+            <strong className="detailTitle">{product.productName}</strong>
+          </div>
+        </div>
+      )}
     </article>
   );
 };

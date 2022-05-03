@@ -1,16 +1,13 @@
 import React from 'react';
-import './SectionMiniCard.scss';
 
-const SectionMiniCard = ({ product, id }) => {
+const SectionMiniCard = ({ product }) => {
   return (
-    <div className="cardDetailWrap">
-      {id === 1 && (
-        <img className="detailImg" alt="detailImg" src={product.productSrc} />
-      )}
+    <div className="threeDetailWrap">
+      <img className="detailImg" alt="detailImg" src={product.productImg} />
 
       <div>
         <strong className="detailTitle">{product.productName}</strong>
-        <span className="detailSale">{product.productSale}%</span>
+        <span className="detailSale">{product.productDiscount}%</span>
         <span className="detailPrice">
           {product.productPrice.toLocaleString()}원
         </span>
