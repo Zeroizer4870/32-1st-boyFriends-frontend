@@ -8,10 +8,11 @@ function ProductOptionSelect({
   salePrice,
   optionChange,
   viewItem,
+  setItemPrice,
+  setResultCount,
+  itemPrice,
+  resultCount,
 }) {
-  const [itemPrice, setItemPrice] = useState(0);
-  const [resultCount, setResultCount] = useState(0);
-
   return (
     <div className="productOptionSelect">
       <div className="selectOption">

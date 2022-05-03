@@ -10,6 +10,8 @@ function ProductPurchase({ productData }) {
   const [viewItem, setViewItem] = useState([]);
   const [key, setKey] = useState(1);
   const navigate = useNavigate();
+  const [itemPrice, setItemPrice] = useState(0);
+  const [resultCount, setResultCount] = useState(0);
 
   let salePrice = (productData.price * (100 - productData.sale)) / 100;
 
@@ -54,6 +56,10 @@ function ProductPurchase({ productData }) {
         salePrice={salePrice}
         optionChange={optionChange}
         viewItem={viewItem}
+        setItemPrice={setItemPrice}
+        setResultCount={setResultCount}
+        itemPrice={itemPrice}
+        resultCount={resultCount}
       />
       <PurchaseButton goToCart={goToCart} postToCart={postToCart} />
     </div>

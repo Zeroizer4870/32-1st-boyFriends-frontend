@@ -20,14 +20,15 @@ function ProductList() {
       sale: null,
     },
   ]);
+
   const [isGrid, setIsGrid] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('/data/ProductListMock/ProductListMock.json')
+    fetch('http://10.58.1.227:1234/products?main_category_id=1')
       .then(res => res.json())
       .then(data => {
-        setProducts(data);
+        setProducts(data.results);
       });
   }, []);
 
@@ -59,7 +60,7 @@ function ProductList() {
   };
 
   const goToDetail = id => {
-    navigate(`/product/${id}`);
+    navigate(`/products/${id}`);
   };
 
   return (
@@ -77,8 +78,12 @@ function ProductList() {
         <main className="categoryMain">
           <div className="categoryList">
             <ul className={isGrid ? 'fiveGrids' : 'doubleGrid'}>
-              {products.map((products, id) => (
-                <Product goToDetail={goToDetail} products={products} key={id} />
+              {products.map(products => (
+                <Product
+                  goToDetail={goToDetail}
+                  products={products}
+                  key={products.id}
+                />
               ))}
             </ul>
           </div>
