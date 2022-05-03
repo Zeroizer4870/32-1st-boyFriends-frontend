@@ -5,11 +5,13 @@ import ProductInfoWrapper from './ProductInfoWrapper/ProductInfoWrapper';
 import ProductPurchase from './ProductPurchase/ProductPurchase';
 
 function ProductDetail() {
-  const params = useParams();
-  console.log(params);
+  // const params = useParams();
+  // const [product, setProduct] = useState({});
+
+  // console.log(params);
 
   // useEffect(() => {
-  //   fetch(`http://${params:id}`).then(res => res.json()).then(data => )
+  //   fetch(`http://${params.id}`).then(res => res.json()).then(data => setProduct(data.result))
   // });
 
   const PRODUCT_DATA = {
