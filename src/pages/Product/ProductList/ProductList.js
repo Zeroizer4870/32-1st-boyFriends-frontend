@@ -26,8 +26,8 @@ function ProductList() {
   useEffect(() => {
     fetch('/data/ProductListMock/ProductListMock.json')
       .then(res => res.json())
-      .then(result => {
-        setProducts(result);
+      .then(data => {
+        setProducts(data);
       });
   }, []);
 

@@ -3,31 +3,14 @@ import '../ProductOptionSelect/ProductOptionSelect.scss';
 import ResultPrice from './ResultPrice/ResultPrice';
 import SelectedProduct from './SelectedProduct/SelectedProduct';
 
-function ProductOptionSelect({ productData, salePrice }) {
-  const [viewItem, setViewItem] = useState([]);
-  const [key, setKey] = useState(1);
+function ProductOptionSelect({
+  productData,
+  salePrice,
+  optionChange,
+  viewItem,
+}) {
   const [itemPrice, setItemPrice] = useState(0);
   const [resultCount, setResultCount] = useState(0);
-
-  const optionChange = e => {
-    if (e.target.value === '사이즈') {
-      return;
-    }
-
-    let isIncludeItem = viewItem
-      .map(item => item.optionName)
-      .includes(e.target.value);
-
-    if (!isIncludeItem) {
-      setViewItem([...viewItem, { optionName: e.target.value, key: key }]);
-    }
-
-    keyChange();
-  };
-
-  const keyChange = () => {
-    setKey(prev => prev + 1);
-  };
 
   return (
     <div className="productOptionSelect">
