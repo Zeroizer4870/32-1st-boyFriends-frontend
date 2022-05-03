@@ -4,7 +4,17 @@ import './Footer.scss';
 
 function Footer() {
   const [closeBtn, setCloseBtn] = useState(false);
-
+  const termsOfService = [
+    'BOYFRIENDS 약관',
+    'BOYFRIENDSPAY 이용약관',
+    '전자금융거래 이용약관',
+    '개인정보처리방침',
+    '책임의 한계와 법적고지',
+    '청소년보호정책',
+    '지식재산권신고센터',
+    '안전거래 가이드',
+    '쇼핑&페이 고객센터',
+  ];
   return (
     <footer className="footer">
       <div className="top">
@@ -32,33 +42,14 @@ function Footer() {
       <div className="mid">
         <div className="termsOfService">
           <ul>
-            <li>
-              <span>BOYFRIENDS 약관</span>
-            </li>
-            <li>
-              <span>BOYFRIENDSPAY 이용약관</span>
-            </li>
-            <li>
-              <span>전자금융거래 이용약관</span>
-            </li>
-            <li>
-              <strong>개인정보처리방침</strong>
-            </li>
-            <li>
-              <span>책임의 한계와 법적고지</span>
-            </li>
-            <li>
-              <span>청소년보호정책</span>
-            </li>
-            <li>
-              <span>지식재산권신고센터</span>
-            </li>
-            <li>
-              <span>안전거래 가이드</span>
-            </li>
-            <li className="endList">
-              <span>쇼핑&페이 고객센터</span>
-            </li>
+            {termsOfService.map((termsOfService, i) => {
+              return (
+                <TermsOfServiceList
+                  termsOfService={termsOfService}
+                  key={termsOfService}
+                />
+              );
+            })}
           </ul>
         </div>
         <div className="information">
@@ -119,5 +110,17 @@ function Footer() {
     </footer>
   );
 }
+
+const TermsOfServiceList = ({ termsOfService }) => {
+  return (
+    <li className={termsOfService === '쇼핑&페이 고객센터' ? 'endList' : null}>
+      {termsOfService === '개인정보처리방침' ? (
+        <strong>{termsOfService}</strong>
+      ) : (
+        <span>{termsOfService}</span>
+      )}
+    </li>
+  );
+};
 
 export default Footer;
