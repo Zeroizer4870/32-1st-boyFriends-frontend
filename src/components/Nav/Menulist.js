@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Menulist.scss';
 
 function Menulist({ menu }) {
   const { menuName, menuLink, sub } = menu;
+  const navigate = useNavigate();
   return (
     <li className="menuList">
       <Link to={`/products?main_category_id=${menuLink}`}>{menuName}</Link>
