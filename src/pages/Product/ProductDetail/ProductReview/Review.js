@@ -53,7 +53,7 @@ export default function Review({ review }) {
           </p>
         </div>
         <div className="reviewEvent">
-          <span className="eventBanner">Reveiw Event</span>
+          <span className="eventBanner">Review Event</span>
           <div className="bannerText">
             "동영상 1개 이상, 글자수 50자 이상 남겨주세요!
             <span className="bannerTextBlue">
@@ -98,7 +98,7 @@ export default function Review({ review }) {
         </div>
       </div>
       {data.map(data => (
-        <ReviewMap data={data} />
+        <ReviewMap data={data} key={data.id} />
       ))}
       <ReviewComment commentContainer={commentContainer} />
       <form onSubmit={handleOnSubmit}>
