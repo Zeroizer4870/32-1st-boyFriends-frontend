@@ -1,23 +1,37 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Menulist.scss';
 
 function Menulist({ menu }) {
   const { menuName, menuLink, sub } = menu;
 
+  const navigate = useNavigate();
+
+  const goToMainCategory = () => {
+    navigate(`/products?main_category_id=${menuLink}`);
+  };
+
+  const goToSubCategoryFirst = () => {
+    navigate(`/products?category_id=${sub[0].subMenuLink}`);
+  };
+
+  const goToSubCategorySecond = () => {
+    navigate(`/products?category_id=${sub[1].subMenuLink}`);
+  };
+
   return (
     <li className="menuList">
-      <Link to={`/products?main_category_id=${menuLink}`}>{menuName}</Link>
+      <span onClick={goToMainCategory}>{menuName}</span>
       <ul className="subMenu">
-        <li className="subMenuList">
-          <Link to={`/products?category_id=${sub[0].subMenuLink}`}>
+        <li onClick={goToSubCategoryFirst} className="subMenuList">
+          <span to={`/products?category_id=${sub[0].subMenuLink}`}>
             {sub[0].subMenu}
-          </Link>
+          </span>
         </li>
-        <li className="subMenuList">
-          <Link to={`/products?category_id=${sub[1].subMenuLink}`}>
+        <li onClick={goToSubCategorySecond} className="subMenuList">
+          <span to={`/products?category_id=${sub[1].subMenuLink}`}>
             {sub[1].subMenu}
-          </Link>
+          </span>
         </li>
       </ul>
     </li>

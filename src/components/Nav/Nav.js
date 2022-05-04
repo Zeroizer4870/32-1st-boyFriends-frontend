@@ -72,7 +72,7 @@ function Nav() {
           <div className="menu">
             <ul className="mainMenu">
               {menuList.map(menu => {
-                return <Menulist menu={menu} key={menu.id} />;
+                return <Menulist menu={menu} key={menu.menuLink} />;
               })}
             </ul>
           </div>
