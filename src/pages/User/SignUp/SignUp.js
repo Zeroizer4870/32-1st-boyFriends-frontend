@@ -57,7 +57,7 @@ function SignUp() {
     })
       .then(response => response.json())
       .then(result => {
-        if (result.message === 'SUCCESS') {
+        if (result.MESSAGE === 'SUCCESS') {
           alert('환영합니다! BoyFriends 입니다!');
           navigate('/');
         }
