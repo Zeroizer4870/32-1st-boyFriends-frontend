@@ -22,7 +22,7 @@ function SignIn() {
 
   function goToMain(e) {
     e.preventDefault();
-    fetch('http://10.58.1.227:1234/users/signin', {
+    fetch('http://10.58.5.56:1234/users/signin', {
       method: 'POST',
       body: JSON.stringify({
         email: inputValues.email,
@@ -31,8 +31,9 @@ function SignIn() {
     })
       .then(response => response.json())
       .then(result => {
-        if (result.message === 'SUCCESS') {
+        if (result.MESSAGE === 'SUCCESS') {
           localStorage.setItem('token', result.ACCESS_TOKEN);
+          localStorage.setItem('name', result.NAME);
           alert('환영합니다! BoyFriends 입니다!');
           navigate('/');
         } else if (result.message === 'INVALID_USER') {
