@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CartSize = ({ sizeNum, box, minusCount, plusCount, i }) => {
-  const size = ['S', 'M', 'L'];
+  const size = ['S', 'M', 'L', 'F'];
 
   return (
     <>

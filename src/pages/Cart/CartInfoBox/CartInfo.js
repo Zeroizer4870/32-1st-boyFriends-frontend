@@ -6,11 +6,9 @@ export default function CartInfoBox({ commonData }) {
   const [sum, setSum] = useState({ default: 0 });
   const [delivery, setDelivery] = useState(3000);
   const [sale, setSale] = useState({ default: 0 });
-  const [a, setA] = useState(0);
 
   const totalPrice = Object.values(sum).reduce((acc, cur) => acc + cur);
   const salePrice = Object.values(sale).reduce((acc, cur) => acc + cur);
-  const aPrice = Object.values(a).reduce((acc, cur) => acc + cur);
 
   const deliveryCharge = () => {
     return totalPrice <= 29999 ? setDelivery(3000) : setDelivery(0);
@@ -37,12 +35,7 @@ export default function CartInfoBox({ commonData }) {
             <i className="fa-solid fa-house-chimney" />
           </div>
           {commonData.map(box => (
-            <CartInProduct
-              setSum={setSum}
-              box={box}
-              setSale={setSale}
-              setA={setA}
-            />
+            <CartInProduct setSum={setSum} box={box} setSale={setSale} />
           ))}
         </div>
       </div>

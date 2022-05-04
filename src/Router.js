@@ -9,7 +9,6 @@ import ProductDetail from './pages/Product/ProductDetail/ProductDetail';
 import Cart from './pages/Cart/Cart';
 import Order from './pages/Order/Order';
 import Footer from './components/Footer/Footer';
-import Cart from './pages/Cart/Cart';
 
 function Router() {
   return (

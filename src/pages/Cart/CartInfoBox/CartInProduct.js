@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import CartSize from './CartInProductSize';
 import './CartInProduct.scss';
 
-const InfoMapBox = ({ box, setSum, setSale, setA }) => {
-  const [sizeNum, setSizeNum] = useState({ S: 0, M: 0, L: 0 });
-  const mapArr = [1, 2, 3];
+const InfoMapBox = ({ box, setSum, setSale }) => {
+  const [sizeNum, setSizeNum] = useState({ S: 0, M: 0, L: 0, F: 0 });
+  const mapArr = [1, 2, 3, 4];
   const [priceIndividual, setPriceIndividual] = useState(0);
   const [salePrice, setSalePrice] = useState(0);
 
@@ -17,8 +17,7 @@ const InfoMapBox = ({ box, setSum, setSale, setA }) => {
     return (
       setPriceIndividual(prev => prev + box.price * ((100 - box.sale) / 100)),
       setSalePrice(prev => prev + box.price * (box.sale / 100)),
-      setSizeNum(sizeNum => ({ ...sizeNum, [size]: sizeNum[size] + 1 })),
-      setA(prev => prev + box.price)
+      setSizeNum(sizeNum => ({ ...sizeNum, [size]: sizeNum[size] + 1 }))
     );
   };
 
@@ -41,6 +40,10 @@ const InfoMapBox = ({ box, setSum, setSale, setA }) => {
         ? sizeNum.L <= 0
           ? alert('0이하는 선택할 수 없습니다.')
           : setSizeNum(sizeNum => ({ ...sizeNum, [size]: sizeNum[size] - 1 }))
+        : size === 'F'
+        ? sizeNum.F <= 0
+          ? alert('0이하는 선택할 수 없습니다.')
+          : setSizeNum(sizeNum => ({ ...sizeNum, [size]: sizeNum[size] - 1 }))
         : null
     );
   };
@@ -56,7 +59,7 @@ const InfoMapBox = ({ box, setSum, setSale, setA }) => {
 
           <div className="productDetail">
             <div className="detailText">{box.name}</div>
-            <p className="detailPrice">{priceIndividual.toLocaleString()}원</p>
+            <p className="detailPrice">{box.price.toLocaleString()}원</p>
             {box.sale !== 0 ? (
               <p className="discountText">
                 할인 가능 금액
