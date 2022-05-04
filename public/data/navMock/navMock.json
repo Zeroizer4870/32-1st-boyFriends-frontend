@@ -1,29 +1,46 @@
-[
-  {
-    "id": 1,
-    "menuName": "토이",
-    "menuLink": "/toys",
-    "subMenu1": "중대형 토이",
-    "subMenu1Link": "/toys/bigtoys",
-    "subMenu2": "미니 토이",
-    "subMenu2Link": "/toys/smalltoys"
-  },
-  {
-    "id": 2,
-    "menuName": "옷",
-    "menuLink": "/cloths",
-    "subMenu1": "반팔 의류",
-    "subMenu1Link": "/cloths/shortsleeves",
-    "subMenu2": "긴팔 의류",
-    "subMenu2Link": "/cloths/longsleeves"
-  },
-  {
-    "id": 3,
-    "menuName": "디지털",
-    "menuLink": "/digital",
-    "subMenu1": "폰 케이스",
-    "subMenu1Link": "/digital/phonecases",
-    "subMenu2": "소형 가전",
-    "subMenu2Link": "/digital/electronics"
-  }
-]
+{
+  "results": [
+    {
+      "menuName": "toy",
+      "menuLink": 1,
+      "sub": [
+        {
+          "subMenu": "big_toy",
+          "subMenuLink": 1
+        },
+        {
+          "subMenu": "small_toy",
+          "subMenuLink": 2
+        }
+      ]
+    },
+    {
+      "menuName": "clothing",
+      "menuLink": 2,
+      "sub": [
+        {
+          "subMenu": "long_slv",
+          "subMenuLink": 3
+        },
+        {
+          "subMenu": "short_slv",
+          "subMenuLink": 4
+        }
+      ]
+    },
+    {
+      "menuName": "digital",
+      "menuLink": 3,
+      "sub": [
+        {
+          "subMenu": "phone_case",
+          "subMenuLink": 5
+        },
+        {
+          "subMenu": "peripheral",
+          "subMenuLink": 6
+        }
+      ]
+    }
+  ]
+}
