@@ -43,7 +43,7 @@ function SignUp() {
 
   function goToLogIn(e) {
     e.preventDefault();
-    fetch('http://10.58.1.227:8000/users/signup', {
+    fetch('http://10.58.5.56:1234/users/signup', {
       method: 'POST',
       body: JSON.stringify({
         email: inputValues.email,
