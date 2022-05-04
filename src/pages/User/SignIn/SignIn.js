@@ -4,6 +4,11 @@ import './SignIn.scss';
 
 function SignIn() {
   const navigate = useNavigate();
+  // if (localStorage.getItem('token')) {
+  //   alert('이미 로그인 상태입니다');
+  //   navigate('/');
+  // }
+
   const [inputValues, setInputValues] = useState({
     email: '',
     pw: '',
@@ -17,7 +22,7 @@ function SignIn() {
 
   function goToMain(e) {
     e.preventDefault();
-    fetch('http://10.58.1.186:8000/users/signin', {
+    fetch('http://10.58.1.227:1234/users/signin', {
       method: 'POST',
       body: JSON.stringify({
         email: inputValues.email,
@@ -35,7 +40,6 @@ function SignIn() {
         }
       });
   }
-
   return (
     <div className="signIn">
       <div className="contentsWrapper">
@@ -72,13 +76,13 @@ function SignIn() {
           </div>
           <div className="buttonWrapper">
             <button
+              type="submit"
               className={`button loginBtn ${isValid ? 'valid' : 'notValid'}`}
               disabled={!isValid}
               onClick={goToMain}
             >
               로그인
             </button>
-
             <Link to="/users/signup">
               <button className="button signUpBtn">회원가입</button>
             </Link>

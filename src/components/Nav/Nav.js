@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Link, Outlet, useNavigate } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import Menulist from './Menulist';
 import './Nav.scss';
 
 function Nav() {
-  const navigate = useNavigate();
   const [menuList, setMenuList] = useState([]);
   useEffect(() => {
     fetch('/data/navMock/navMock.json', {
@@ -15,18 +14,6 @@ function Nav() {
         setMenuList(data);
       });
   }, []);
-  const logout = () => {
-    const isLoggedIn = localStorage.getItem('token');
-    console.log(isLoggedIn);
-    if (isLoggedIn) {
-      localStorage.removeItem('token');
-      window.confirm('다음에 또 봐요!');
-      navigate('/');
-    } else {
-      navigate('/users/signin');
-    }
-  };
-
   return (
     <>
       <nav className="nav">
@@ -36,12 +23,8 @@ function Nav() {
               <Link to="/">BoyFriends</Link>
             </div>
             <div className="infoIcons">
-              <button onClick={logout}>
-                {localStorage.getItem('token') ? '로그아웃' : '로그인'}
-              </button>
-              <Link to="/users/signup">
-                {localStorage.getItem('token') ? null : '회원가입'}
-              </Link>
+              <Link to="/users/signin">로그인</Link>
+              <Link to="/users/signup">회원가입</Link>
               <Link to="/cart">장바구니</Link>
             </div>
           </div>
