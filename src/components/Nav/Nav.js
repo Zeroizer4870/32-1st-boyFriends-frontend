@@ -7,7 +7,7 @@ function Nav() {
   const navigate = useNavigate();
   const [menuList, setMenuList] = useState([]);
   useEffect(() => {
-    fetch('http://10.58.1.227:8000/core/nav')
+    fetch('http://10.58.5.56:1234/navigation')
       .then(res => res.json())
       .then(data => {
         setMenuList(data.results);
