@@ -3,17 +3,21 @@ import { Link } from 'react-router-dom';
 import './Menulist.scss';
 
 function Menulist({ menu }) {
-  const { menuName, menuLink, subMenu1, subMenu1Link, subMenu2, subMenu2Link } =
-    menu;
+  const { menuName, menuLink, sub } = menu;
+
   return (
     <li className="menuList">
-      <Link to={menuLink}>{menuName}</Link>
+      <Link to={`/products?main_category_id=${menuLink}`}>{menuName}</Link>
       <ul className="subMenu">
         <li className="subMenuList">
-          <Link to={subMenu1Link}>{subMenu1}</Link>
+          <Link to={`/products?category_id=${sub[0].subMenuLink}`}>
+            {sub[0].subMenu}
+          </Link>
         </li>
         <li className="subMenuList">
-          <Link to={subMenu2Link}>{subMenu2}</Link>
+          <Link to={`/products?category_id=${sub[1].subMenuLink}`}>
+            {sub[1].subMenu}
+          </Link>
         </li>
       </ul>
     </li>
