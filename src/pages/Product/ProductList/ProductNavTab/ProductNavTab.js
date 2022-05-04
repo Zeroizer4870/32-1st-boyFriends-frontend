@@ -3,7 +3,6 @@ import '../ProductNavTab/ProductNavTab.scss';
 
 function ProductNavTab({ products }) {
   const categoryList = ['홈', '토이', `중대형 인형  (${products.length}개)`];
-
   const spreadLink = categoryList.map((title, index) => {
     return (
       <li key={index}>

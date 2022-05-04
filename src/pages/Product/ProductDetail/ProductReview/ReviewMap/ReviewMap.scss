@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.reviewMap {
+  .userInfoBox {
+    margin-top: 15px;
+    margin-left: 15px;
+
+    .userImg {
+      float: left;
+      width: 50px;
+      border-radius: 50%;
+    }
+
+    .userInfoText {
+      color: gray;
+      font-size: 12px;
+    }
+  }
+
+  .commentBox {
+    display: flex;
+    margin-top: 30px;
+    border-bottom: 1px solid gainsboro;
+
+    .comment {
+      width: 1000px;
+      font-size: 14px;
+    }
+
+    .productImgDiv {
+      width: 100px;
+      margin-left: 40px;
+      position: relative;
+      bottom: 40px;
+      .productImg {
+        width: 100px;
+        border: 1px solid rgba(0, 0, 0, 0.07);
+      }
+    }
+
+    .like {
+      width: 70px;
+      height: 30px;
+      margin-left: 50px;
+      border: 1px solid gainsboro;
+      border-radius: 40%;
+      background-color: white;
+
+      i {
+        color: red;
+      }
+    }
+  }
+}
