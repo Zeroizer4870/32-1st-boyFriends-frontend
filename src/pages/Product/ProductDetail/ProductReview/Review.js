@@ -8,12 +8,11 @@ export default function Review({ review }) {
   const [commentInput, setCommentInput] = useState({});
   const [commentContainer, setCommentContainer] = useState([]);
   const [numReview, setNumReview] = useState(0);
-  console.log(review);
 
   useEffect(() => {
     setData(review);
     setNumReview(review.length);
-  }, []);
+  }, [review]);
 
   const handleOnChange = event => {
     setCommentInput(prev => ({
