@@ -27,7 +27,7 @@ function ProductInfoWrapper({ productData }) {
           alt={productData.itemTitle}
         />
       </div>
-      {productData.review && (
+      {productData.review.length !== 0 && (
         <div className="productReviewCount">
           <span className="reviewSum">
             <div className="reviewText">리뷰수 </div>

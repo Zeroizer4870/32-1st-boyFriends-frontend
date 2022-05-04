@@ -47,18 +47,22 @@ function ProductPurchase({ productData }) {
         size: postOption[0],
       }),
     });
-    console.log(
-      'product_id:',
-      productData.id,
-      'count: ',
-      resultCount,
-      'size:',
-      postOption[0]
-    );
   };
 
   const goToOrder = () => {
-    console.log('gotoCart');
+    fetch(`http://10.58.5.56:1234/payments/cart`, {
+      method: 'POST',
+      headers: {
+        Authorization:
+          'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTEsImV4cCI6MTY1MTczODI1OX0.Nn1pSmUyXaXxbSxEYRI43tGNZP8-xAMhhtIxLneEKiU',
+      },
+      body: JSON.stringify({
+        product_id: productData.id,
+        count: resultCount,
+        size: postOption[0],
+      }),
+    });
+
     navigate('/cart');
   };
 
