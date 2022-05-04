@@ -3,6 +3,7 @@ import SectionMiniCard from './SectionMiniCard';
 import './SectionCard.scss';
 
 const SectionCard = ({ category, product }) => {
+  const miniCard = [1, 2];
   return (
     <article className="card">
       <div className={!!category ? 'cardThreeImage' : 'cardFourImage'}>
@@ -18,8 +19,8 @@ const SectionCard = ({ category, product }) => {
       )}
 
       {!!category ? (
-        category.product.map(product => {
-          return <SectionMiniCard product={product} key={product.productId} />;
+        miniCard.map(a => {
+          return <SectionMiniCard product={category.product[0]} />;
         })
       ) : (
         <div className="fourDetailWrap">

@@ -6,7 +6,7 @@ import './Section.scss';
 import { useNavigate } from 'react-router-dom';
 
 const Section = ({ sectionData, mainData }) => {
-  const carousel = 7;
+  const carousel = 1;
   const [index, setIndex] = useState(0);
   const cardRef = useRef(null);
 
@@ -22,8 +22,6 @@ const Section = ({ sectionData, mainData }) => {
       : null;
 
   useEffect(() => {
-    // index === 8
-    //   ? (cardRef.current.style.transition = 'none'): // 무한 캐러셀 만들어야ㅏㅎㅁ
     cardRef.current.style.transition = 'all 0.5s ease-in-out';
     cardRef.current.style.transform = `translateX(-${index * 1280}px)`;
   }, [index]);
@@ -37,7 +35,7 @@ const Section = ({ sectionData, mainData }) => {
     <>
       <section style={gridRowSet} className="section">
         <div className="sectionTitle">
-          <h1>{sectionData.title}</h1>
+          <strong>{sectionData.title}</strong>
         </div>
         <div
           ref={cardRef}
@@ -46,38 +44,47 @@ const Section = ({ sectionData, mainData }) => {
           {sectionData.id === 1
             ? mainData.map(category => {
                 return (
-                  <SectionCard
-                    category={category}
-                    sectionData={sectionData}
-                    key={category.categoryId}
-                  />
+                  <SectionCard category={category} sectionData={sectionData} />
                 );
               })
             : mainData.map(category => {
                 return category.product.map(product => {
-                  return (
-                    <SectionCard product={product} key={product.productId} />
-                  );
+                  return sectionData.id === 2 &&
+                    product.productStatus === 'New' ? (
+                    <SectionCard product={product} />
+                  ) : sectionData.id === 3 &&
+                    product.productStatus === 'Best' ? (
+                    <SectionCard product={product} />
+                  ) : sectionData.id === 4 ? (
+                    <SectionCard product={product} />
+                  ) : null;
                 });
               })}
         </div>
       </section>
 
-      <div onClick={goToProducts} style={gridRowSet} className="sectionCopy">
+      <div style={gridRowSet} className="sectionCopy">
         {sectionData.id === 4 || (
           <DirectionBtn index={index} setIndex={setIndex} carousel={carousel} />
         )}
         <div className="circleBtnList">
-          {sectionData.id === 4 ||
-            mainData.map(category => {
-              return (
-                <CircleBtn
-                  id={category.categoryId}
-                  setIndex={setIndex}
-                  key={category.categoryId}
-                />
-              );
-            })}
+          {sectionData.id === 1
+            ? mainData.map(category => {
+                return (
+                  <CircleBtn id={category.categoryId} setIndex={setIndex} />
+                );
+              })
+            : mainData.map(category => {
+                return category.product.map(product => {
+                  return sectionData.id === 2 &&
+                    product.productStatus === 'new' ? (
+                    <CircleBtn id={product.productId} setIndex={setIndex} />
+                  ) : sectionData.id === 3 &&
+                    product.productStatus === 'best' ? (
+                    <CircleBtn id={product.productId} setIndex={setIndex} />
+                  ) : null;
+                });
+              })}
         </div>
       </div>
     </>

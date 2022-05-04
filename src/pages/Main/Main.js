@@ -13,48 +13,25 @@ const Main = () => {
     { id: 4, title: '마음껏 둘러보세요' },
   ];
 
-  const testRef = useRef(null);
-  const [myElementIsVisible, setMyElementIsVisible] = useState();
-  console.log('myElementIsVisible: ', myElementIsVisible);
-
   useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      const entry = entries[0];
-      setMyElementIsVisible(entry.isIntersecting);
-      console.log('entry:', entry);
-    });
-    observer.observe(testRef.current);
-  }, []);
-
-  useEffect(() => {
-    fetch('/data/mainMock/mainMock.json', {
+    // fetch('/data/mainMock/mainMock.json', {})
+    //   .then(res => res.json())
+    //   .then(data => setMainData(data));
+    fetch('http://10.58.5.56:1234/topic', {
       method: 'GET',
     })
       .then(res => res.json())
-      .then(data => setMainData(data.result));
-    // fetch('http://10.58.1.186:8000/core/topic', {
-    //   method: 'GET',
-    // })
-    //   .then(res => res.json())
-    //   .then(data => setMainData(data.results));
+      .then(data => setMainData(data.results));
   }, []);
 
   return (
     <main>
       <Nav />
       <Header mainData={mainData} />
-      <div ref={testRef} />
       {sectionData.map(sectionData => {
-        return (
-          <Section
-            sectionData={sectionData}
-            mainData={mainData}
-            key={sectionData.id}
-          />
-        );
+        return <Section sectionData={sectionData} mainData={mainData} />;
       })}
     </main>
   );
-  //무한 스크롤 추가 해야함
 };
 export default Main;

@@ -2,21 +2,22 @@
 
 .card {
   display: grid;
-  grid-template-rows: 1fr repeat(3, 0.1fr);
+  grid-template-rows: 365px, repeat(10, 300px);
   grid-row-gap: 10px;
 
   .cardThreeImage {
+    grid-row: 1/2;
     width: 427px;
     text-align: center;
     .cardImage {
       width: 93%;
-      height: 365px;
       border-radius: 7%;
     }
   }
 
   .cardFourImage {
     width: 320px;
+    height: 365px;
     text-align: center;
 
     &:hover {
