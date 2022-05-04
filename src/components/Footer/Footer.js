@@ -4,17 +4,7 @@ import './Footer.scss';
 
 function Footer() {
   const [closeBtn, setCloseBtn] = useState(false);
-  const termsOfService = [
-    'BOYFRIENDS 약관',
-    'BOYFRIENDSPAY 이용약관',
-    '전자금융거래 이용약관',
-    '개인정보처리방침',
-    '책임의 한계와 법적고지',
-    '청소년보호정책',
-    '지식재산권신고센터',
-    '안전거래 가이드',
-    '쇼핑&페이 고객센터',
-  ];
+
   return (
     <footer className="footer">
       <div className="top">
@@ -110,6 +100,18 @@ function Footer() {
     </footer>
   );
 }
+
+const termsOfService = [
+  'BOYFRIENDS 약관',
+  'BOYFRIENDSPAY 이용약관',
+  '전자금융거래 이용약관',
+  '개인정보처리방침',
+  '책임의 한계와 법적고지',
+  '청소년보호정책',
+  '지식재산권신고센터',
+  '안전거래 가이드',
+  '쇼핑&페이 고객센터',
+];
 
 const TermsOfServiceList = ({ termsOfService }) => {
   return (

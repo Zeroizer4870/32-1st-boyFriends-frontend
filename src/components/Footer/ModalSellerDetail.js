@@ -2,27 +2,6 @@ import React from 'react';
 import './ModalSellerDetail.scss';
 
 const ModalSellerDetail = ({ setCloseBtn }) => {
-  const contentKey = [
-    '상호명',
-    '대표자',
-    '사업자등록번호',
-    '통신판매업번호',
-    '사업장 소재지',
-    '고객센터',
-    'e-mail',
-  ];
-
-  const contentValue = [
-    '보이프렌즈 주식회사(사업자/법인사업자)',
-    '황석영',
-    '18413074421',
-    '1994-경기수원-0321',
-    '경기도 수원특례시 팔달구 향교로 1번길 8',
-    '6336-7941',
-    '인증',
-    'rkekqmf@gmail.com',
-  ];
-
   return (
     <div className="modalSellerDetail">
       <button onClick={() => setCloseBtn(false)}>X</button>
@@ -49,17 +28,36 @@ const ModalSellerDetail = ({ setCloseBtn }) => {
   );
 };
 
+const contentKey = [
+  '상호명',
+  '대표자',
+  '사업자등록번호',
+  '통신판매업번호',
+  '사업장 소재지',
+  '고객센터',
+  'e-mail',
+];
+
+const contentValue = [
+  '보이프렌즈 주식회사(사업자/법인사업자)',
+  '황석영',
+  '18413074421',
+  '1994-경기수원-0321',
+  '경기도 수원특례시 팔달구 향교로 1번길 8',
+  '6336-7941',
+  '인증',
+  'rkekqmf@gmail.com',
+];
+
 const ContentKey = ({ contentKey }) => {
   return <p>{contentKey}</p>;
 };
 
 const ContentValue = ({ contentValue }) => {
   return (
-    // eslint-disable-next-line react/jsx-no-useless-fragment
     <>
-      {contentValue === '6336-7941' ? (
-        <span>{contentValue}</span>
-      ) : (
+      {contentValue === '6336-7941' && <span>{contentValue}</span>}
+      {contentValue === '6336-7941' || (
         <p className={contentValue === '인증' ? 'inlineText' : null}>
           {contentValue}
         </p>
