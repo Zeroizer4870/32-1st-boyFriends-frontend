@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "reviewerName": "기성",
+    "reviewContent": "너무 좋아요",
+    "reputation": 4,
+    "reivewImg": "https://file.mk.co.kr/meet/neds/2021/02/image_readtop_2021_26945_16137156464500629.jpg"
+  },
+  {
+    "id": 2,
+    "reviewerName": "성용",
+    "reviewContent": "너무 좋은데요?",
+    "reputation": 4,
+    "reivewImg": "https://file.mk.co.kr/meet/neds/2021/02/image_readtop_2021_26945_16137156464500629.jpg"
+  },
+  {
+    "id": 3,
+    "reviewerName": "재관",
+    "reviewContent": "아름답네요",
+    "reputation": 2,
+    "reivewImg": "https://file.mk.co.kr/meet/neds/2021/02/image_readtop_2021_26945_16137156464500629.jpg"
+  },
+  {
+    "id": 4,
+    "reviewerName": "훈기",
+    "reviewContent": "너무 좋아요",
+    "reputation": 3,
+    "reivewImg": "https://file.mk.co.kr/meet/neds/2021/02/image_readtop_2021_26945_16137156464500629.jpg"
+  }
+]

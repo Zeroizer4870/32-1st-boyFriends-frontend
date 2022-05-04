@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.review {
+  width: 1280px;
+  margin: auto;
+  font-family: "Nanum Gothic", sans-serif;
+
+  .reviewNav {
+    .reviewNavText {
+      color: #999999;
+      font-size: 12px;
+      .pointPrice {
+        color: #6b90dc;
+      }
+    }
+    .reviewEvent {
+      height: 134px;
+      padding-top: 20px;
+      border: 1px solid #9c68fb;
+      text-align: center;
+
+      .eventBanner {
+        padding: 3px;
+        background-color: #9c68fb;
+        border-radius: 5px;
+        font-size: 14px;
+        color: white;
+      }
+
+      .bannerText {
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: 800;
+
+        .bannerTextBlue {
+          color: #6b90dc;
+        }
+      }
+
+      .eventDate {
+        width: 1280px;
+        height: 40px;
+        padding-top: 13px;
+        margin-top: 15px;
+        background-color: #9c68fb;
+        color: white;
+        font-size: 13px;
+        font-weight: 800;
+      }
+    }
+  }
+
+  .reviewImg {
+    margin-top: 50px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid black;
+    font-size: 16px;
+    font-weight: 800;
+
+    .productImg {
+      width: 120px;
+      height: 120px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(0, 0, 0, 0.07);
+    }
+  }
+
+  .reviewMain {
+    margin-top: 20px;
+    .reviewMainNav {
+      display: flex;
+      justify-content: space-between;
+      font-size: 16px;
+      font-weight: 800;
+
+      .productSort {
+        font-size: 13px;
+        .rangkingList,
+        .newList,
+        .highList {
+          margin-right: 10px;
+          padding-right: 10px;
+          border-right: 1px solid gainsboro;
+        }
+      }
+    }
+
+    .productSort {
+      display: flex;
+    }
+
+    .reviewMenu {
+      height: 48px;
+      display: flex;
+      margin-top: 20px;
+      border: 1px solid gainsboro;
+      text-align: center;
+
+      div {
+        flex: 1;
+        padding-top: 13px;
+        border: 1px solid gainsboro;
+        font-size: 13px;
+      }
+    }
+  }
+
+  .addReview {
+    width: 1280px;
+    margin-top: 40px;
+    border: 1px solid gainsboro;
+    text-align: center;
+
+    .addReviewText {
+      border-bottom: 1px solid gainsboro;
+    }
+
+    .selectScore {
+      text-align: left;
+    }
+
+    .inputReview {
+      width: 100%;
+      height: 144px;
+      border: none;
+      border-top: 1px solid gainsboro;
+      border-bottom: 1px solid gainsboro;
+    }
+  }
+}
