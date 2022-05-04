@@ -36,6 +36,7 @@ function ProductOptionSelect({
               salePrice={salePrice}
               setItemPrice={setItemPrice}
               setResultCount={setResultCount}
+              productData={productData}
             />
           ))}
         </div>

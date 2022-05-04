@@ -9,11 +9,11 @@ import PurchaseButton from './PurchaseButton/PurchaseButton';
 function ProductPurchase({ productData }) {
   const [viewItem, setViewItem] = useState([]);
   const [key, setKey] = useState(1);
-  const navigate = useNavigate();
   const [itemPrice, setItemPrice] = useState(0);
   const [resultCount, setResultCount] = useState(0);
-
+  const navigate = useNavigate();
   let salePrice = (productData.price * (100 - productData.sale)) / 100;
+  let postOption = viewItem.map(x => x.optionName);
 
   const optionChange = e => {
     if (e.target.value === '사이즈') {
@@ -33,10 +33,11 @@ function ProductPurchase({ productData }) {
   };
 
   const postToCart = () => {
-    console.log(viewItem, 'postToCart');
+    // 현재 선택은 여러개가 가능하지만, 장바구니로 보낼땐 한개만 보내기로 약속해서 인덱스 0번으로 접근하는 형태입니다.
+    console.log(postOption, 'postToCart', resultCount, 'productCount');
   };
 
-  const goToCart = () => {
+  const goToOrder = () => {
     console.log('gotoCart');
     navigate('/cart');
   };
@@ -61,7 +62,8 @@ function ProductPurchase({ productData }) {
         itemPrice={itemPrice}
         resultCount={resultCount}
       />
-      <PurchaseButton goToCart={goToCart} postToCart={postToCart} />
+
+      <PurchaseButton goToOrder={goToOrder} postToCart={postToCart} />
     </div>
   );
 }

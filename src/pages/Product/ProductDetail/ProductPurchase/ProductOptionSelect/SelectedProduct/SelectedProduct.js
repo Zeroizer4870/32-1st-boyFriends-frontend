@@ -5,11 +5,17 @@ function SelectedProduct({
   salePrice,
   setItemPrice,
   setResultCount,
+  productData,
 }) {
   const [itemCount, setItemCount] = useState(0);
   const [priceOption, setPriceOption] = useState(0);
+  let stock = productData.productOptioin.map(x => x.stock);
 
   const onIncrease = () => {
+    if (itemCount >= stock) {
+      alert('재고 이상의 수량은 선택할 수 없습니다.');
+      return;
+    }
     setItemCount(prev => prev + 1);
     setResultCount(prev => prev + 1);
     setPriceOption(prev => prev + salePrice);
