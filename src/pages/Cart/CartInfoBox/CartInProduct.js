@@ -83,6 +83,7 @@ const InfoMapBox = ({ box, setSum, setSale }) => {
               minusCount={minusCount}
               plusCount={plusCount}
               box={box}
+              key={box.id}
               sizeNum={sizeNum}
               i={i}
             />

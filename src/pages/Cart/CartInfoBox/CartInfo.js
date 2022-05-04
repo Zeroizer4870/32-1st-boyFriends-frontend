@@ -35,7 +35,12 @@ export default function CartInfoBox({ commonData }) {
             <i className="fa-solid fa-house-chimney" />
           </div>
           {commonData.map(box => (
-            <CartInProduct setSum={setSum} box={box} setSale={setSale} />
+            <CartInProduct
+              setSum={setSum}
+              box={box}
+              key={box.id}
+              setSale={setSale}
+            />
           ))}
         </div>
       </div>
