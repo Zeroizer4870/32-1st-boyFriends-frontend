@@ -31,12 +31,12 @@ function SignIn() {
     })
       .then(response => response.json())
       .then(result => {
-        if (result.MESSAGE === 'SUCCESS') {
+        if (result.message === 'SUCCESS') {
           localStorage.setItem('token', result.ACCESS_TOKEN);
           localStorage.setItem('name', result.NAME);
           alert('환영합니다! BoyFriends 입니다!');
           navigate('/');
-        } else if (result.MESSAGE === 'INVALID_USER') {
+        } else if (result.message === 'INVALID_USER') {
           alert('이메일 또는 비밀번호를 다시 확인하세요!');
         }
       });
@@ -59,35 +59,36 @@ function SignIn() {
               type="password"
               placeholder="비밀번호를 입력해주세요"
             />
-          </form>
-          <div className="findWrapper">
-            <label className="accessCheck">
-              <input className="checkBox" type="checkbox" />
-              보안접속
-            </label>
-            <div className="findIdPw">
-              <Link to="/users/findid" className="link">
-                아이디 찾기
-              </Link>
-              <span className="bar">|</span>
-              <Link to="/users/findpw" className="link">
-                비밀번호 찾기
+
+            <div className="findWrapper">
+              <label className="accessCheck">
+                <input className="checkBox" type="checkbox" />
+                보안접속
+              </label>
+              <div className="findIdPw">
+                <Link to="/users/findid" className="link">
+                  아이디 찾기
+                </Link>
+                <span className="bar">|</span>
+                <Link to="/users/findpw" className="link">
+                  비밀번호 찾기
+                </Link>
+              </div>
+            </div>
+            <div className="buttonWrapper">
+              <button
+                type="submit"
+                className={`button loginBtn ${isValid ? 'valid' : 'notValid'}`}
+                disabled={!isValid}
+                onClick={goToMain}
+              >
+                로그인
+              </button>
+              <Link to="/users/signup">
+                <button className="button signUpBtn">회원가입</button>
               </Link>
             </div>
-          </div>
-          <div className="buttonWrapper">
-            <button
-              type="submit"
-              className={`button loginBtn ${isValid ? 'valid' : 'notValid'}`}
-              disabled={!isValid}
-              onClick={goToMain}
-            >
-              로그인
-            </button>
-            <Link to="/users/signup">
-              <button className="button signUpBtn">회원가입</button>
-            </Link>
-          </div>
+          </form>
         </div>
       </div>
     </div>

@@ -7,12 +7,10 @@ function Nav() {
   const navigate = useNavigate();
   const [menuList, setMenuList] = useState([]);
   useEffect(() => {
-    fetch('/data/navMock/navMock.json', {
-      method: 'GET',
-    })
+    fetch('http://10.58.1.227:8000/core/nav')
       .then(res => res.json())
       .then(data => {
-        setMenuList(data);
+        setMenuList(data.results);
       });
   }, []);
 
@@ -20,7 +18,6 @@ function Nav() {
     const isLoggedIn = localStorage.getItem('token');
     if (isLoggedIn) {
       localStorage.clear();
-      window.confirm('다음에 또 봐요!');
       navigate('/');
     } else {
       navigate('/users/signin');
@@ -36,7 +33,10 @@ function Nav() {
               <Link to="/">BoyFriends</Link>
             </div>
             <div className="infoIcons">
-              <span>{localStorage.getItem('name')}님 환영합니다</span>
+              <span>
+                {localStorage.getItem('name') &&
+                  `${localStorage.getItem('name')}님 환영합니다`}
+              </span>
               <button onClick={logout}>
                 {localStorage.getItem('token') ? '로그아웃' : '로그인'}
               </button>
