@@ -1,28 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { Link, Outlet, useNavigate } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import Menulist from './Menulist';
 import './Nav.scss';
 
 function Nav() {
-  const navigate = useNavigate();
   const [menuList, setMenuList] = useState([]);
   useEffect(() => {
-    fetch('http://10.58.1.227:8000/core/nav')
+    fetch('/navMock/navMock.json', {
+      method: 'GET',
+    })
       .then(res => res.json())
       .then(data => {
-        setMenuList(data.results);
+        setMenuList(data);
       });
   }, []);
-
-  const logout = () => {
-    const isLoggedIn = localStorage.getItem('token');
-    if (isLoggedIn) {
-      localStorage.clear();
-      navigate('/');
-    } else {
-      navigate('/users/signin');
-    }
-  };
 
   return (
     <>
@@ -33,16 +24,8 @@ function Nav() {
               <Link to="/">BoyFriends</Link>
             </div>
             <div className="infoIcons">
-              <Link to="/">
-                {localStorage.getItem('name') &&
-                  `${localStorage.getItem('name')}님 환영합니다`}
-              </Link>
-              <button onClick={logout}>
-                {localStorage.getItem('token') ? '로그아웃' : '로그인'}
-              </button>
-              <Link to="/users/signup">
-                {!localStorage.getItem('token') && '회원가입'}
-              </Link>
+              <Link to="/user/signin">로그인</Link>
+              <Link to="/user/signup">회원가입</Link>
               <Link to="/cart">장바구니</Link>
             </div>
           </div>
