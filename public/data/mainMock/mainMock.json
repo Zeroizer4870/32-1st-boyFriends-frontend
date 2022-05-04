@@ -1,0 +1,140 @@
+[
+  {
+    "categoryId": 1,
+    "categoryName": "zz",
+    "categoryImg": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+    "product": [
+      {
+        "productId": 1,
+        "productName": "라인프렌즈 미니니 브니니 인형 마그넷1",
+        "productImg": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+        "productPrice": 108000000,
+        "productDiscount": 10,
+        "productStatus": "new"
+      },
+      {
+        "productId": 2,
+        "productName": "보이프렌즈 미니니 브니니 인형 마그넷1",
+        "productImg": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+        "productPrice": 108000000,
+        "productDiscount": 10,
+        "productStatus": "new"
+      }
+    ]
+  },
+  {
+    "categoryId": 2,
+    "categoryName": "zz",
+    "categoryImg": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+    "product": [
+      {
+        "productId": 1,
+        "productName": "라인프렌즈 미니니 브니니 인형 마그넷2",
+        "productImg": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+        "productPrice": 108000000,
+        "productDiscount": 10,
+        "productStatus": "new"
+      },
+      {
+        "productId": 1,
+        "productName": "라인프렌즈 미니니 브니니 인형 마그넷3",
+        "productImg": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801092.jpg?type=f120_120",
+        "productPrice": 108000000,
+        "productDiscount": 10,
+        "productStatus": "new"
+      }
+    ]
+  },
+  {
+    "categoryId": 3,
+    "categoryName": "zz",
+    "categoryImg": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+    "product": [
+      {
+        "productId": 1,
+        "productName": "라인프렌즈 미니니 브니니 인형 마그넷3",
+        "productImg": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+        "productPrice": 108000000,
+        "productDiscount": 10,
+        "productStatus": "new"
+      },
+      {
+        "productId": 1,
+        "productName": "라인프렌즈 미니니 브니니 인형 마그넷3",
+        "productImg": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+        "productPrice": 108000000,
+        "productDiscount": 10,
+        "productStatus": 10
+      }
+    ]
+  },
+  {
+    "categoryId": 4,
+    "categoryName": "zz",
+    "categoryImg": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+    "product": [
+      {
+        "productId": 1,
+        "productName": "라인프렌즈 미니니 브니니 인형 마그넷4",
+        "productImg": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+        "productPrice": 108000000,
+        "productDiscount": 10,
+        "productStatus": 10
+      },
+      {
+        "productId": 1,
+        "productName": "라인프렌즈 미니니 브니니 인형 마그넷4",
+        "productImg": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+        "productPrice": 108000000,
+        "productDiscount": 10,
+        "productStatus": "best"
+      }
+    ]
+  },
+  {
+    "categoryId": 5,
+    "categoryName": "zz",
+    "categoryImg": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+    "product": [
+      {
+        "productId": 1,
+        "productName": "라인프렌즈 미니니 브니니 인형 마그넷5",
+        "productImg": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+        "productPrice": 108000000,
+        "productDiscount": 10,
+        "productStatus": 10
+      },
+      {
+        "productId": 1,
+        "productName": "라인프렌즈 미니니 브니니 인형 마그넷5",
+        "productImg": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+        "productPrice": 108000000,
+        "productDiscount": 10,
+        "productStatus": 10
+      }
+    ]
+  },
+  {
+    "categoryId": 6,
+    "categoryName": "zz",
+    "categoryImg": "https://media.bunjang.co.kr/product/155777438_1_1622649836_w360.jpg",
+    "product": [
+      {
+        "productId": 1,
+        "productName": "라인프렌즈 미니니 브니니 인형 마그넷6",
+        "productImg": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+        "productPrice": 108000000,
+        "productDiscount": 10,
+        "productStatus": 10
+      },
+      {
+        "productId": 1,
+        "productName": "라인프렌즈 미니니 브니니 인형 마그넷6",
+        "productImg": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
+        "productPrice": 108000000,
+        "productDiscount": 10,
+        "productStatus": "best"
+      }
+    ]
+  }
+]
