@@ -25,8 +25,6 @@ function ProductList() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  console.log(location);
-
   useEffect(() => {
     fetch(`http://10.58.5.56:1234/products${location.search}`)
       .then(res => res.json())
