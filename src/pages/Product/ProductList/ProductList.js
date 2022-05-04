@@ -26,12 +26,9 @@ function ProductList() {
   const location = useLocation();
 
   console.log(location);
-  // ${location.search}
 
   useEffect(() => {
     fetch(`http://10.58.5.56:1234/products${location.search}`)
-      // params id 연동하기  -> 카테고리 필터링
-      // query string으로 적용하기
       .then(res => res.json())
       .then(data => {
         setProducts(data.results);
