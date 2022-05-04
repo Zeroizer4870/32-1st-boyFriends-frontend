@@ -10,10 +10,10 @@ function ProductDetail() {
   const params = useParams();
 
   useEffect(() => {
-    fetch(`http://10.58.1.227:1234/products/${params.id}`, {
+    fetch(`http://10.58.5.56:1234/products/${params.id}`, {
       headers: {
         Authorization:
-          'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNjUxNzEwMzQ2fQ.gZh4oqlfy4xJKITrdf3wN99vyZCp5ki172Z3kKAjOWg',
+          'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTEsImV4cCI6MTY1MTczODI1OX0.Nn1pSmUyXaXxbSxEYRI43tGNZP8-xAMhhtIxLneEKiU',
       },
     })
       .then(res => res.json())
