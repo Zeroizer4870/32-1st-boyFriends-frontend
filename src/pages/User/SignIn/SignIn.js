@@ -31,7 +31,7 @@ function SignIn() {
     })
       .then(response => response.json())
       .then(result => {
-        if (result.MESSAGE === 'SUCCESS') {
+        if (result.message === 'SUCCESS') {
           localStorage.setItem('token', result.ACCESS_TOKEN);
           localStorage.setItem('name', result.NAME);
           alert('환영합니다! BoyFriends 입니다!');
