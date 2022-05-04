@@ -4,10 +4,6 @@ import './SignIn.scss';
 
 function SignIn() {
   const navigate = useNavigate();
-  // if (localStorage.getItem('token')) {
-  //   alert('이미 로그인 상태입니다');
-  //   navigate('/');
-  // }
 
   const [inputValues, setInputValues] = useState({
     email: '',
