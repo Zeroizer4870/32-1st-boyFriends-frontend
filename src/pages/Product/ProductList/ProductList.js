@@ -33,7 +33,7 @@ function ProductList() {
       .then(data => {
         setProducts(data.results);
       });
-  }, []);
+  }, [location.search]);
 
   const sortProductsPrice = () => {
     let newProducts = [...products];
