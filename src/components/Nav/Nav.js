@@ -18,7 +18,6 @@ function Nav() {
     const isLoggedIn = localStorage.getItem('token');
     if (isLoggedIn) {
       localStorage.clear();
-      window.confirm('다음에 또 봐요!');
       navigate('/');
     } else {
       navigate('/users/signin');
@@ -31,10 +30,13 @@ function Nav() {
         <div className="infoWrapper">
           <div className="info">
             <div className="infoLogo">
-              <Link to="/">BoyFriends</Link>
+              <Link to="/">
+                {localStorage.getItem('name')
+                  ? `${localStorage.getItem('name')}님 환영합니다`
+                  : 'BoyFreinds'}
+              </Link>
             </div>
             <div className="infoIcons">
-              <span>{localStorage.getItem('name') && '님 환영합니다'}</span>
               <button onClick={logout}>
                 {localStorage.getItem('token') ? '로그아웃' : '로그인'}
               </button>
