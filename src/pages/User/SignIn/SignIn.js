@@ -31,12 +31,12 @@ function SignIn() {
     })
       .then(response => response.json())
       .then(result => {
-        if (result.message === 'SUCCESS') {
+        if (result.MESSAGE === 'SUCCESS') {
           localStorage.setItem('token', result.ACCESS_TOKEN);
           localStorage.setItem('name', result.NAME);
           alert('환영합니다! BoyFriends 입니다!');
           navigate('/');
-        } else if (result.message === 'INVALID_USER') {
+        } else if (result.MESSAGE === 'INVALID_USER') {
           alert('이메일 또는 비밀번호를 다시 확인하세요!');
         }
       });
