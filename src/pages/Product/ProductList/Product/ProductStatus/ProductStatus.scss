@@ -3,9 +3,9 @@
 .productStatus {
   .reviewTab {
     display: flex;
-
     margin-top: 20px;
     font-size: 10px;
+    width: 50%;
 
     .review {
       padding-right: 10px;
@@ -22,9 +22,12 @@
     }
 
     .reputation {
+      display: flex;
+
       .reputationTitle {
         color: #8f8f8f;
         padding-right: 5px;
+        width: 30px;
       }
 
       .reputationCount {

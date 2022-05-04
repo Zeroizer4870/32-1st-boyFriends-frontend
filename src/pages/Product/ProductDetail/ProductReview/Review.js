@@ -10,8 +10,10 @@ export default function Review({ review }) {
   const [numReview, setNumReview] = useState(0);
 
   useEffect(() => {
-    setData(review);
-    setNumReview(review.length);
+    if (review) {
+      setData(review);
+      setNumReview(review.length);
+    }
   }, [review]);
 
   const handleOnChange = event => {

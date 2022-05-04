@@ -18,7 +18,9 @@ function ProductInfoWrapper({ productData }) {
   return (
     <div className="productInfoWrapper">
       <div className="mainProductImg">
-        <span className="statusTab">{productData.status}</span>
+        {productData.status && (
+          <span className="statusTab">{productData.status}</span>
+        )}
         <img
           className="productThumbNail"
           src={productData.img}
