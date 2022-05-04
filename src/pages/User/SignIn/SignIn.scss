@@ -100,10 +100,18 @@
           cursor: pointer;
         }
 
-        .signUpBtn {
-          border: 1px solid $green;
-          color: $green;
-          cursor: pointer;
+        a {
+          width: 100%;
+          height: 54px;
+          background-color: white;
+          border-radius: 3px;
+          font-size: 16px;
+
+          .signUpBtn {
+            border: 1px solid $green;
+            color: $green;
+            cursor: pointer;
+          }
         }
       }
     }

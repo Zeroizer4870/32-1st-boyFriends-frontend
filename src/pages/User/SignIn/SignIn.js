@@ -17,7 +17,7 @@ function SignIn() {
 
   function goToMain(e) {
     e.preventDefault();
-    fetch('http://10.58.3.2:8000/users/signin', {
+    fetch('http://10.58.1.186:8000/users/signin', {
       method: 'POST',
       body: JSON.stringify({
         email: inputValues.email,
@@ -34,9 +34,6 @@ function SignIn() {
           alert('이메일 또는 비밀번호를 다시 확인하세요!');
         }
       });
-  }
-  function goToSignUp() {
-    navigate('/users/signup');
   }
 
   return (
@@ -81,9 +78,10 @@ function SignIn() {
             >
               로그인
             </button>
-            <button className="button signUpBtn" onClick={goToSignUp}>
-              회원가입
-            </button>
+
+            <Link to="/users/signup">
+              <button className="button signUpBtn">회원가입</button>
+            </Link>
           </div>
         </div>
       </div>
