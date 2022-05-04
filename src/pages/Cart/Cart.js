@@ -19,11 +19,15 @@ export default function Cart() {
 
   // useEffect(() => {
   //   fetch('http://10.58.1.227:1234/payments/cart', {
-  //     method: 'GET',
+  //     headers: {
+  //       Authorization:
+  //         'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNjUxNzEwMzQ2fQ.gZh4oqlfy4xJKITrdf3wN99vyZCp5ki172Z3kKAjOWg',
+  //     },
   //   })
   //     .then(res => res.json())
   //     .then(data => {
   //       setCommonData(data);
+  //       console.log(data);
   //     });
   // }, []);
 

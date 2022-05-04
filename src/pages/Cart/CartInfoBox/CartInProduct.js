@@ -64,7 +64,7 @@ const InfoMapBox = ({ box, setSum, setSale }) => {
               <p className="discountText">
                 할인 가능 금액
                 <span className="discountPrice">
-                  {salePrice.toLocaleString()}원
+                  {(box.price * (box.sale / 100)).toLocaleString()}원
                 </span>
               </p>
             ) : (

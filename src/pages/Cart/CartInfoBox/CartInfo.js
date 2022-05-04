@@ -14,6 +14,8 @@ export default function CartInfoBox({ commonData }) {
     return totalPrice <= 29999 ? setDelivery(3000) : setDelivery(0);
   };
 
+  const OrderPrice = totalPrice + salePrice;
+
   useEffect(() => {
     deliveryCharge();
   }, [totalPrice]);
@@ -48,7 +50,7 @@ export default function CartInfoBox({ commonData }) {
       <div className="cartInfoBot">
         <div className="select">
           <p className="text">총 선택상품금액</p>
-          <p className="price">{totalPrice.toLocaleString()} 원 </p>
+          <p className="price">{OrderPrice.toLocaleString()} 원 </p>
         </div>
         <div className="plus">+</div>
         <div className="delivery">
@@ -63,7 +65,7 @@ export default function CartInfoBox({ commonData }) {
         <span className="totalText">총 주문금액</span>
         {totalPrice !== 0 && (
           <span className="totalPrice">
-            {(totalPrice + delivery - salePrice).toLocaleString()} 원
+            {(OrderPrice + delivery - salePrice).toLocaleString()} 원
           </span>
         )}
       </div>
