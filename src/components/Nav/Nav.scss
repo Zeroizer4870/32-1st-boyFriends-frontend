@@ -25,6 +25,16 @@
         }
       }
       .infoIcons {
+        button {
+          margin: 0px;
+          padding: 0px;
+          border: none;
+          background-color: transparent;
+          font-size: 11px;
+          color: $secondryFontColor;
+          text-decoration: none;
+          cursor: pointer;
+        }
         a {
           margin-left: 10px;
           color: $secondryFontColor;
