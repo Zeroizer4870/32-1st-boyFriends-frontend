@@ -32,7 +32,7 @@ function PointAccumulate({ productData }) {
             </span>
           </li>
           <li className="pointColumn">
-            <span className="pointDescrpiton">네이버 현대카드로 결제 시</span>
+            <span className="pointDescrpiton">보이프렌드 카드로 결제 시</span>
             <span className="subPoint">
               {Math.floor(productData.price * 0.015).toLocaleString()}원
             </span>

@@ -21,7 +21,6 @@ function ProductDetail() {
         setProductId(data.results[0]);
       });
   }, [params.id]);
-
   return (
     <div>
       {productId && (
