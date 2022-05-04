@@ -1,6 +1,7 @@
 @import '/src/styles/variables.scss';
+
 .cart {
-  width: 100vw;
+  width: 100%;
 
   .cartNav {
     display: flex;
@@ -11,16 +12,29 @@
     margin: auto;
     font-size: 20px;
 
-    .normalDeli {
-      font-weight: 800;
+    .commonDelivery {
+      font-weight: 900;
     }
 
-    .ingStatus {
+    .selectDelivery::before {
+      content: ' | ';
+    }
+
+    .purchasingProcess {
       font-size: 13px;
-    }
 
-    .basketBold {
-      font-weight: bold;
+      .basket {
+        font-weight: 900;
+      }
+
+      .orderPay {
+        &::before {
+          content: ' > ';
+        }
+        &::after {
+          content: ' > ';
+        }
+      }
     }
   }
 }
