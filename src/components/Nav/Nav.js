@@ -33,10 +33,10 @@ function Nav() {
               <Link to="/">BoyFriends</Link>
             </div>
             <div className="infoIcons">
-              <span>
+              <Link to="/">
                 {localStorage.getItem('name') &&
                   `${localStorage.getItem('name')}님 환영합니다`}
-              </span>
+              </Link>
               <button onClick={logout}>
                 {localStorage.getItem('token') ? '로그아웃' : '로그인'}
               </button>
