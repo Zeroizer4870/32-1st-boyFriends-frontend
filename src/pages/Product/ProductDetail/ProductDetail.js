@@ -12,7 +12,7 @@ function ProductDetail() {
   useEffect(() => {
     fetch(`http://10.58.5.56:1234/products/${params.id}`, {
       headers: {
-        Authorization: 'token',
+        Authorization: localStorage.token,
       },
     })
       .then(res => res.json())

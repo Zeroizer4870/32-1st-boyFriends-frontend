@@ -44,7 +44,7 @@ function SignUp() {
 
   function goToLogIn(e) {
     e.preventDefault();
-    fetch('http://10.58.1.186:8000/users/signup', {
+    fetch('http://10.58.5.56:1234/users/signup', {
       method: 'POST',
       body: JSON.stringify({
         email: inputValues.email,
@@ -58,7 +58,7 @@ function SignUp() {
     })
       .then(response => response.json())
       .then(result => {
-        if (result.MESSAGE === 'SUCCESS') {
+        if (result.message === 'SUCCESS') {
           alert('환영합니다! BoyFriends 입니다!');
           navigate('/users/signin');
         }
