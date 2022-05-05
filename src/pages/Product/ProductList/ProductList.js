@@ -65,6 +65,31 @@ function ProductList() {
     navigate(`/products/${id}`);
   };
 
+  const getOffsetAndLimit = index => {
+    const offset = index * LIMIT;
+
+    if (location.search.includes('main_category_id=1')) {
+      navigate(`?main_category_id=1&offset=${offset}&limit=${LIMIT}`);
+    } else if (location.search.includes('main_category_id=2')) {
+      navigate(`?main_category_id=2&offset=${offset}&limit=${LIMIT}`);
+    } else if (location.search.includes('main_category_id=3')) {
+      navigate(`?main_category_id=3&offset=${offset}&limit=${LIMIT}`);
+    } else if (location.search.includes('category_id=1')) {
+      navigate(`?category_id=1&offset=${offset}&limit=${LIMIT}`);
+    } else if (location.search.includes('category_id=2')) {
+      navigate(`?category_id=2&offset=${offset}&limit=${LIMIT}`);
+    } else if (location.search.includes('category_id=3')) {
+      navigate(`?category_id=3&offset=${offset}&limit=${LIMIT}`);
+    } else if (location.search.includes('category_id=4')) {
+      navigate(`?category_id=4&offset=${offset}&limit=${LIMIT}`);
+    } else if (location.search.includes('category_id=5')) {
+      navigate(`?category_id=5&offset=${offset}&limit=${LIMIT}`);
+    } else if (location.search.includes('category_id=6')) {
+      navigate(`?category_id=6&offset=${offset}&limit=${LIMIT}`);
+    } else {
+      navigate(`?offset=${offset}&limit=${LIMIT}`);
+    }
+  };
   return (
     <div className="productList">
       <div className="contentWrapper">
@@ -91,8 +116,52 @@ function ProductList() {
           </div>
         </main>
       </div>
+      <div className="paginationBtnList">
+        <button
+          className="paginationBtn"
+          onClick={e => {
+            getOffsetAndLimit(Number(e.target.innerHTML - 1));
+          }}
+        >
+          1
+        </button>
+        <button
+          className="paginationBtn"
+          onClick={e => {
+            getOffsetAndLimit(Number(e.target.innerHTML - 1));
+          }}
+        >
+          2
+        </button>
+        <button
+          className="paginationBtn"
+          onClick={e => {
+            getOffsetAndLimit(Number(e.target.innerHTML - 1));
+          }}
+        >
+          3
+        </button>
+        <button
+          className="paginationBtn"
+          onClick={e => {
+            getOffsetAndLimit(Number(e.target.innerHTML - 1));
+          }}
+        >
+          4
+        </button>
+        <button
+          className="paginationBtn"
+          onClick={e => {
+            getOffsetAndLimit(Number(e.target.innerHTML - 1));
+          }}
+        >
+          5
+        </button>
+      </div>
     </div>
   );
 }
+
+const LIMIT = 5;
 
 export default ProductList;
