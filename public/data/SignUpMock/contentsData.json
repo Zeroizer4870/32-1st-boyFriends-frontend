@@ -47,15 +47,6 @@
   },
   {
     "id": 6,
-    "contentName": "주소",
-    "placeholder": "주소를 입력해주세요",
-    "type": "text",
-    "name": "address",
-    "isImportant": false,
-    "check": null
-  },
-  {
-    "id": 7,
     "contentName": "나이",
     "placeholder": "나이를 입력해주세요",
     "type": "number",
