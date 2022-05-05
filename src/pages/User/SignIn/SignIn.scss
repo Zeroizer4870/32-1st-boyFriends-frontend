@@ -25,10 +25,12 @@
       .inputWrapper {
         display: flex;
         justify-content: center;
+        align-items: center;
         flex-direction: column;
         padding-top: 36px;
 
         .input {
+          width: 100%;
           height: 54px;
           padding: 0px 19px;
           border: 1px solid lightgray;
@@ -48,6 +50,7 @@
         }
 
         .findWrapper {
+          width: 100%;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -55,11 +58,20 @@
           font-size: 13px;
 
           .accessCheck {
-            margin-top: 9px;
+            display: flex;
+            margin-top: 16px;
+            .checkBox {
+              display: flex;
+              width: 16px;
+              height: 16px;
+              display: flex;
+              margin: 0px;
+              margin-right: 5px;
+            }
           }
 
           .findIdPw {
-            margin-top: 13px;
+            padding-top: 13px;
 
             .link {
               color: black;
