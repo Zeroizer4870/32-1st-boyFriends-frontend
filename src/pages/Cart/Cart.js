@@ -7,16 +7,6 @@ export default function Cart() {
   const [commonData, setCommonData] = useState([]);
   const selectData = 0;
 
-  // useEffect(() => {
-  //   fetch('/data/cartData.json', {
-  //     method: 'GET',
-  //   })
-  //     .then(res => res.json())
-  //     .then(data => {
-  //       setCommonData(data);
-  //     });
-  // }, []);
-
   useEffect(() => {
     fetch('http://10.58.5.56:1234/payments/cart', {
       headers: {
@@ -29,6 +19,10 @@ export default function Cart() {
         setCommonData(data.results);
       });
   }, []);
+
+  const deleteCart = () => {
+    setCommonData([]);
+  };
 
   return (
     <main className="cart">
@@ -47,7 +41,7 @@ export default function Cart() {
       {commonData.length === 0 ? (
         <CartEmpty />
       ) : (
-        <CartInfo commonData={commonData} />
+        <CartInfo commonData={commonData} deleteCart={deleteCart} />
       )}
     </main>
   );

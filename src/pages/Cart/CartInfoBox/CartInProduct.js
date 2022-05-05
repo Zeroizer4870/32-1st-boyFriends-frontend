@@ -66,7 +66,7 @@ const InfoMapBox = ({ box, setSum, setSale }) => {
             <img className="productImage" src={box.img} alt={box.name} />
           </label>
 
-          <div className="productDetail">
+          <div className="productsDetail">
             <div className="detailText">{box.name}</div>
             <p className="detailPrice">{box.price.toLocaleString()}원</p>
             {box.sale !== 0 ? (

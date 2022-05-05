@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CartInProduct from './CartInProduct';
 import './CartInfo.scss';
 
-export default function CartInfoBox({ commonData }) {
+export default function CartInfoBox({ commonData, deleteCart }) {
   const [sum, setSum] = useState({ default: 0 });
   const [delivery, setDelivery] = useState(3000);
   const [sale, setSale] = useState({ default: 0 });
@@ -20,13 +20,15 @@ export default function CartInfoBox({ commonData }) {
     deliveryCharge();
   }, [totalPrice]);
   return (
-    <>
+    <div className="cartInfo">
       <div className="cartInfoTop">
         <p className="selectAll">
           <input type="checkbox" className="navSelect" id="a" />
           <label htmlFor="a">전체 선택</label>
         </p>
-        <button className="deleteAll">X 선택 삭제</button>
+        <button onClick={deleteCart} className="deleteAll">
+          X 전체 삭제
+        </button>
       </div>
 
       <div className="cartInfoBack">
@@ -69,6 +71,6 @@ export default function CartInfoBox({ commonData }) {
         </span>
         <button className="orderBtn">총 {commonData.length}건 주문하기</button>
       </div>
-    </>
+    </div>
   );
 }
