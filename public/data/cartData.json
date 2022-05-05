@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "img": "https://m.an-kko.com/web/product/big/202010/c6c31b54ab23bdec4956dac4cabcd1d1.jpg",
+    "name": "아디다스 바막",
+    "price": 100000,
+    "size": ["S", "M", "L", "F"],
+    "sale": 30,
+    "stock": [10, 3, 5],
+    "isChecked": true
+  },
+  {
+    "id": 2,
+    "img": "https://static.coupangcdn.com/image/vendor_inventory/4554/4b41817f6d157ecac1da33ff55f0f7052ccb0f471a1da61befdb865cc2b4.jpg",
+    "name": "나이키 바지",
+    "price": 22000,
+    "size": ["S", "M", "L", "F"],
+    "sale": 10,
+    "stock": [3, 5, 30],
+    "isChecked": true
+  },
+  {
+    "id": 3,
+    "img": "http://image.auction.co.kr/itemimage/19/9c/2b/199c2b5c96.jpg",
+    "name": "퓨마 모자",
+    "price": 30000,
+    "size": ["S", "M", "L", "F"],
+    "sale": 0,
+    "stock": [1, 2, 5],
+    "isChecked": true
+  },
+  {
+    "id": 4,
+    "img": "https://image.msscdn.net/images/goods_img/20180816/829470/829470_1_500.jpg",
+    "name": "뉴발란스 바지",
+    "price": 20000,
+    "size": ["S", "M", "L", "F"],
+    "sale": 5,
+    "stock": [4, 5, 12],
+    "isChecked": true
+  },
+  {
+    "id": 5,
+    "img": "https://img.etoday.co.kr/pto_db/2018/06/600/20180622093728_1223576_600_600.jpg",
+    "name": "프로스펙스 패딩",
+    "price": 500000,
+    "size": ["S", "M", "L", "F"],
+    "sale": 20,
+    "stock": [4, 11, 0],
+    "isChecked": true
+  }
+]

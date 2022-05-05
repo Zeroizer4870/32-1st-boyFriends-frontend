@@ -1,0 +1,141 @@
+@import '/src/styles/variables.scss';
+
+.cartInProduct {
+  display: flex;
+  margin: 0 30px;
+  padding: 15px 0;
+  border-top: 1px solid $secondryFontColor;
+
+  .productContainer {
+    display: flex;
+    flex: 1.3;
+
+    .productWrap {
+      display: flex;
+      font-size: 14px;
+
+      .productCheckBox {
+        position: relative;
+        top: 68px;
+      }
+
+      label {
+        width: 150px;
+      }
+
+      .productImage {
+        width: 100px;
+        margin: 20px;
+      }
+
+      .productDetail {
+        width: 200px;
+        margin-top: 30px;
+        padding-left: 20px;
+        font-weight: 900;
+
+        .detailText {
+          line-height: 180%;
+          font-size: 15px;
+        }
+
+        .detailPrice {
+          line-height: 250%;
+        }
+
+        .discountText {
+          line-height: 180%;
+          color: red;
+        }
+
+        .discountPrice {
+          padding-left: 10px;
+          color: red;
+        }
+
+        .sellerInfo {
+          line-height: 180%;
+          color: #cacbd4;
+          font-size: 12px;
+          font-weight: 100;
+        }
+      }
+    }
+  }
+
+  .sizeContainer {
+    display: flex;
+    padding-left: 100px;
+    padding-top: 80px;
+
+    .sizeName {
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .sizeCount {
+      margin-left: 100px;
+      font-weight: 900;
+      font-size: 14px;
+      color: black;
+    }
+    .quantity {
+      font-size: 14px;
+      .quantityNum {
+        padding: 0 5px;
+        font-size: 14px;
+        font-weight: 900;
+      }
+
+      .quantityMinus {
+        margin-left: 10px;
+      }
+      .quantityMinus,
+      .quantityPlus {
+        font-size: 14px;
+        font-weight: 100;
+
+        &:hover {
+          cursor: pointer;
+          color: $secondryFontColor;
+        }
+      }
+    }
+    .sizeStock {
+      margin-left: 100px;
+      font-weight: 900;
+    }
+  }
+
+  .priceContainer {
+    flex: 2.3;
+    margin-top: 35px;
+    text-align: center;
+
+    .priceText {
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .price {
+      margin: 20px 0;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .orderBtn {
+      width: 80px;
+      height: 40px;
+      color: white;
+      background-color: $green;
+      border: none;
+      font-weight: 900;
+      border-radius: 10px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
