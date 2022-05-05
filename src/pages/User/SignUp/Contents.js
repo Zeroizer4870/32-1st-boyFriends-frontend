@@ -40,6 +40,7 @@ function Contents({ contents, inputValues }) {
           placeholder={placeholder}
           onChange={isValidEach}
           onClick={visible}
+          onKeyUp={visible}
         />
       </div>
       <p
