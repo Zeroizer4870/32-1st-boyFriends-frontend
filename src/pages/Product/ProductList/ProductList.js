@@ -20,7 +20,7 @@ function ProductList() {
       sale: null,
     },
   ]);
-
+  const [category, setCategory] = useState('');
   const [isGrid, setIsGrid] = useState(true);
   const navigate = useNavigate();
   const location = useLocation();
@@ -29,6 +29,7 @@ function ProductList() {
     fetch(`http://10.58.5.56:1234/products${location.search}`)
       .then(res => res.json())
       .then(data => {
+        setCategory(data.results[0]);
         setProducts(data.results[1]);
       });
   }, [location.search]);
@@ -68,7 +69,7 @@ function ProductList() {
     <div className="productList">
       <div className="contentWrapper">
         <div className="navContent">
-          <ProductNavTab products={products} />
+          <ProductNavTab products={products} category={category} />
           <ProductFilterTab
             sortProductsPrice={sortProductsPrice}
             sortReputation={sortReputation}
