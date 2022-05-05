@@ -3,6 +3,7 @@ import ProductNavTab from './ProductNavTab/ProductNavTab';
 import ProductFilterTab from './ProductFilterTab/ProductFilterTab';
 import Product from './Product/Product';
 import '../ProductList/ProductList.scss';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 function ProductList() {
   const [products, setProducts] = useState([
@@ -19,15 +20,19 @@ function ProductList() {
       sale: null,
     },
   ]);
+  const [category, setCategory] = useState('');
   const [isGrid, setIsGrid] = useState(true);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
-    fetch('/data/ProductListMock/ProductListMock.json')
+    fetch(`http://10.58.5.56:1234/products${location.search}`)
       .then(res => res.json())
-      .then(result => {
-        setProducts(result);
+      .then(data => {
+        setCategory(data.results[0]);
+        setProducts(data.results[1]);
       });
-  }, []);
+  }, [location.search]);
 
   const sortProductsPrice = () => {
     let newProducts = [...products];
@@ -56,11 +61,15 @@ function ProductList() {
     }
   };
 
+  const goToDetail = id => {
+    navigate(`/products/${id}`);
+  };
+
   return (
     <div className="productList">
       <div className="contentWrapper">
         <div className="navContent">
-          <ProductNavTab products={products} />
+          <ProductNavTab products={products} category={category} />
           <ProductFilterTab
             sortProductsPrice={sortProductsPrice}
             sortReputation={sortReputation}
@@ -72,7 +81,11 @@ function ProductList() {
           <div className="categoryList">
             <ul className={isGrid ? 'fiveGrids' : 'doubleGrid'}>
               {products.map(products => (
-                <Product products={products} key={products.id} />
+                <Product
+                  goToDetail={goToDetail}
+                  products={products}
+                  key={products.id}
+                />
               ))}
             </ul>
           </div>

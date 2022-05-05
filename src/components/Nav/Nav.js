@@ -1,19 +1,28 @@
 import React, { useEffect, useState } from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
 import Menulist from './Menulist';
 import './Nav.scss';
 
 function Nav() {
+  const navigate = useNavigate();
   const [menuList, setMenuList] = useState([]);
   useEffect(() => {
-    fetch('/navMock/navMock.json', {
-      method: 'GET',
-    })
+    fetch('http://10.58.5.56:1234/navigation')
       .then(res => res.json())
       .then(data => {
-        setMenuList(data);
+        setMenuList(data.results);
       });
   }, []);
+
+  const logout = () => {
+    const isLoggedIn = localStorage.getItem('token');
+    if (isLoggedIn) {
+      localStorage.clear();
+      navigate('/');
+    } else {
+      navigate('/users/signin');
+    }
+  };
 
   return (
     <>
@@ -21,11 +30,19 @@ function Nav() {
         <div className="infoWrapper">
           <div className="info">
             <div className="infoLogo">
-              <Link to="/">BoyFriends</Link>
+              <Link to="/">
+                {localStorage.getItem('name')
+                  ? `${localStorage.getItem('name')}님 환영합니다`
+                  : 'BoyFreinds'}
+              </Link>
             </div>
             <div className="infoIcons">
-              <Link to="/user/signin">로그인</Link>
-              <Link to="/user/signup">회원가입</Link>
+              <button onClick={logout}>
+                {localStorage.getItem('token') ? '로그아웃' : '로그인'}
+              </button>
+              <Link to="/users/signup">
+                {!localStorage.getItem('token') && '회원가입'}
+              </Link>
               <Link to="/cart">장바구니</Link>
             </div>
           </div>
@@ -55,7 +72,7 @@ function Nav() {
           <div className="menu">
             <ul className="mainMenu">
               {menuList.map(menu => {
-                return <Menulist menu={menu} key={menu.id} />;
+                return <Menulist menu={menu} key={menu.menuLink} />;
               })}
             </ul>
           </div>

@@ -16,10 +16,10 @@ function Router() {
       <Routes>
         <Route path="/" element={<Main />} />;
         <Route element={<Nav />}>
-          <Route path="/signup" element={<SignUp />} />;
-          <Route path="/signin" element={<SignIn />} />;
+          <Route path="users/signup" element={<SignUp />} />;
+          <Route path="users/signin" element={<SignIn />} />;
           <Route path="/products" element={<ProductList />} />;
-          <Route path="/product" element={<ProductDetail />} />;
+          <Route path="/products/:id" element={<ProductDetail />} />;
           <Route path="/cart" element={<Cart />} />;
           <Route path="/order" element={<Order />} />;
         </Route>

@@ -1,0 +1,116 @@
+@import '/src/styles/variables.scss';
+
+.section {
+  grid-column: 1/4;
+  grid-row: 2/3;
+  justify-self: center;
+  width: 1280px;
+  overflow: hidden;
+  z-index: 91;
+
+  .sectionTitle {
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    font-size: 32px;
+    font-weight: 900;
+  }
+
+  .cardListFlex {
+    display: flex;
+  }
+
+  .cardListGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 320px);
+  }
+}
+
+.sectionCopy {
+  grid-column: 1/4;
+  grid-row: 2/3;
+  position: relative;
+  background-color: transparent;
+  z-index: 90;
+
+  .prevBtn,
+  .nextBtn {
+    opacity: 0%;
+  }
+
+  &:hover {
+    opacity: 100%;
+
+    .prevBtn {
+      grid-column: 1/2;
+      grid-row: 2/3;
+      position: absolute;
+      top: 50%;
+      left: 30px;
+      background-color: $fontColor;
+      opacity: 30%;
+      width: 60px;
+      height: 60px;
+      border: 0px;
+      border-radius: 50%;
+
+      &:hover {
+        opacity: 100%;
+        cursor: pointer;
+      }
+
+      i {
+        font-size: 30px;
+        color: $MainBackground;
+      }
+    }
+
+    .nextBtn {
+      grid-column: 3/4;
+      grid-row: 2/3;
+      position: absolute;
+      top: 50%;
+      right: 30px;
+      opacity: 30%;
+      width: 60px;
+      height: 60px;
+      background-color: $fontColor;
+      border: 0px;
+      border-radius: 50%;
+
+      &:hover {
+        opacity: 100%;
+        cursor: pointer;
+      }
+
+      i {
+        font-size: 30px;
+        color: $MainBackground;
+      }
+    }
+  }
+
+  .circleBtnList {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    margin-left: -75px;
+
+    .circleBtn {
+      background-color: transparent;
+      border: 0;
+
+      i {
+        color: $fontColor;
+        opacity: 30%;
+        font-size: 5px;
+
+        &:hover {
+          opacity: 100%;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

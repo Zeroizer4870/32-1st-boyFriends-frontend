@@ -1,3 +1,38 @@
-h1 {
-  font-size: 40px;
+main {
+  display: grid;
+  grid-template-columns: auto 1280px auto;
+  grid-template-rows: 767px 750px repeat(2, 527px) 1fr;
+  row-gap: 130px;
+
+  .nav {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    z-index: 91;
+    height: 202px;
+
+    .infoWrapper {
+      border-color: #838383;
+      opacity: 50%;
+    }
+
+    .logoWrapper {
+      .logo {
+        .logoLike {
+          .logoLikeBtn {
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgb(200, 200, 200);
+          }
+        }
+        .logoSearch {
+          .logoSearchInput {
+            background-color: rgba(255, 255, 255, 0.2);
+          }
+        }
+      }
+    }
+
+    .menuWrapper {
+      border: none;
+    }
+  }
 }

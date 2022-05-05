@@ -1,0 +1,73 @@
+@import '../../../styles/variables.scss';
+
+.contents {
+  width: 640px;
+  .red {
+    color: red;
+  }
+
+  .gray {
+    color: $secondryFontColor;
+  }
+
+  .green {
+    color: $green;
+  }
+
+  .inputWrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    .contentLabel {
+      width: 200px;
+      padding: 30px 30px;
+    }
+
+    input {
+      width: 332px;
+      height: 44px;
+      padding: 14px;
+      border: 1px solid rgb(230, 230, 230);
+      border-radius: 3px;
+
+      &:focus {
+        outline: 1px solid black;
+      }
+
+      &::placeholder {
+        color: rgb(200, 200, 200);
+      }
+    }
+
+    input[type='number'] {
+      &::-webkit-inner-spin-button,
+      ::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+
+    .genderLabel {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      width: 332px;
+      .gender {
+        width: 25px;
+      }
+      span {
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
+  .check {
+    width: 332px;
+    padding: 5px 0px;
+    position: relative;
+    left: 210px;
+    font-size: 12px;
+  }
+}

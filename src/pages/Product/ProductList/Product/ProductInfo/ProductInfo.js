@@ -1,10 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import '../ProductInfo/ProductInfo.scss';
 
 function ProductInfo({ products }) {
   return (
-    <Link to="/category" className="productInfo">
+    <div className="productInfo">
       <div className="linkWrapper">
         {products.status !== null && (
           <div className="bestTab">
@@ -22,7 +21,7 @@ function ProductInfo({ products }) {
           <p>{products.descript}</p>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }
 

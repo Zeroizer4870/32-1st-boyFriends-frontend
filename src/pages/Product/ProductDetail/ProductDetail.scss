@@ -1,3 +1,14 @@
-h1 {
-  font-size: 40px;
+@import '/src//styles/variables.scss';
+
+.productDetail {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+
+  .layOut {
+    width: 1020px;
+    display: flex;
+    justify-content: center;
+  }
 }

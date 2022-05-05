@@ -1,0 +1,41 @@
+.purchaseButton {
+  .btnWrapper {
+    display: grid;
+    :hover {
+      cursor: pointer;
+    }
+
+    .mainPurchaseBtn {
+      grid-column: 1 / 3;
+      margin-top: 10px;
+
+      border-radius: 3px;
+      border: none;
+      background-color: #03c75a;
+      color: white;
+      height: 50px;
+      font-weight: 600;
+      font-size: 15px;
+
+      &:hover {
+        background-color: #009242;
+      }
+    }
+
+    .subPurchaseBtn {
+      margin-top: 5px;
+      width: 97%;
+      justify-self: center;
+      border-radius: 3px;
+      border: 0.5px solid #03c75a;
+      background-color: white;
+      height: 50px;
+      font-weight: 400;
+      font-size: 15px;
+
+      &:hover {
+        border: 0.5px solid #009242;
+      }
+    }
+  }
+}
