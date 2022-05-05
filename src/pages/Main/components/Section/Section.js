@@ -3,10 +3,9 @@ import SectionCard from './SectionCard';
 import DirectionBtn from '../common/DirectionBtn';
 import CircleBtn from '../common/CircleBtn';
 import './Section.scss';
-import { useNavigate } from 'react-router-dom';
 
 const Section = ({ sectionData, mainData }) => {
-  const carousel = 1;
+  const carousel = mainData.length;
   const [index, setIndex] = useState(0);
   const cardRef = useRef(null);
 
@@ -23,13 +22,10 @@ const Section = ({ sectionData, mainData }) => {
 
   useEffect(() => {
     cardRef.current.style.transition = 'all 0.5s ease-in-out';
-    cardRef.current.style.transform = `translateX(-${index * 1280}px)`;
+    sectionData.id !== 1
+      ? (cardRef.current.style.transform = `translateX(-${index * 320}px)`)
+      : (cardRef.current.style.transform = `translateX(-${index * 427}px)`);
   }, [index]);
-
-  const navigate = useNavigate();
-  const goToProducts = () => {
-    navigate(`/products/${sectionData.id}`);
-  };
 
   return (
     <>
@@ -68,23 +64,10 @@ const Section = ({ sectionData, mainData }) => {
           <DirectionBtn index={index} setIndex={setIndex} carousel={carousel} />
         )}
         <div className="circleBtnList">
-          {sectionData.id === 1
-            ? mainData.map(category => {
-                return (
-                  <CircleBtn id={category.categoryId} setIndex={setIndex} />
-                );
-              })
-            : mainData.map(category => {
-                return category.product.map(product => {
-                  return sectionData.id === 2 &&
-                    product.productStatus === 'new' ? (
-                    <CircleBtn id={product.productId} setIndex={setIndex} />
-                  ) : sectionData.id === 3 &&
-                    product.productStatus === 'best' ? (
-                    <CircleBtn id={product.productId} setIndex={setIndex} />
-                  ) : null;
-                });
-              })}
+          {sectionData.id === 4 ||
+            mainData.map(category => {
+              return <CircleBtn id={category.categoryId} setIndex={setIndex} />;
+            })}
         </div>
       </div>
     </>

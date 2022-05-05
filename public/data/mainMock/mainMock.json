@@ -10,7 +10,7 @@
         "productImg": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
         "productPrice": 108000000,
         "productDiscount": 10,
-        "productStatus": "new"
+        "productStatus": "New"
       },
       {
         "productId": 2,
@@ -18,7 +18,7 @@
         "productImg": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
         "productPrice": 108000000,
         "productDiscount": 10,
-        "productStatus": "new"
+        "productStatus": "New"
       }
     ]
   },
@@ -33,7 +33,7 @@
         "productImg": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
         "productPrice": 108000000,
         "productDiscount": 10,
-        "productStatus": "new"
+        "productStatus": "New"
       },
       {
         "productId": 1,
@@ -41,7 +41,7 @@
         "productImg": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801092.jpg?type=f120_120",
         "productPrice": 108000000,
         "productDiscount": 10,
-        "productStatus": "new"
+        "productStatus": "New"
       }
     ]
   },
@@ -56,7 +56,7 @@
         "productImg": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
         "productPrice": 108000000,
         "productDiscount": 10,
-        "productStatus": "new"
+        "productStatus": "New"
       },
       {
         "productId": 1,
@@ -87,7 +87,7 @@
         "productImg": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
         "productPrice": 108000000,
         "productDiscount": 10,
-        "productStatus": "best"
+        "productStatus": "Best"
       }
     ]
   },
@@ -133,7 +133,7 @@
         "productImg": "https://shop-phinf.pstatic.net/20220426_137/1650961892903xP4pb_JPEG/21218449_73801091.jpg?type=f120_120",
         "productPrice": 108000000,
         "productDiscount": 10,
-        "productStatus": "best"
+        "productStatus": "Best"
       }
     ]
   }

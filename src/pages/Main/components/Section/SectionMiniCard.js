@@ -1,15 +1,34 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SectionMiniCard = ({ product }) => {
+  const randomNum = Math.random() * 4;
+  const wrapNum = Math.floor(randomNum);
+  const navigate = useNavigate();
+  const goToProducts = () => {
+    navigate(`/products/${product[wrapNum].productId}`);
+  };
+
   return (
     <div className="threeDetailWrap">
-      <img className="detailImg" alt="detailImg" src={product.productImg} />
+      <img
+        onClick={goToProducts}
+        className="detailImg"
+        alt="detailImg"
+        src={product[wrapNum].productImg}
+      />
 
       <div>
-        <strong className="detailTitle">{product.productName}</strong>
-        <span className="detailSale">{product.productDiscount}%</span>
+        <strong onClick={goToProducts} className="detailTitle">
+          {product[wrapNum].productName}
+        </strong>
+        {product[wrapNum].productDiscount === 0 || (
+          <span className="detailSale">
+            {product[wrapNum].productDiscount}%
+          </span>
+        )}
         <span className="detailPrice">
-          {product.productPrice.toLocaleString()}원
+          {product[wrapNum].productPrice.toLocaleString()}원
         </span>
       </div>
     </div>
