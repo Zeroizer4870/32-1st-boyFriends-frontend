@@ -12,8 +12,7 @@ function ProductDetail() {
   useEffect(() => {
     fetch(`http://10.58.5.56:1234/products/${params.id}`, {
       headers: {
-        Authorization:
-          'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTEsImV4cCI6MTY1MTczODI1OX0.Nn1pSmUyXaXxbSxEYRI43tGNZP8-xAMhhtIxLneEKiU',
+        Authorization: 'token',
       },
     })
       .then(res => res.json())
