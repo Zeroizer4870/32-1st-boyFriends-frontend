@@ -5,6 +5,7 @@ function Contents({ contents, inputValues }) {
   const { contentName, isImportant, placeholder, type, name, check } = contents;
 
   const [test, setTest] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   function isValidEach(e) {
     const pwdCheck = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,20}$/;
@@ -23,6 +24,9 @@ function Contents({ contents, inputValues }) {
       setTest(e.target.value.length >= 2);
     }
   }
+  function visible() {
+    setIsVisible(true);
+  }
   return (
     <div className="contents">
       <div className="inputWrapper">
@@ -35,9 +39,14 @@ function Contents({ contents, inputValues }) {
           className={name}
           placeholder={placeholder}
           onChange={isValidEach}
+          onClick={visible}
         />
       </div>
-      <p className={`check ${test ? 'green' : 'gray'}`}>{check}</p>
+      <p
+        className={`check ${test ? 'green' : 'gray'} ${isVisible && 'visible'}`}
+      >
+        {check}
+      </p>
     </div>
   );
 }
