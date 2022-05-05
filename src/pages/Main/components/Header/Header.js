@@ -12,8 +12,8 @@ const Header = ({ mainData }) => {
 
   const navigate = useNavigate();
 
-  const goToProducts = () => {
-    navigate('/products');
+  const goToCategory = () => {
+    navigate(`/products?category_id=${index + 1}&offset=0&limit=5`);
   };
 
   useEffect(() => {
@@ -26,17 +26,25 @@ const Header = ({ mainData }) => {
       <header className="header">
         <div ref={cardRef} className="card">
           {mainData.map(category => {
-            return <ImageCard src={category.categoryImg} />;
+            return (
+              <ImageCard src={category.categoryImg} key={category.categoryId} />
+            );
           })}
         </div>
       </header>
 
       <div className="headerCopy">
-        <div onClick={goToProducts} className="headerHidden" />
+        <div onClick={goToCategory} className="headerHidden" />
         <DirectionBtn index={index} setIndex={setIndex} carousel={carousel} />
         <div className="circleBtnList">
           {mainData.map(category => {
-            return <CircleBtn id={category.categoryId} setIndex={setIndex} />;
+            return (
+              <CircleBtn
+                id={category.categoryId}
+                setIndex={setIndex}
+                key={category.categoryName}
+              />
+            );
           })}
         </div>
       </div>

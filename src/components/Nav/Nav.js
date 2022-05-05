@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
 import Menulist from './Menulist';
 import './Nav.scss';
@@ -14,6 +14,8 @@ function Nav() {
       });
   }, []);
 
+  const searchRef = useRef(null);
+
   const logout = () => {
     const isLoggedIn = localStorage.getItem('token');
     if (isLoggedIn) {
@@ -22,6 +24,10 @@ function Nav() {
     } else {
       navigate('/users/signin');
     }
+  };
+
+  const searchProduct = () => {
+    navigate(`/products?search=${searchRef.current.value}&limit=15`);
   };
 
   return (
@@ -58,12 +64,16 @@ function Nav() {
 
             <div className="logoSearch">
               <input
+                ref={searchRef}
                 type="text"
                 className="logoSearchInput"
                 placeholder="검색어를 입력해보세요"
               />
               <button className="logoSearchInputIcon">
-                <i className="fa-solid fa-magnifying-glass" />
+                <i
+                  onClick={searchProduct}
+                  className="fa-solid fa-magnifying-glass"
+                />
               </button>
             </div>
           </div>
@@ -71,6 +81,9 @@ function Nav() {
         <div className="menuWrapper">
           <div className="menu">
             <ul className="mainMenu">
+              <li className="menuListStrong">
+                <Link to="/products?&offset=0&limit=5">전체상품</Link>
+              </li>
               {menuList.map(menu => {
                 return <Menulist menu={menu} key={menu.menuLink} />;
               })}

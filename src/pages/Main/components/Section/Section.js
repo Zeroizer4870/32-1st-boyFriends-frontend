@@ -40,7 +40,11 @@ const Section = ({ sectionData, mainData }) => {
           {sectionData.id === 1
             ? mainData.map(category => {
                 return (
-                  <SectionCard category={category} sectionData={sectionData} />
+                  <SectionCard
+                    category={category}
+                    sectionData={sectionData}
+                    key={category.categoryId}
+                  />
                 );
               })
             : mainData.map(category => {
@@ -66,7 +70,13 @@ const Section = ({ sectionData, mainData }) => {
         <div className="circleBtnList">
           {sectionData.id === 4 ||
             mainData.map(category => {
-              return <CircleBtn id={category.categoryId} setIndex={setIndex} />;
+              return (
+                <CircleBtn
+                  id={category.categoryId}
+                  setIndex={setIndex}
+                  key={category.categoryName}
+                />
+              );
             })}
         </div>
       </div>

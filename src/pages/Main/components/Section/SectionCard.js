@@ -12,7 +12,7 @@ const SectionCard = ({ category, product }) => {
   };
 
   const goToCategory = () => {
-    navigate(`/products`);
+    navigate(`/products?category_id=${category.categoryId}&offset=0&limit=5`);
   };
 
   return (

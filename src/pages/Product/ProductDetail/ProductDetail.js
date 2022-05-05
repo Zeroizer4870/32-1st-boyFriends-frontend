@@ -9,6 +9,7 @@ function ProductDetail() {
   const [productId, setProductId] = useState(null);
   const params = useParams();
 
+  console.log(params);
   useEffect(() => {
     fetch(`http://10.58.5.56:1234/products/${params.id}`, {
       headers: {
