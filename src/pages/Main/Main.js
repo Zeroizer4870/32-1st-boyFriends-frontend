@@ -7,16 +7,13 @@ import './Main.scss';
 const Main = () => {
   const [mainData, setMainData] = useState([]);
   const sectionData = [
-    { id: 1, title: '주목할만한 소식' },
-    { id: 2, title: '새로 나왔어요' },
+    { id: 1, title: '# 주목할만한 소식' },
+    { id: 2, title: '# 새로 나왔어요' },
     { id: 3, title: '# 베스트 아이템' },
-    { id: 4, title: '마음껏 둘러보세요' },
+    { id: 4, title: '# 마음껏 둘러보세요' },
   ];
 
   useEffect(() => {
-    // fetch('/data/mainMock/mainMock.json', {})
-    //   .then(res => res.json())
-    //   .then(data => setMainData(data));
     fetch('http://10.58.5.56:1234/topic', {
       method: 'GET',
     })

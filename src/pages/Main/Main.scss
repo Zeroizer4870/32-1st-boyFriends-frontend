@@ -1,34 +1,8 @@
 main {
   display: grid;
   grid-template-columns: auto 1280px auto;
-  grid-template-rows: 767px 900px repeat(2, 527px) 1fr;
+  grid-template-rows: 767px 750px repeat(2, 527px) 1fr;
   row-gap: 130px;
-
-  .z,
-  .g {
-    grid-column: 1/4;
-    grid-row: 2/3;
-  }
-  .zz {
-    grid-column: 1/4;
-    grid-row: 2/3;
-
-    animation-duration: 5s;
-    animation-name: test;
-    animation-iteration-count: infinite;
-  }
-
-  @keyframes test {
-    from {
-      margin-left: 100%;
-      width: 300%;
-    }
-
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
-  }
 
   .nav {
     grid-column: 1/4;

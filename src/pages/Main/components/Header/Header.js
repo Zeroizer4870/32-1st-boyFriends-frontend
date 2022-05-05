@@ -8,9 +8,8 @@ import './Header.scss';
 const Header = ({ mainData }) => {
   const carousel = mainData.length - 1;
   const [index, setIndex] = useState(0);
-  const cardTitle = ['새콤달콤', 'test2', 'ㅋㅋ3', 'ㅋㅋ', 'ㅋㅋ', 'ㅋㅋ'];
-  const cardContent = ['달콤새콤', 'gg2', 'gg3', 'gg', 'gg', 'gg'];
   const cardRef = useRef(null);
+
   const navigate = useNavigate();
 
   const goToProducts = () => {
@@ -34,8 +33,6 @@ const Header = ({ mainData }) => {
 
       <div className="headerCopy">
         <div onClick={goToProducts} className="headerHidden" />
-        <strong className="cardTitle">{cardTitle[index]}</strong>
-        <p className="cardContent">{cardContent[index]}</p>
         <DirectionBtn index={index} setIndex={setIndex} carousel={carousel} />
         <div className="circleBtnList">
           {mainData.map(category => {
