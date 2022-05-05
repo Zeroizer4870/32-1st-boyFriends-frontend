@@ -23,7 +23,7 @@ function ProductOptionSelect({
               .filter(option => option.category === productData.category)
               .map(option => (
                 <option disabled={!option.stock} key={option.id}>
-                  {option.size} ({option.stock}개)
+                  {option.size}
                 </option>
               ))}
           </select>

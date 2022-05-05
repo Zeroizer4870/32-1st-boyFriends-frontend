@@ -1,7 +1,7 @@
 import React from 'react';
 import '../ProductNavTab/ProductNavTab.scss';
 
-function ProductNavTab({ products }) {
+function ProductNavTab({ products, category }) {
   const categoryList = ['홈', '토이', `중대형 인형  (${products.length}개)`];
   const spreadLink = categoryList.map((title, index) => {
     return (
@@ -15,10 +15,8 @@ function ProductNavTab({ products }) {
     <div className="productNavTab">
       <nav className="categoryWrapper">
         <div className="categoryNav">
-          <strong className="categoryName">중대형 인형</strong>
-          <div>
-            <ul className="categoryLink">{spreadLink}</ul>
-          </div>
+          <strong className="categoryName">{category.pageTitle}</strong>
+          <div />
         </div>
       </nav>
     </div>
