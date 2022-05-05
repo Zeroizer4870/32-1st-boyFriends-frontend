@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import CartSize from './CartInProductSize';
 import './CartInProduct.scss';
 
 const InfoMapBox = ({ box, setSum, setSale }) => {
-  const [sizeNum, setSizeNum] = useState({ S: 0, M: 0, L: 0, F: 0 });
-  const mapArr = [1, 2, 3, 4];
-  const [priceIndividual, setPriceIndividual] = useState(0);
+  const [sizeNum, setSizeNum] = useState(box.count);
+  const [priceIndividual, setPriceIndividual] = useState(
+    box.count * (box.price * ((100 - box.sale) / 100))
+  );
   const [salePrice, setSalePrice] = useState(0);
 
   useEffect(() => {
@@ -17,43 +17,52 @@ const InfoMapBox = ({ box, setSum, setSale }) => {
     return (
       setPriceIndividual(prev => prev + box.price * ((100 - box.sale) / 100)),
       setSalePrice(prev => prev + box.price * (box.sale / 100)),
-      setSizeNum(sizeNum => ({ ...sizeNum, [size]: sizeNum[size] + 1 }))
+      setSizeNum(sizeNum + 1)
     );
   };
-
   const minusCount = size => {
     return (
-      sizeNum[size] > 0
+      sizeNum > 0
         ? setPriceIndividual(
             prev => prev - box.price * ((100 - box.sale) / 100)
-          ) || setSalePrice(prev => prev - box.price * (box.sale / 100))
+          )
         : null,
-      size === 'S'
-        ? sizeNum.S <= 0
-          ? alert('0이하는 선택할 수 없습니다.')
-          : setSizeNum(sizeNum => ({ ...sizeNum, [size]: sizeNum[size] - 1 }))
-        : size === 'M'
-        ? sizeNum.M <= 0
-          ? alert('0이하는 선택할 수 없습니다.')
-          : setSizeNum(sizeNum => ({ ...sizeNum, [size]: sizeNum[size] - 1 }))
-        : size === 'L'
-        ? sizeNum.L <= 0
-          ? alert('0이하는 선택할 수 없습니다.')
-          : setSizeNum(sizeNum => ({ ...sizeNum, [size]: sizeNum[size] - 1 }))
-        : size === 'F'
-        ? sizeNum.F <= 0
-          ? alert('0이하는 선택할 수 없습니다.')
-          : setSizeNum(sizeNum => ({ ...sizeNum, [size]: sizeNum[size] - 1 }))
-        : null
+      sizeNum > 0
+        ? setSalePrice(prev => prev - box.price * (box.sale / 100))
+        : null,
+      sizeNum <= 0
+        ? alert('0이하는 선택할 수 없습니다.')
+        : setSizeNum(sizeNum => sizeNum - 1)
     );
   };
 
+  const selectStock = () => {
+    switch (box.option) {
+      case 'small':
+        return box.size_stock[0].stock;
+      case 'medium':
+        return box.size_stock[1].stock;
+      case 'large':
+        return box.size_stock[2].stock;
+      case '단품':
+        return box.size_stock[0].stock;
+      default:
+        return null;
+    }
+  };
+
+  const salePriceIndivisual = box.price * (box.sale / 100);
+
   return (
-    <div className="cartInProduct" key={box.id}>
+    <div className="cartInProduct" key={box.productId}>
       <div className="productContainer">
         <div className="productWrap">
-          <input className="productCheckBox" id={box.id} type="checkbox" />
-          <label htmlFor={box.id}>
+          <input
+            className="productCheckBox"
+            id={box.productId}
+            type="checkbox"
+          />
+          <label htmlFor={box.productId}>
             <img className="productImage" src={box.img} alt={box.name} />
           </label>
 
@@ -64,7 +73,7 @@ const InfoMapBox = ({ box, setSum, setSale }) => {
               <p className="discountText">
                 할인 가능 금액
                 <span className="discountPrice">
-                  {(box.price * (box.sale / 100)).toLocaleString()}원
+                  {salePriceIndivisual.toLocaleString()}원
                 </span>
               </p>
             ) : (
@@ -76,20 +85,32 @@ const InfoMapBox = ({ box, setSum, setSale }) => {
           </div>
         </div>
       </div>
+
       <div className="sizeContainer">
-        {mapArr.map((a, i) => {
-          return (
-            <CartSize
-              minusCount={minusCount}
-              plusCount={plusCount}
-              box={box}
-              key={box.id}
-              sizeNum={sizeNum}
-              i={i}
+        <span className="sizeName">사이즈: {box.option}</span>
+        <div className="sizeCount"> 수량: </div>
+        <div className="quantity">
+          <span className="quantityMinus">
+            <i
+              className="fa-solid fa-minus"
+              onClick={() => {
+                minusCount();
+              }}
             />
-          );
-        })}
+          </span>
+          <span className="quantityNum">{sizeNum}</span>
+          <span className="quantityPlus">
+            <i
+              className="fa-solid fa-plus"
+              onClick={() => {
+                plusCount();
+              }}
+            />
+          </span>
+          <span className="sizeStock">재고:{selectStock()}</span>
+        </div>
       </div>
+
       <div className="priceContainer">
         <p className="priceText">상품금액</p>
         <p className="price">{priceIndividual.toLocaleString()} 원</p>

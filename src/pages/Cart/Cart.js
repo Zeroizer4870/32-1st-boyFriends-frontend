@@ -7,29 +7,28 @@ export default function Cart() {
   const [commonData, setCommonData] = useState([]);
   const selectData = 0;
 
-  useEffect(() => {
-    fetch('/data/cartData.json', {
-      method: 'GET',
-    })
-      .then(res => res.json())
-      .then(data => {
-        setCommonData(data);
-      });
-  }, []);
-
   // useEffect(() => {
-  //   fetch('http://10.58.1.227:1234/payments/cart', {
-  //     headers: {
-  //       Authorization:
-  //         'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNjUxNzEwMzQ2fQ.gZh4oqlfy4xJKITrdf3wN99vyZCp5ki172Z3kKAjOWg',
-  //     },
+  //   fetch('/data/cartData.json', {
+  //     method: 'GET',
   //   })
   //     .then(res => res.json())
   //     .then(data => {
   //       setCommonData(data);
-  //       console.log(data);
   //     });
   // }, []);
+
+  useEffect(() => {
+    fetch('http://10.58.5.56:1234/payments/cart', {
+      headers: {
+        Authorization:
+          'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTYsImV4cCI6MTY1MTgyNjQ0NH0.5_-dsdu20YsHx_z102jPHDupYBvQJeWM1wTUyFzTIW8',
+      },
+    })
+      .then(res => res.json())
+      .then(data => {
+        setCommonData(data.results);
+      });
+  }, []);
 
   return (
     <main className="cart">

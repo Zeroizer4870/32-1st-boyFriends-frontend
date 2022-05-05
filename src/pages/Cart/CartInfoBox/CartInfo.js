@@ -19,7 +19,6 @@ export default function CartInfoBox({ commonData }) {
   useEffect(() => {
     deliveryCharge();
   }, [totalPrice]);
-
   return (
     <>
       <div className="cartInfoTop">
@@ -37,12 +36,7 @@ export default function CartInfoBox({ commonData }) {
             <i className="fa-solid fa-house-chimney" />
           </div>
           {commonData.map(box => (
-            <CartInProduct
-              setSum={setSum}
-              box={box}
-              key={box.id}
-              setSale={setSale}
-            />
+            <CartInProduct setSum={setSum} box={box} setSale={setSale} />
           ))}
         </div>
       </div>

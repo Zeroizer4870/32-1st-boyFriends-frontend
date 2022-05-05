@@ -12,7 +12,6 @@
 
     .productWrap {
       display: flex;
-
       font-size: 14px;
 
       .productCheckBox {
@@ -20,13 +19,18 @@
         top: 68px;
       }
 
+      label {
+        width: 150px;
+      }
+
       .productImage {
-        width: 110px;
+        width: 100px;
         margin: 20px;
       }
 
       .productDetail {
-        margin-top: 20px;
+        width: 200px;
+        margin-top: 30px;
         padding-left: 20px;
         font-weight: 900;
 
@@ -60,36 +64,35 @@
   }
 
   .sizeContainer {
-    flex: 0.1;
-    display: grid;
-    grid-template-columns: 25px repeat(2, 60px);
-    grid-template-rows: repeat(3, 30px);
-    align-content: center;
+    display: flex;
+    padding-left: 100px;
+    padding-top: 80px;
 
     .sizeName {
-      grid-column: 1/2;
       font-size: 14px;
       font-weight: 900;
     }
 
-    .stock {
-      grid-column: 2/3;
-      padding: 3px 0;
-      font-size: 9px;
-      color: $secondryFontColor;
+    .sizeCount {
+      margin-left: 100px;
+      font-weight: 900;
+      font-size: 14px;
+      color: black;
     }
     .quantity {
-      grid-column: 3/4;
-
+      font-size: 14px;
       .quantityNum {
         padding: 0 5px;
-        font-size: 13px;
+        font-size: 14px;
         font-weight: 900;
       }
 
+      .quantityMinus {
+        margin-left: 10px;
+      }
       .quantityMinus,
       .quantityPlus {
-        font-size: 10px;
+        font-size: 14px;
         font-weight: 100;
 
         &:hover {
@@ -98,11 +101,15 @@
         }
       }
     }
+    .sizeStock {
+      margin-left: 100px;
+      font-weight: 900;
+    }
   }
 
   .priceContainer {
     flex: 2.3;
-    margin-top: 20px;
+    margin-top: 35px;
     text-align: center;
 
     .priceText {
