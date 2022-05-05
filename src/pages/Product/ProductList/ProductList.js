@@ -29,7 +29,7 @@ function ProductList() {
     fetch(`http://10.58.5.56:1234/products${location.search}`)
       .then(res => res.json())
       .then(data => {
-        setProducts(data.results);
+        setProducts(data.results[1]);
       });
   }, [location.search]);
 
