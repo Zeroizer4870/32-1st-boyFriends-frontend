@@ -8,7 +8,9 @@
   .cardThreeImage {
     grid-row: 1/2;
     width: 427px;
+    object-fit: cover;
     text-align: center;
+
     .cardImage {
       width: 93%;
       height: 365px;
