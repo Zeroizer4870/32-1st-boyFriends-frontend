@@ -33,13 +33,11 @@ function ProductPurchase({ productData }) {
     setKey(prev => prev + 1);
   };
 
-  // 현재 선택은 여러개가 가능하지만, 장바구니로 보낼땐 한개만 보내기로 약속해서 인덱스 0번으로 접근하는 형태입니다.
   const postToCart = () => {
     fetch(`http://10.58.5.56:1234/payments/cart`, {
       method: 'POST',
       headers: {
-        Authorization:
-          'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTEsImV4cCI6MTY1MTczODI1OX0.Nn1pSmUyXaXxbSxEYRI43tGNZP8-xAMhhtIxLneEKiU',
+        Authorization: localStorage.token,
       },
       body: JSON.stringify({
         product_id: productData.id,
@@ -49,12 +47,13 @@ function ProductPurchase({ productData }) {
     });
   };
 
+  console.log(productData.id, resultCount, postOption[0]);
+
   const goToOrder = () => {
     fetch(`http://10.58.5.56:1234/payments/cart`, {
       method: 'POST',
       headers: {
-        Authorization:
-          'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTEsImV4cCI6MTY1MTczODI1OX0.Nn1pSmUyXaXxbSxEYRI43tGNZP8-xAMhhtIxLneEKiU',
+        Authorization: localStorage.token,
       },
       body: JSON.stringify({
         product_id: productData.id,
