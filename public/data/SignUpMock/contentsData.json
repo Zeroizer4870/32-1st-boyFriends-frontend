@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "contentName": "이메일",
+    "placeholder": "이메일을 입력해주세요",
+    "type": "text",
+    "name": "email",
+    "isImportant": true,
+    "check": "이메일 형식으로 입력해주세요"
+  },
+  {
+    "id": 2,
+    "contentName": "비밀번호",
+    "placeholder": "비밀번호를 입력해주세요",
+    "type": "password",
+    "name": "pw",
+    "isImportant": true,
+    "check": "문자, 숫자, 특수문자를 포함한 8글자 이상을 입력해주세요"
+  },
+  {
+    "id": 3,
+    "contentName": "비밀번호확인",
+    "placeholder": "비밀번호를 한번 더 입력해주세요",
+    "type": "password",
+    "name": "pw2",
+    "isImportant": true,
+    "check": "동일한 비밀번호를 입력해주세요"
+  },
+  {
+    "id": 4,
+    "contentName": "이름",
+    "placeholder": "이름을 입력해주세요",
+    "type": "text",
+    "name": "name",
+    "isImportant": true,
+    "check": "두글자 이상을 입력해주세요",
+    "isValidEach": false
+  },
+  {
+    "id": 5,
+    "contentName": "휴대폰",
+    "placeholder": "숫자만 입력해주세요",
+    "type": "number",
+    "name": "phone",
+    "isImportant": false,
+    "check": null
+  },
+  {
+    "id": 6,
+    "contentName": "주소",
+    "placeholder": "주소를 입력해주세요",
+    "type": "text",
+    "name": "address",
+    "isImportant": false,
+    "check": null
+  },
+  {
+    "id": 7,
+    "contentName": "나이",
+    "placeholder": "나이를 입력해주세요",
+    "type": "number",
+    "name": "age",
+    "isImportant": false,
+    "check": null
+  }
+]
