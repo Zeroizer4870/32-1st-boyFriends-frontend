@@ -22,7 +22,7 @@ const Main = () => {
   }, []);
 
   return (
-    <main>
+    <main className="main">
       <Nav />
       <Header mainData={mainData} />
       {sectionData.map(sectionData => {
