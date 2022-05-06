@@ -75,8 +75,6 @@ https://youtu.be/7dLoURqLBgs
 - path, query parameter 활용한 동적 페이지 구현
 ```
 
-![](https://velog.velcdn.com/images/willy4202/post/8231c0b4-0747-411e-9550-bba4debf6c60/image.gif)
-
 - 상품 리스트
 
 ```
@@ -86,7 +84,7 @@ https://youtu.be/7dLoURqLBgs
 - 상품 정보에 따른 정렬 기능 추가 (인기순, 가격순 등)
 ```
 
-![](https://velog.velcdn.com/images/willy4202/post/5aebed4e-3424-4e37-9b96-30085d2d778b/image.gif)
+![](https://velog.velcdn.com/images/willy4202/post/8231c0b4-0747-411e-9550-bba4debf6c60/image.gif)
 
 - 상품 상세보기
 
@@ -98,8 +96,9 @@ https://youtu.be/7dLoURqLBgs
 - 재고, 주문 수량이 0 이하로 내려갈 시, alert 창 출력
 ```
 
+![](https://velog.velcdn.com/images/willy4202/post/5aebed4e-3424-4e37-9b96-30085d2d778b/image.gif)
+
 ![](https://velog.velcdn.com/images/willy4202/post/61dc38a4-7689-4859-b2a7-d93c228bb0d6/image.gif)
-![](https://velog.velcdn.com/images/willy4202/post/7a35bd19-637f-4cdf-a071-fdb00abec79f/image.gif)
 
 - 장바구니
 
@@ -110,7 +109,7 @@ https://youtu.be/7dLoURqLBgs
 - 재고, 주문 수량이 0 이하로 내려갈 시, alert창 출력
 ```
 
-![](https://velog.velcdn.com/images/willy4202/post/06b90a6d-c295-44d2-ade2-bc287b54bd9f/image.gif)
+![](https://velog.velcdn.com/images/willy4202/post/7a35bd19-637f-4cdf-a071-fdb00abec79f/image.gif)
 
 - 푸터
 
@@ -118,7 +117,7 @@ https://youtu.be/7dLoURqLBgs
 - 상세 정보 모달 창 구현
 ```
 
-![](blob:https://velog.io/f68139d1-902c-4bd2-bf48-728188e17e95)
+![](https://velog.velcdn.com/images/willy4202/post/06b90a6d-c295-44d2-ade2-bc287b54bd9f/image.gif)
 
 ### Reference
 
