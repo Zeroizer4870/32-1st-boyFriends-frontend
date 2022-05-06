@@ -10,8 +10,7 @@ export default function Cart() {
   useEffect(() => {
     fetch('http://10.58.5.56:1234/payments/cart', {
       headers: {
-        Authorization:
-          'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTYsImV4cCI6MTY1MTgyNjQ0NH0.5_-dsdu20YsHx_z102jPHDupYBvQJeWM1wTUyFzTIW8',
+        Authorization: localStorage.token,
       },
     })
       .then(res => res.json())
